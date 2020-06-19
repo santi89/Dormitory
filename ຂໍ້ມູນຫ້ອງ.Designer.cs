@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cbbuildID = new System.Windows.Forms.ComboBox();
             this.cbroomtype = new System.Windows.Forms.ComboBox();
-            this.cbstatus = new System.Windows.Forms.ComboBox();
             this.cbfloor = new System.Windows.Forms.ComboBox();
             this.btrdelete = new System.Windows.Forms.Button();
             this.dgvroom = new System.Windows.Forms.DataGridView();
@@ -46,8 +44,6 @@
             this.txtroomnum = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.ຕຶກ = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.txtstamount = new System.Windows.Forms.TextBox();
             this.txtsearch = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
@@ -57,9 +53,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(208)))), ((int)(((byte)(203)))));
-            this.groupBox1.Controls.Add(this.cbbuildID);
             this.groupBox1.Controls.Add(this.cbroomtype);
-            this.groupBox1.Controls.Add(this.cbstatus);
             this.groupBox1.Controls.Add(this.cbfloor);
             this.groupBox1.Controls.Add(this.btrdelete);
             this.groupBox1.Controls.Add(this.dgvroom);
@@ -74,8 +68,6 @@
             this.groupBox1.Controls.Add(this.txtroomnum);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.ຕຶກ);
-            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.txtstamount);
             this.groupBox1.Controls.Add(this.txtsearch);
             this.groupBox1.Location = new System.Drawing.Point(13, 2);
@@ -87,14 +79,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ຈັດການຂໍ້ມູນຫ້ອງ";
             // 
-            // cbbuildID
-            // 
-            this.cbbuildID.FormattingEnabled = true;
-            this.cbbuildID.Location = new System.Drawing.Point(144, 265);
-            this.cbbuildID.Name = "cbbuildID";
-            this.cbbuildID.Size = new System.Drawing.Size(215, 44);
-            this.cbbuildID.TabIndex = 30;
-            // 
             // cbroomtype
             // 
             this.cbroomtype.FormattingEnabled = true;
@@ -103,18 +87,6 @@
             this.cbroomtype.Name = "cbroomtype";
             this.cbroomtype.Size = new System.Drawing.Size(216, 44);
             this.cbroomtype.TabIndex = 29;
-            // 
-            // cbstatus
-            // 
-            this.cbstatus.FormattingEnabled = true;
-            this.cbstatus.Items.AddRange(new object[] {
-            "ເຕັມ",
-            "ວ່າງ"});
-            this.cbstatus.Location = new System.Drawing.Point(144, 317);
-            this.cbstatus.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
-            this.cbstatus.Name = "cbstatus";
-            this.cbstatus.Size = new System.Drawing.Size(216, 44);
-            this.cbstatus.TabIndex = 29;
             // 
             // cbfloor
             // 
@@ -262,38 +234,16 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(5, 376);
+            this.label2.Location = new System.Drawing.Point(3, 319);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(134, 36);
             this.label2.TabIndex = 21;
             this.label2.Text = "ຈຳນວນນັກຮຽນ";
             // 
-            // ຕຶກ
-            // 
-            this.ຕຶກ.AutoSize = true;
-            this.ຕຶກ.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.ຕຶກ.Location = new System.Drawing.Point(86, 265);
-            this.ຕຶກ.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.ຕຶກ.Name = "ຕຶກ";
-            this.ຕຶກ.Size = new System.Drawing.Size(41, 36);
-            this.ຕຶກ.TabIndex = 21;
-            this.ຕຶກ.Text = "ຕຶກ";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label8.Location = new System.Drawing.Point(37, 320);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(102, 36);
-            this.label8.TabIndex = 21;
-            this.label8.Text = "ຖານະຫ້ອງ";
-            // 
             // txtstamount
             // 
-            this.txtstamount.Location = new System.Drawing.Point(144, 376);
+            this.txtstamount.Location = new System.Drawing.Point(142, 319);
             this.txtstamount.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.txtstamount.Multiline = true;
             this.txtstamount.Name = "txtstamount";
@@ -333,9 +283,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox cbbuildID;
         private System.Windows.Forms.ComboBox cbroomtype;
-        private System.Windows.Forms.ComboBox cbstatus;
         private System.Windows.Forms.ComboBox cbfloor;
         private System.Windows.Forms.Button btrdelete;
         private System.Windows.Forms.DataGridView dgvroom;
@@ -350,8 +298,6 @@
         private System.Windows.Forms.TextBox txtroomnum;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label ຕຶກ;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtstamount;
         private System.Windows.Forms.TextBox txtsearch;
     }

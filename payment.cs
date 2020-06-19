@@ -35,7 +35,7 @@ namespace C_Sharp_2_Project
         {
             try
             {
- sql = "select * from tbroom inner join tbfloor on tbfloor.floorID=tbfloor.floorID where floornumber=N'" + cbfloor.SelectedItem + "'";
+ sql = "select * from tbroom inner join tbfloor on tbfloor.floorID=tbfloor.floorID where floornumber=N'" + cbfloor.SelectedItem + "' and ";
             cmd = new SqlCommand(sql, con);
             dr = cmd.ExecuteReader();
                 while (dr.Read())
@@ -106,42 +106,36 @@ namespace C_Sharp_2_Project
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             try
-            {
-                if (rbcontinues .Checked == true)
+            {   if (txtsearch .Text =="" ){
+                    return;
+                    }
+                if (rbcontinues.Checked == true)
                 {
- /*
-               sql="select * from tbrentdetail where studentID like '%"+txtsearch.text+"'";
-               cmd=new sqlcommand(sql,con);
-               da=new sqldataadapter (cmd)
-               da.fill (ds,"stud");
-               if (ds.tables["stud"]){
-               ds.tables.clear();
-               da.fill(ds,"stud");
-               dgvpayment.datasource=ds.tables["stud"];
-               }
-                
-               if (txtsearch .Text =="" ){
+                    sql = "SELECT rentID,studentID,typename,buildingnumber,floornumber,room_number,startdate,enddate,cost FROM Rentdetail inner join tbbuilding on tbbuilding.buildingID =Rentdetail.buildingID inner join tbfloor on tbfloor.floorID= Rentdetail.floorID inner join tbroomtype on tbroomtype.roomtypeID=Rentdetail.rotypeid  inner join tbroom on tbroom.roomID= Rentdetail.roomIDwhere studentID like '%" + txtsearch.Text + "'";
+                    cmd = new SqlCommand(sql, con);
+                    da = new SqlDataAdapter(cmd);
+                    da.Fill(ds, "stud");
+                    if (ds.Tables["stud"] != null) {
+                        ds.Tables.Clear();
+                        da.Fill(ds, "stud");
+                        dgvpayment.DataSource = ds.Tables["stud"];
+                    } 
+                }
 
-                }else
-                {*/
-                }else if(rbnewadd .Checked ==true  ){ 
-                    sql = "select studentID,name,surname,gender,schoolname,facname,deptname from tbstudent inner join tbschool on tbschool.schoolID=tbstudent.schoolID inner join tbfaculty on tbfaculty.facID=tbstudent.facID inner join tbdepartment on tbdepartment.deptID=tbstudent.deptID where studentID like N'%"+txtsearch .Text + "%' or name like '%" + txtsearch.Text + "%'";
-                cmd = new SqlCommand(sql, con);
-                da = new SqlDataAdapter(cmd);
-                da.Fill(ds, "student");
-                if (ds.Tables ["student"] != null)
-                {
-                    ds.Tables.Clear();
+                else if (rbnewadd.Checked == true) {
+                    sql = "select studentID,name,surname,gender,schoolname,facname,deptname from tbstudent inner join tbschool on tbschool.schoolID=tbstudent.schoolID inner join tbfaculty on tbfaculty.facID=tbstudent.facID inner join tbdepartment on tbdepartment.deptID=tbstudent.deptID where studentID like N'%" + txtsearch.Text + "%' or name like '%" + txtsearch.Text + "%'";
+                    cmd = new SqlCommand(sql, con);
+                    da = new SqlDataAdapter(cmd);
                     da.Fill(ds, "student");
-                    dgvpayment.DataSource = ds.Tables["student"];
+                    if (ds.Tables["student"] != null)
+                    {
+                        ds.Tables.Clear();
+                        da.Fill(ds, "student");
+                        dgvpayment.DataSource = ds.Tables["student"];
 
-                }
+                    }
 
-                }
-              
-
-               
-               // }
+                }                           
 
             }
             catch (Exception ex )
@@ -176,9 +170,13 @@ namespace C_Sharp_2_Project
                     cmd.Parameters.AddWithValue("@enddate", enddate.Value);
                     cmd.Parameters.AddWithValue("@cost", txtcost.Text);
                     cmd.Parameters.AddWithValue("@rentID", txtid.Text);
-                    cmd.ExecuteNonQuery();
+                    if (cmd.ExecuteNonQuery() == 1)
+                    {
+                        MessageBox.Show("ສຳເລັດ");
+                    }
+                    
 
-                }else if (rbnewadd .Checked ==true)
+                }else if (rbnewadd.Checked ==true)
                 {
                  sql = "insert into tbrendetail values (@id,@stid,@troom,@bui,@flo,@room,@now,@enddate,@cost";
                 cmd = new SqlCommand(sql, con);
@@ -257,7 +255,11 @@ namespace C_Sharp_2_Project
 
         private void rbnewadd_CheckedChanged(object sender, EventArgs e)
         {
-            sql = "select studentID,name,surname,gender,schoolname,facname,deptname from tbstudent inner join tbschool on tbschool.schoolID=tbstudent.schoolID inner join tbfaculty on tbfaculty.facID=tbstudent.facID inner join tbdepartment on tbdepartment.deptID=tbstudent.deptID  ";
+            try
+            {
+                if (rbnewadd .Checked ==true)
+                {
+                sql = "select studentID,name,surname,gender,schoolname,facname,deptname from tbstudent inner join tbschool on tbschool.schoolID=tbstudent.schoolID inner join tbfaculty on tbfaculty.facID=tbstudent.facID inner join tbdepartment on tbdepartment.deptID=tbstudent.deptID  ";
             cmd = new SqlCommand(sql, con);
             da = new SqlDataAdapter(cmd);
             da.Fill(ds, "student");
@@ -268,6 +270,73 @@ namespace C_Sharp_2_Project
                 dgvpayment.DataSource = ds.Tables["student"];
 
             }
+                }
+                else
+                {
+                    dgvpayment.DataSource = "";
+                }
+            }
+            catch (Exception ex )
+            {
+
+                throw;
+            } 
+        }
+
+        private void payment_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtsearch.Text == "")
+                {
+                    return;
+                }
+                if (rbcontinues.Checked == true)
+                {
+                    sql = "SELECT rentID,studentID,typename,buildingnumber,floornumber,room_number,startdate,enddate,cost FROM Rentdetail inner join tbbuilding on tbbuilding.buildingID =Rentdetail.buildingID inner join tbfloor on tbfloor.floorID= Rentdetail.floorID inner join tbroomtype on tbroomtype.roomtypeID=Rentdetail.rotypeid  inner join tbroom on tbroom.roomID= Rentdetail.roomIDwhere studentID like '%" + txtsearch.Text + "'";
+                    cmd = new SqlCommand(sql, con);
+                    da = new SqlDataAdapter(cmd);
+                    da.Fill(ds, "stud");
+                    if (ds.Tables["stud"] != null)
+                    {
+                        ds.Tables.Clear();
+                        da.Fill(ds, "stud");
+                        dgvpayment.DataSource = ds.Tables["stud"];
+                    }
+                }
+
+                else if (rbnewadd.Checked == true)
+                {
+                    sql = "select studentID,name,surname,gender,schoolname,facname,deptname from tbstudent inner join tbschool on tbschool.schoolID=tbstudent.schoolID inner join tbfaculty on tbfaculty.facID=tbstudent.facID inner join tbdepartment on tbdepartment.deptID=tbstudent.deptID where studentID like N'%" + txtsearch.Text + "%' or name like '%" + txtsearch.Text + "%'";
+                    cmd = new SqlCommand(sql, con);
+                    da = new SqlDataAdapter(cmd);
+                    da.Fill(ds, "student");
+                    if (ds.Tables["student"] != null)
+                    {
+                        ds.Tables.Clear();
+                        da.Fill(ds, "student");
+                        dgvpayment.DataSource = ds.Tables["student"];
+
+                    }
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void cbroom_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

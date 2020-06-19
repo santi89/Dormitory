@@ -30,17 +30,17 @@ namespace C_Sharp_2_Project
         {
             showdata();
             comtype();
-            combuild();
+           
             comfloor();
         }
-        string[] strtitle = { "ລະຫັດ", "ເບີຫ້ອງ", "ຊື່ປະເພດ", "ເບີຊັ້ນ", "ເບີຕຶກ", "ສະຖານະຫ້ອງ", "ຈຳນວນນັກຮຽນ" };
+        string[] strtitle = { "ລະຫັດ", "ເບີຫ້ອງ", "ຊື່ປະເພດ", "ເບີຊັ້ນ", "ເບີຕຶກ", "ຈຳນວນນັກຮຽນ" };
         // int[] siz = { 50, 50, 80, 50, 50, 100, 130 };
        // AutoCompleteStringCollection auto = new AutoCompleteStringCollection();
         private void showdata()
         {
             try
             {
-                sql = "select roomID,room_number,typename,floornumber,buildingnumber,room_status,Student_amount from tbroom left join tbroomtype on tbroomtype.roomtypeID=tbroom.roomtypeID left join tbfloor on tbfloor.floorID=tbroom.floorID left join tbbuilding on tbbuilding.buildingID = tbroom.buildingID";
+                sql = "select roomID,room_number,typename,floornumber,buildingnumber,Student_amount from tbroom left join tbroomtype on tbroomtype.roomtypeID=tbroom.roomtypeID left join tbfloor on tbfloor.floorID=tbroom.floorID left join tbbuilding on tbbuilding.buildingID = tbroom.buildingID";
             da = new SqlDataAdapter(sql, con);
             da.Fill(ds, "room");
             if (ds.Tables["room"] !=null)
@@ -82,7 +82,7 @@ namespace C_Sharp_2_Project
         }
         }
 
-        public void combuild()
+       /* public void combuild()
         {
             try
             {
@@ -101,7 +101,7 @@ namespace C_Sharp_2_Project
             {
                 MessageBox.Show(ex.Message.ToString());
             }
-        }
+        }*/
         public void comfloor()
         {
             sql = "select distinct floornumber from tbfloor ";
@@ -120,20 +120,19 @@ namespace C_Sharp_2_Project
         {
             try
             { 
-                sql = "insert into tbroom values(@roomID,@roomnum,@rtype,@flo,@bui,@rstatus,@stamount)";
+                sql = "insert into tbroom values(@roomID,@roomnum,@rtype,@flo,@stamount)";
             cmd = new SqlCommand(sql, con);
             cmd.Parameters.Clear();
             cmd.Parameters.AddWithValue("@roomID",txtroomid .Text );
             cmd.Parameters.AddWithValue("@roomnum",txtroomnum.Text);
             cmd.Parameters.AddWithValue("@rtype",cbroomtype .SelectedIndex+1);
             cmd.Parameters.AddWithValue("@flo",cbfloor.SelectedIndex+1);
-            cmd.Parameters.AddWithValue("@bui",cbbuildID .SelectedIndex +1);
-            cmd.Parameters.AddWithValue("@rstatus",cbstatus .SelectedItem);
+            //cmd.Parameters.AddWithValue("@bui",cbbuildID .SelectedIndex +1);         
             cmd.Parameters.AddWithValue("@stamount",txtstamount .Text );
             cmd.ExecuteNonQuery();
             showdata();
                 comtype();
-                combuild();
+               
                 comfloor();
 
 
@@ -150,19 +149,18 @@ namespace C_Sharp_2_Project
         {
             try
             {
-                sql = "update tbroom set room_number=@rnum,roomtypeID=@type,floorID=@floid,buildingID=@buid,room_status=@status,Student_amount=@stamount where roomID=@rID";
+                sql = "update tbroom set room_number=@rnum,roomtypeID=@type,floorID=@floid,Student_amount=@stamount where roomID=@rID";
                 cmd = new SqlCommand(sql, con);
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@rnum",txtroomnum .Text);
                 cmd.Parameters.AddWithValue("@type",cbroomtype .SelectedIndex+1);
                 cmd.Parameters.AddWithValue("@floid",cbfloor .SelectedIndex+1);
-                cmd.Parameters.AddWithValue("@buid",cbbuildID .SelectedIndex+1);
-                cmd.Parameters.AddWithValue("@status",cbstatus.SelectedItem);
+              //  cmd.Parameters.AddWithValue("@buid",cbbuildID .SelectedIndex+1);
+               
                 cmd.Parameters.AddWithValue("@stamount",txtstamount .Text );
                 cmd.Parameters.AddWithValue("@rID",txtroomid .Text );
                 cmd.ExecuteNonQuery();
-                showdata();
-                combuild();
+                showdata();             
                 comtype();
                 comfloor();
 
@@ -186,7 +184,7 @@ namespace C_Sharp_2_Project
                 cmd.ExecuteNonQuery();
                 showdata();
                 comtype();
-                combuild();
+               
                 comfloor();
 
             }
@@ -204,16 +202,16 @@ namespace C_Sharp_2_Project
              txtroomnum.Text = dgvroom.CurrentRow.Cells[1].Value.ToString();
             cbroomtype.SelectedItem  = dgvroom.CurrentRow.Cells[2].Value.ToString ();
             cbfloor.SelectedItem = dgvroom.CurrentRow.Cells[3].Value.ToString ();
-            cbbuildID.SelectedItem = dgvroom.CurrentRow.Cells[4].Value.ToString() ;
-            cbstatus.SelectedItem = dgvroom.CurrentRow.Cells[5].Value.ToString();
-            txtstamount.Text = dgvroom.CurrentRow.Cells[6].Value.ToString();
+           
+          
+            txtstamount.Text = dgvroom.CurrentRow.Cells[4].Value.ToString();
         }
 
         private void txtsearch_TextChanged(object sender, EventArgs e)
         {
             try
             {
-                sql = "select roomID,room_number,typename,floornumber,buildingnumber,room_status,Student_amount from tbroom left join tbroomtype on tbroomtype.roomtypeID=tbroom.roomtypeID left join tbfloor on tbfloor.floorID=tbroom.floorID left join tbbuilding on tbbuilding.buildingID = tbroom.buildingID where roomID='"+ txtsearch.Text +"'";
+                sql = "select roomID,room_number,typename,floornumber,Student_amount from tbroom left join tbroomtype on tbroomtype.roomtypeID=tbroom.roomtypeID left join tbfloor on tbfloor.floorID=tbroom.floorID where roomID='"+ txtsearch.Text +"'";
                 da = new SqlDataAdapter(sql, con);
                 da.Fill(ds, "room");
                 if (ds.Tables["room"] != null)
@@ -237,7 +235,7 @@ namespace C_Sharp_2_Project
         {
             try
             {
-                sql = "select roomID,room_number,typename,floornumber,buildingnumber,room_status,Student_amount from tbroom left join tbroomtype on tbroomtype.roomtypeID=tbroom.roomtypeID left join tbfloor on tbfloor.floorID=tbroom.floorID left join tbbuilding on tbbuilding.buildingID = tbroom.buildingID where roomID='" + txtsearch.Text + "'";
+                sql = "select roomID,room_number,typename,floornumber,room_status from tbroom left join tbroomtype on tbroomtype.roomtypeID=tbroom.roomtypeID left join tbfloor on tbfloor.floorID=tbroom.floorID where roomID='" + txtsearch.Text + "'";
                 da = new SqlDataAdapter(sql, con);
                 da.Fill(ds, "room");
                 if (ds.Tables["room"] != null)

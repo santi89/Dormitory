@@ -80,6 +80,7 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "ຄົ້ນຫາ";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtsearch
             // 
@@ -276,6 +277,7 @@
             this.cbroom.Name = "cbroom";
             this.cbroom.Size = new System.Drawing.Size(206, 44);
             this.cbroom.TabIndex = 4;
+            this.cbroom.SelectedIndexChanged += new System.EventHandler(this.cbroom_SelectedIndexChanged);
             // 
             // startdate
             // 
@@ -302,7 +304,7 @@
             this.rbnewadd.FlatAppearance.BorderColor = System.Drawing.Color.HotPink;
             this.rbnewadd.FlatAppearance.CheckedBackColor = System.Drawing.Color.Lime;
             this.rbnewadd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.rbnewadd.Location = new System.Drawing.Point(172, 11);
+            this.rbnewadd.Location = new System.Drawing.Point(110, 11);
             this.rbnewadd.Name = "rbnewadd";
             this.rbnewadd.Size = new System.Drawing.Size(149, 40);
             this.rbnewadd.TabIndex = 6;
@@ -384,6 +386,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.Name = "payment";
             this.Text = "payment";
+            this.Load += new System.EventHandler(this.payment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvpayment)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
