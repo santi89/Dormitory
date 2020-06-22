@@ -40,7 +40,7 @@ namespace C_Sharp_2_Project
             dgvroomtype.Columns[0].HeaderText = "ລະຫັດປະເພດ";
             dgvroomtype.Columns[1].HeaderText = "ຊື່ປະເພດ";
             dgvroomtype.Columns[2].HeaderText = "ລາຄາ";
-            dgvroomtype.Columns[2].DefaultCellStyle .Format ="c";
+            dgvroomtype.Columns[2].DefaultCellStyle .Format ="0,000 Kip";
 
                 dgvroomtype.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }
@@ -124,6 +124,13 @@ sql = "insert into tbroomtype values(@rtID,@rtname,@price)";
             txtroomtypeID.Text = dgvroomtype.CurrentRow.Cells[0].Value.ToString();
             txtnametype.Text = dgvroomtype.CurrentRow.Cells[1].Value.ToString();
             txttypeprice.Text = dgvroomtype.CurrentRow.Cells[2].Value.ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            txtnametype.Clear();
+            txtroomtypeID.Clear();
+            txttypeprice.Clear();
         }
     }
 }

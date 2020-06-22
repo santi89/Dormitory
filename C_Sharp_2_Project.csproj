@@ -123,6 +123,12 @@
     <Compile Include="ຂໍ້ມູນຫ້ອງ.Designer.cs">
       <DependentUpon>ຂໍ້ມູນຫ້ອງ.cs</DependentUpon>
     </Compile>
+    <Compile Include="ບັດຫໍພັກ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ບັດຫໍພັກ.Designer.cs">
+      <DependentUpon>ບັດຫໍພັກ.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="checkroom.resx">
       <DependentUpon>checkroom.cs</DependentUpon>
     </EmbeddedResource>
@@ -164,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ຂໍ້ມູນຫ້ອງ.resx">
       <DependentUpon>ຂໍ້ມູນຫ້ອງ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ບັດຫໍພັກ.resx">
+      <DependentUpon>ບັດຫໍພັກ.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

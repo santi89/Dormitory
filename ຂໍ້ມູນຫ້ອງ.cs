@@ -33,14 +33,14 @@ namespace C_Sharp_2_Project
            
             comfloor();
         }
-        string[] strtitle = { "ລະຫັດ", "ເບີຫ້ອງ", "ຊື່ປະເພດ", "ເບີຊັ້ນ", "ເບີຕຶກ", "ຈຳນວນນັກຮຽນ" };
+        string[] strtitle = { "ລະຫັດ", "ເບີຫ້ອງ", "ຊື່ປະເພດ", "ເບີຊັ້ນ", "ຈຳນວນນັກຮຽນ" };
         // int[] siz = { 50, 50, 80, 50, 50, 100, 130 };
        // AutoCompleteStringCollection auto = new AutoCompleteStringCollection();
         private void showdata()
         {
             try
             {
-                sql = "select roomID,room_number,typename,floornumber,buildingnumber,Student_amount from tbroom left join tbroomtype on tbroomtype.roomtypeID=tbroom.roomtypeID left join tbfloor on tbfloor.floorID=tbroom.floorID left join tbbuilding on tbbuilding.buildingID = tbroom.buildingID";
+                sql = "select roomID,room_number,typename,floornumber,Student_amount from tbroom left join tbroomtype on tbroomtype.roomtypeID=tbroom.roomtypeID left join tbfloor on tbfloor.floorID=tbroom.floorID";
             da = new SqlDataAdapter(sql, con);
             da.Fill(ds, "room");
             if (ds.Tables["room"] !=null)
@@ -82,26 +82,8 @@ namespace C_Sharp_2_Project
         }
         }
 
-       /* public void combuild()
-        {
-            try
-            {
-                sql = "select * from tbbuilding";
-                cmd = new SqlCommand(sql, con);
-                reader = cmd.ExecuteReader();
-                cbbuildID.Items.Clear();
-                while (reader.Read()) {
-                    string strbui = reader.GetString(1);
-                    cbbuildID.Items.Add(strbui);
-}reader.Close();
-
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString());
-            }
-        }*/
+      
+       
         public void comfloor()
         {
             sql = "select distinct floornumber from tbfloor ";
@@ -202,8 +184,7 @@ namespace C_Sharp_2_Project
              txtroomnum.Text = dgvroom.CurrentRow.Cells[1].Value.ToString();
             cbroomtype.SelectedItem  = dgvroom.CurrentRow.Cells[2].Value.ToString ();
             cbfloor.SelectedItem = dgvroom.CurrentRow.Cells[3].Value.ToString ();
-           
-          
+
             txtstamount.Text = dgvroom.CurrentRow.Cells[4].Value.ToString();
         }
 

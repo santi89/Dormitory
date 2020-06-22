@@ -35,7 +35,7 @@ namespace C_Sharp_2_Project
         {
             try
             {
- sql = "select * from tbroom inner join tbfloor on tbfloor.floorID=tbfloor.floorID where floornumber=N'" + cbfloor.SelectedItem + "' and ";
+ sql = "select * from tbroom inner join tbfloor on tbfloor.floorID=tbfloor.floorID where floornumber=N'" + cbfloor.SelectedItem + "' and Student_amount<4 ";
             cmd = new SqlCommand(sql, con);
             dr = cmd.ExecuteReader();
                 while (dr.Read())

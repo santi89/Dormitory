@@ -74,7 +74,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 7, 4, 7);
-            this.groupBox1.Size = new System.Drawing.Size(1510, 626);
+            this.groupBox1.Size = new System.Drawing.Size(1291, 626);
             this.groupBox1.TabIndex = 35;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ຈັດການຂໍ້ມູນຫ້ອງ";
@@ -100,7 +100,7 @@
             // btrdelete
             // 
             this.btrdelete.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btrdelete.Location = new System.Drawing.Point(241, 423);
+            this.btrdelete.Location = new System.Drawing.Point(264, 362);
             this.btrdelete.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.btrdelete.Name = "btrdelete";
             this.btrdelete.Size = new System.Drawing.Size(100, 46);
@@ -117,7 +117,7 @@
             this.dgvroom.Name = "dgvroom";
             this.dgvroom.RowHeadersWidth = 51;
             this.dgvroom.RowTemplate.Height = 24;
-            this.dgvroom.Size = new System.Drawing.Size(1130, 495);
+            this.dgvroom.Size = new System.Drawing.Size(905, 495);
             this.dgvroom.TabIndex = 27;
             this.dgvroom.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvroom_CellContentClick);
             // 
@@ -145,7 +145,7 @@
             // btredit
             // 
             this.btredit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btredit.Location = new System.Drawing.Point(133, 424);
+            this.btredit.Location = new System.Drawing.Point(156, 363);
             this.btredit.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.btredit.Name = "btredit";
             this.btredit.Size = new System.Drawing.Size(100, 45);
@@ -168,7 +168,7 @@
             // btrsave
             // 
             this.btrsave.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btrsave.Location = new System.Drawing.Point(22, 426);
+            this.btrsave.Location = new System.Drawing.Point(45, 365);
             this.btrsave.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.btrsave.Name = "btrsave";
             this.btrsave.Size = new System.Drawing.Size(100, 44);
@@ -234,7 +234,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(3, 319);
+            this.label2.Location = new System.Drawing.Point(4, 277);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(134, 36);
@@ -243,7 +243,7 @@
             // 
             // txtstamount
             // 
-            this.txtstamount.Location = new System.Drawing.Point(142, 319);
+            this.txtstamount.Location = new System.Drawing.Point(143, 277);
             this.txtstamount.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.txtstamount.Multiline = true;
             this.txtstamount.Name = "txtstamount";
@@ -265,7 +265,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 36F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(208)))), ((int)(((byte)(203)))));
-            this.ClientSize = new System.Drawing.Size(1521, 630);
+            this.ClientSize = new System.Drawing.Size(1320, 630);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Saysettha OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
