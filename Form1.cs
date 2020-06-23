@@ -31,5 +31,32 @@ namespace C_Sharp_2_Project
         {
 
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            //menuStrip1.Size.Height = 55;
+        }
+
+        private void toolStripTextBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void crToolStripTextBox1_Click(object sender, EventArgs e)
+        {
+            Formlogin fl = new Formlogin();
+            fl.Show();
+            this.Hide();
+        }
+
+        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void crToolStripTextBox2_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

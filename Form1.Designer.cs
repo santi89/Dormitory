@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -45,7 +46,8 @@
             this.ການເຂາພກຂອງນກສກສາToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ລາຍງານການຊຳລະຄາຫToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ລາຍງານວນໝດອາຍພກToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ອອກຈາກລະບບToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crToolStripTextBox1 = new CrystalDecisions.Windows.Forms.CRToolStripTextBox();
+            this.crToolStripTextBox2 = new CrystalDecisions.Windows.Forms.CRToolStripTextBox();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -69,17 +71,18 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.SpringGreen;
+            this.menuStrip1.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.menuStrip1.Font = new System.Drawing.Font("Saysettha OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ລງທະບຽນToolStripMenuItem,
             this.ຈດການຂມນToolStripMenuItem,
             this.ລາຍງານToolStripMenuItem,
-            this.ອອກຈາກລະບບToolStripMenuItem});
+            this.crToolStripTextBox1,
+            this.crToolStripTextBox2});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1201, 44);
+            this.menuStrip1.Size = new System.Drawing.Size(1201, 47);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -88,8 +91,9 @@
             this.ລງທະບຽນToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ລງທະບຽນToolStripMenuItem1,
             this.ຊຳລະຄາຫToolStripMenuItem});
+            this.ລງທະບຽນToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ລງທະບຽນToolStripMenuItem.Image")));
             this.ລງທະບຽນToolStripMenuItem.Name = "ລງທະບຽນToolStripMenuItem";
-            this.ລງທະບຽນToolStripMenuItem.Size = new System.Drawing.Size(258, 40);
+            this.ລງທະບຽນToolStripMenuItem.Size = new System.Drawing.Size(278, 43);
             this.ລງທະບຽນToolStripMenuItem.Text = "ລົງທະບຽນ ແລະ ຊຳລະຄ່າຫໍ";
             this.ລງທະບຽນToolStripMenuItem.Click += new System.EventHandler(this.ລງທະບຽນToolStripMenuItem_Click);
             // 
@@ -114,8 +118,9 @@
             this.ຈດການຂມນຕກToolStripMenuItem,
             this.ຈດການຂມນປະເພດຫອງToolStripMenuItem,
             this.ຈດການຂມນຊນToolStripMenuItem});
+            this.ຈດການຂມນToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ຈດການຂມນToolStripMenuItem.Image")));
             this.ຈດການຂມນToolStripMenuItem.Name = "ຈດການຂມນToolStripMenuItem";
-            this.ຈດການຂມນToolStripMenuItem.Size = new System.Drawing.Size(129, 40);
+            this.ຈດການຂມນToolStripMenuItem.Size = new System.Drawing.Size(149, 43);
             this.ຈດການຂມນToolStripMenuItem.Text = "ຈັດການຂໍ້ມູນ";
             // 
             // ຈດການຂມນນກສກສາToolStripMenuItem
@@ -160,8 +165,10 @@
             this.ການເຂາພກຂອງນກສກສາToolStripMenuItem,
             this.ລາຍງານການຊຳລະຄາຫToolStripMenuItem,
             this.ລາຍງານວນໝດອາຍພກToolStripMenuItem});
+            this.ລາຍງານToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ລາຍງານToolStripMenuItem.Image")));
+            this.ລາຍງານToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Yellow;
             this.ລາຍງານToolStripMenuItem.Name = "ລາຍງານToolStripMenuItem";
-            this.ລາຍງານToolStripMenuItem.Size = new System.Drawing.Size(100, 40);
+            this.ລາຍງານToolStripMenuItem.Size = new System.Drawing.Size(120, 43);
             this.ລາຍງານToolStripMenuItem.Text = "ລາຍງານ";
             // 
             // ການເຂາພກຂອງນກສກສາToolStripMenuItem
@@ -183,25 +190,49 @@
             this.ລາຍງານວນໝດອາຍພກToolStripMenuItem.Text = "ລາຍງານວັນໝົດອາຍຸພັກ";
             this.ລາຍງານວນໝດອາຍພກToolStripMenuItem.Click += new System.EventHandler(this.ລາຍງານວນໝດອາຍພກToolStripMenuItem_Click);
             // 
-            // ອອກຈາກລະບບToolStripMenuItem
+            // crToolStripTextBox1
             // 
-            this.ອອກຈາກລະບບToolStripMenuItem.Name = "ອອກຈາກລະບບToolStripMenuItem";
-            this.ອອກຈາກລະບບToolStripMenuItem.Size = new System.Drawing.Size(156, 40);
-            this.ອອກຈາກລະບບToolStripMenuItem.Text = "ອອກຈາກລະບົບ";
+            this.crToolStripTextBox1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.crToolStripTextBox1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.crToolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.crToolStripTextBox1.ForeColor = System.Drawing.Color.Red;
+            this.crToolStripTextBox1.Name = "crToolStripTextBox1";
+            this.crToolStripTextBox1.Size = new System.Drawing.Size(25, 43);
+            this.crToolStripTextBox1.Text = "X";
+            this.crToolStripTextBox1.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.crToolStripTextBox1.Click += new System.EventHandler(this.crToolStripTextBox1_Click);
+            // 
+            // crToolStripTextBox2
+            // 
+            this.crToolStripTextBox2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.crToolStripTextBox2.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.crToolStripTextBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.crToolStripTextBox2.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.crToolStripTextBox2.Name = "crToolStripTextBox2";
+            this.crToolStripTextBox2.Size = new System.Drawing.Size(25, 43);
+            this.crToolStripTextBox2.Text = "-";
+            this.crToolStripTextBox2.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.crToolStripTextBox2.Click += new System.EventHandler(this.crToolStripTextBox2_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1201, 702);
+            this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-            this.MainMenuStrip = this.menuStrip1;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dormitory";
+            this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
@@ -229,7 +260,8 @@
         private System.Windows.Forms.ToolStripMenuItem ຈດການຂມນຕກToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ຈດການຂມນປະເພດຫອງToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ຈດການຂມນຊນToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ອອກຈາກລະບບToolStripMenuItem;
+        private CrystalDecisions.Windows.Forms.CRToolStripTextBox crToolStripTextBox1;
+        private CrystalDecisions.Windows.Forms.CRToolStripTextBox crToolStripTextBox2;
     }
 }
 

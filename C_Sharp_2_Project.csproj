@@ -61,6 +61,11 @@
       <DependentUpon>checkroom.cs</DependentUpon>
     </Compile>
     <Compile Include="Connect.cs" />
+    <Compile Include="dbDormitoryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbDormitoryDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="employee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +97,18 @@
     </Compile>
     <Compile Include="Addstudent.Designer.cs">
       <DependentUpon>Addstudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportstudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportstudent.Designer.cs">
+      <DependentUpon>Reportstudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="studentreport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>studentreport.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="study.cs">
       <SubType>Form</SubType>
@@ -156,6 +173,13 @@
     <EmbeddedResource Include="Addstudent.resx">
       <DependentUpon>Addstudent.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportstudent.resx">
+      <DependentUpon>Reportstudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="studentreport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>studentreport.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="study.resx">
       <DependentUpon>study.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,6 +198,17 @@
     <EmbeddedResource Include="ບັດຫໍພັກ.resx">
       <DependentUpon>ບັດຫໍພັກ.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="dbDormitoryDataSet.xsc">
+      <DependentUpon>dbDormitoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbDormitoryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbDormitoryDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbDormitoryDataSet.xss">
+      <DependentUpon>dbDormitoryDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -299,6 +334,9 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

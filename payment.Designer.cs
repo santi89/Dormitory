@@ -172,13 +172,14 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(980, 620);
+            this.button3.Location = new System.Drawing.Point(969, 620);
             this.button3.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(178, 52);
             this.button3.TabIndex = 1;
             this.button3.Text = "ກັບໜ້າເພີມ";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label5
             // 

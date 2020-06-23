@@ -417,5 +417,15 @@ namespace C_Sharp_2_Project
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void txtdateend_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtdatestart_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

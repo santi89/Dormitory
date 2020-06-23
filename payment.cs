@@ -35,7 +35,7 @@ namespace C_Sharp_2_Project
         {
             try
             {
- sql = "select * from tbroom inner join tbfloor on tbfloor.floorID=tbfloor.floorID where floornumber=N'" + cbfloor.SelectedItem + "' and Student_amount<4 ";
+            sql = "select * from tbroom inner join tbfloor on tbfloor.floorID=tbfloor.floorID where floornumber=N'" + cbfloor.SelectedItem + "' and Student_amount<4 ";
             cmd = new SqlCommand(sql, con);
             dr = cmd.ExecuteReader();
                 while (dr.Read())
@@ -46,7 +46,7 @@ namespace C_Sharp_2_Project
             }
             catch (Exception ex)
             {
-                throw;
+                MessageBox.Show(ex.Message);
             }         
         }
        public void flocombo()
@@ -64,9 +64,10 @@ namespace C_Sharp_2_Project
             }
             catch (Exception ex)
             {
-                throw;
+                MessageBox.Show(ex.Message);
+
             }
-            
+
         }
         private void troomcombo()
         {
@@ -79,16 +80,14 @@ namespace C_Sharp_2_Project
                
                 while (dr.Read())
                 {
-                    cbtroom.Items.Add(dr.GetString(1));
-                    
+                    cbtroom.Items.Add(dr.GetString(1));    
                 }
                 dr.Close();
                 
             }
             catch (Exception ex)
             {
-
-                throw;
+                MessageBox.Show(ex.Message);
             }
         }
         private void builcombo()
@@ -259,7 +258,7 @@ namespace C_Sharp_2_Project
             {
                 if (rbnewadd .Checked ==true)
                 {
-                sql = "select studentID,name,surname,gender,schoolname,facname,deptname from tbstudent inner join tbschool on tbschool.schoolID=tbstudent.schoolID inner join tbfaculty on tbfaculty.facID=tbstudent.facID inner join tbdepartment on tbdepartment.deptID=tbstudent.deptID  ";
+                sql = "select studentID,name,surname,gender,schoolname,facname,deptname from tbstudent inner join tbschool on tbschool.schoolID=tbstudent.schoolID inner join tbfaculty on tbfaculty.facID=tbstudent.facID inner join tbdepartment on tbdepartment.deptID=tbstudent.deptID where startdate ";
             cmd = new SqlCommand(sql, con);
             da = new SqlDataAdapter(cmd);
             da.Fill(ds, "student");
@@ -337,6 +336,13 @@ namespace C_Sharp_2_Project
         private void cbroom_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Addstudent ads = new Addstudent();
+            ads.Show();
+            this.Hide();
         }
     }
 }
