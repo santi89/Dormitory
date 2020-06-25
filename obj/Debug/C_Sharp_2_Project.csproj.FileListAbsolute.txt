@@ -51,3 +51,4 @@ E:\work\C_Sharp_2_Project\C_Sharp_2_Project\obj\Debug\C_Sharp_2_Project.ຂໍ�
 E:\work\C_Sharp_2_Project\C_Sharp_2_Project\bin\Debug\Microsoft.Build.Framework.dll
 E:\work\C_Sharp_2_Project\C_Sharp_2_Project\obj\Debug\C_Sharp_2_Project.Addstudent.resources
 E:\work\C_Sharp_2_Project\C_Sharp_2_Project\obj\Debug\C_Sharp_2_Project.ບັດຫໍພັກ.resources
+E:\work\C_Sharp_2_Project\C_Sharp_2_Project\obj\Debug\C_Sharp_2_Project.Reportstudent.resources

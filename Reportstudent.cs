@@ -16,5 +16,10 @@ namespace C_Sharp_2_Project
         {
             InitializeComponent();
         }
+
+        private void crystalReportViewer1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -101,7 +101,7 @@
             this.txtdateTime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.txtdateTime.Location = new System.Drawing.Point(158, 345);
             this.txtdateTime.Name = "txtdateTime";
-            this.txtdateTime.Size = new System.Drawing.Size(213, 42);
+            this.txtdateTime.Size = new System.Drawing.Size(213, 35);
             this.txtdateTime.TabIndex = 41;
             // 
             // btsearch
@@ -149,7 +149,7 @@
             this.rbfemale.AutoSize = true;
             this.rbfemale.Location = new System.Drawing.Point(309, 281);
             this.rbfemale.Name = "rbfemale";
-            this.rbfemale.Size = new System.Drawing.Size(61, 40);
+            this.rbfemale.Size = new System.Drawing.Size(49, 33);
             this.rbfemale.TabIndex = 38;
             this.rbfemale.TabStop = true;
             this.rbfemale.Text = "ຍິງ";
@@ -161,7 +161,7 @@
             this.rbmale.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.rbmale.Location = new System.Drawing.Point(165, 283);
             this.rbmale.Name = "rbmale";
-            this.rbmale.Size = new System.Drawing.Size(73, 40);
+            this.rbmale.Size = new System.Drawing.Size(59, 33);
             this.rbmale.TabIndex = 39;
             this.rbmale.TabStop = true;
             this.rbmale.Text = "ຊາຍ";
@@ -206,7 +206,7 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(98, 469);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(61, 36);
+            this.label9.Size = new System.Drawing.Size(49, 29);
             this.label9.TabIndex = 2;
             this.label9.Text = "ເບີໂທ";
             // 
@@ -215,7 +215,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(99, 528);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 36);
+            this.label6.Size = new System.Drawing.Size(49, 29);
             this.label6.TabIndex = 2;
             this.label6.Text = "ອີເມວ";
             // 
@@ -224,7 +224,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(116, 409);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 36);
+            this.label3.Size = new System.Drawing.Size(34, 29);
             this.label3.TabIndex = 2;
             this.label3.Text = "ທີຢູ່";
             // 
@@ -241,7 +241,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(26, 350);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(133, 36);
+            this.label8.Size = new System.Drawing.Size(105, 29);
             this.label8.TabIndex = 3;
             this.label8.Text = "ວັນເດືອນປີເກີດ";
             // 
@@ -250,7 +250,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(109, 283);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 36);
+            this.label5.Size = new System.Drawing.Size(39, 29);
             this.label5.TabIndex = 3;
             this.label5.Text = "ເພດ";
             // 
@@ -259,7 +259,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(8, 106);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(151, 36);
+            this.label2.Size = new System.Drawing.Size(117, 29);
             this.label2.TabIndex = 3;
             this.label2.Text = "ລະຫັດເຂົ້າລະບົບ";
             // 
@@ -276,7 +276,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(57, 227);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(102, 36);
+            this.label7.Size = new System.Drawing.Size(80, 29);
             this.label7.TabIndex = 4;
             this.label7.Text = "ນາມສະກຸນ";
             // 
@@ -293,7 +293,7 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(443, 100);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(66, 36);
+            this.label10.Size = new System.Drawing.Size(53, 29);
             this.label10.TabIndex = 4;
             this.label10.Text = "ຄົ້ນຫາ";
             // 
@@ -302,7 +302,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(131, 172);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(28, 36);
+            this.label4.Size = new System.Drawing.Size(23, 29);
             this.label4.TabIndex = 4;
             this.label4.Text = "ຊື່";
             // 
@@ -328,19 +328,22 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(4, 48);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(155, 36);
+            this.label1.Size = new System.Drawing.Size(119, 29);
             this.label1.TabIndex = 4;
             this.label1.Text = "ລະຫັດພະນັກງານ";
             // 
             // employee
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 36F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1421, 642);
+            this.ClientSize = new System.Drawing.Size(1406, 623);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Saysettha OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
+            this.MaximumSize = new System.Drawing.Size(1422, 662);
+            this.MinimumSize = new System.Drawing.Size(1422, 662);
             this.Name = "employee";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "employee";
             this.Load += new System.EventHandler(this.employee_Load);
             this.groupBox1.ResumeLayout(false);

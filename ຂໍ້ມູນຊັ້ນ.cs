@@ -115,10 +115,10 @@ namespace C_Sharp_2_Project
         {
             try
             {
-        sql = "insert into tbfloor values(@floorID,@floornum,@build)";
-            cmd = new SqlCommand(sql, con);
+        sql = "insert into tbfloor values(@floornum,@build)";//@floorID,
+                cmd = new SqlCommand(sql, con);
             cmd.Parameters.Clear();
-            cmd.Parameters.AddWithValue("@floorID", txtfloorid.Text);
+          //  cmd.Parameters.AddWithValue("@floorID", txtfloorid.Text);
             cmd.Parameters.AddWithValue("@floornum", txtfloornum.Text);
             cmd.Parameters.AddWithValue("@build", cbbuilding .SelectedIndex+1);
             cmd.ExecuteNonQuery();
@@ -184,6 +184,39 @@ namespace C_Sharp_2_Project
         private void button1_Click(object sender, EventArgs e)
         {
             clrtext();
+        }
+
+        private void txtsearch_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                sql = "select * from tbfloor where floorID like '%" + txtsearch.Text + "' or floornumber LIKE '%"+txtsearch .Text +"'";
+                da = new SqlDataAdapter(sql, con);
+                da.Fill(ds, "flo");
+                if (ds.Tables["flo"] != null) ds.Tables.Clear();                
+                 da.Fill(ds, "flo");
+                dgvfloor.DataSource = ds.Tables["flo"];
+                dgvfloor.Columns[0].HeaderText = "ລະຫັດຊັ້ນ";
+                dgvfloor.Columns[1].HeaderText = "ເບີຊັ້ນ";
+                dgvfloor.Columns[2].HeaderText = "ເບີຕຶກ";
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void cbbuilding_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtfloornum.Text = cbbuilding.Text;
+            txtfloornum.Focus();
+        }
+
+        private void txtfloornum_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
