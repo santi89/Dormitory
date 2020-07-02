@@ -191,6 +191,20 @@ namespace C_Sharp_2_Project
                 }
                 da.Fill (ds, "emp");
                 dgvemp.DataSource = ds.Tables["emp"];
+                dgvemp.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dgvemp.Columns[0].HeaderText = "ລະຫັດພະນັກງານ";
+                dgvemp.Columns[1].HeaderText = "ລະຫັດເຂົ້າລະບົບ";
+                dgvemp.Columns[2].HeaderText = "ຊື່";
+                dgvemp.Columns[3].HeaderText = "ນາມສະກຸນ";
+                dgvemp.Columns[4].HeaderText = "ເພດ";
+                dgvemp.Columns[5].HeaderText = "ວັນເດືອນປີເກີດ";
+                dgvemp.Columns[6].HeaderText = "ທີຢູ່";
+                dgvemp.Columns[7].HeaderText = "ເບີໂທ";
+                dgvemp.Columns[8].HeaderText = "ອີເມວ";
+                dgvemp.Columns[0].Width = 120;
+                dgvemp.Columns[1].Width = 120;
+                dgvemp.Columns[4].Width = 80;
+                dgvemp.Columns[5].Width = 120;
             }
            
            

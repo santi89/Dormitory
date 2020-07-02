@@ -121,6 +121,8 @@ namespace C_Sharp_2_Project
         {
             try
             {
+                date2 = Form1.date1;
+                
                 if (txtstid .Text ==null && txtstname .Text ==null && txtstsurname.Text ==null && txtvillage .Text==null && txtdistrict .Text ==null && cbprovince .SelectedItem ==null && txtemail .Text ==null && txttel .Text ==null && txtyearstudy .Text ==null && txtemername .Text ==null && txtemersurname .Text ==null && txtemerage.Text ==null && txtemervillage.Text ==null && txtemerdistrict.Text ==null && txtemerjob .Text ==null && txtemertel.Text ==null &&txtemerrelationship .Text ==null)
                 {
                     return;
@@ -187,7 +189,44 @@ namespace C_Sharp_2_Project
 
         private void btsearch_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(""+schoID);
+            
+             try
+             {
+                 if (txtsearch.Text == "")
+                 {
+                     showstudent();
+                 }
+                 else
+                 {
+                     sql = "SELECT studentID,name,surname,gender,birthofdate,village,district,province,email,phone,schoolname,facname,deptname,session,emgcname,emgcsurname,emgcage,emgcvillage,emgcdistrict,emgcprovince,emgcjob,emgctel,relationship,picture FROM tbstudent inner join tbschool on tbstudent.schoolID=tbschool.schoolID inner join tbfaculty  on tbfaculty.facID=tbstudent.facID inner join tbdepartment on tbstudent.deptID=tbdepartment.deptID where studentID like '%" + txtsearch.Text + "%' or name like '%" + txtsearch.Text + "%'";
+                     cmd = new SqlCommand(sql, con);
+                     da = new SqlDataAdapter(cmd);
+                     da.Fill(ds, "student");
+                     if (ds.Tables["student"] != null)
+                     {
+                         ds.Tables.Clear();
+                         da.Fill(ds, "student");
+                         dgvregister.DataSource = ds.Tables["student"];
+                     }
+                     dr = cmd.ExecuteReader();
+                     while (dr.Read())
+                     {
+                         auto.Add(dr["studentID"].ToString());
+                         auto.Add(dr["name"].ToString());
+
+                     }
+                     dr.Close();
+                     txtsearch.AutoCompleteCustomSource = auto;
+                     txtsearch.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                     txtsearch.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                 }
+
+             }
+             catch (Exception ex)
+             {
+
+                 MessageBox.Show(ex.Message);
+             }
         }
         string path = "";
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -254,14 +293,15 @@ namespace C_Sharp_2_Project
             //dr.Close();
 
         }
-
+        string date2;
         private void register_Load(object sender, EventArgs e)
         {
+            
             depcombo();
             showconoboxschool();
             showstudent();
             faccombo ();
-
+            
         }
 
         private void cbschool_SelectedIndexChanged(object sender, EventArgs e)

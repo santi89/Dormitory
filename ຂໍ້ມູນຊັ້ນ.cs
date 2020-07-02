@@ -212,6 +212,7 @@ namespace C_Sharp_2_Project
         {
             txtfloornum.Text = cbbuilding.Text;
             txtfloornum.Focus();
+            txtfloornum.Select(txtfloornum.Text.Length, 0);
         }
 
         private void txtfloornum_TextChanged(object sender, EventArgs e)

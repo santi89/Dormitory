@@ -328,6 +328,7 @@
             this.rbcontinues.TabStop = true;
             this.rbcontinues.Text = "ຕໍ່ບັດ";
             this.rbcontinues.UseVisualStyleBackColor = false;
+            this.rbcontinues.CheckedChanged += new System.EventHandler(this.rbcontinues_CheckedChanged);
             // 
             // cbtroom
             // 

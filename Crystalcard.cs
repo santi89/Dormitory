@@ -16,14 +16,14 @@ namespace C_Sharp_2_Project {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class studentreport : ReportClass {
+    public class Crystalcard : ReportClass {
         
-        public studentreport() {
+        public Crystalcard() {
         }
         
         public override string ResourceName {
             get {
-                return "studentreport.rpt";
+                return "Crystalcard.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace C_Sharp_2_Project {
         
         public override string FullResourceName {
             get {
-                return "C_Sharp_2_Project.studentreport.rpt";
+                return "C_Sharp_2_Project.Crystalcard.rpt";
             }
             set {
                 // Do nothing
@@ -90,7 +90,7 @@ namespace C_Sharp_2_Project {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_date {
+        public CrystalDecisions.Shared.IParameterField Parameter_id {
             get {
                 return this.DataDefinition.ParameterFields[0];
             }
@@ -98,9 +98,9 @@ namespace C_Sharp_2_Project {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class Cachedstudentreport : Component, ICachedReport {
+    public class CachedCrystalcard : Component, ICachedReport {
         
-        public Cachedstudentreport() {
+        public CachedCrystalcard() {
         }
         
         [Browsable(false)]
@@ -137,7 +137,7 @@ namespace C_Sharp_2_Project {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            studentreport rpt = new studentreport();
+            Crystalcard rpt = new Crystalcard();
             rpt.Site = this.Site;
             return rpt;
         }

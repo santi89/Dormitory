@@ -12,9 +12,11 @@ namespace C_Sharp_2_Project
 {
     public partial class Form1 : Form
     {
+        public static string date1;
         public Form1()
         {
             InitializeComponent();
+           
         }
 
         private void ການຊຳລະຕາຫToolStripMenuItem_Click(object sender, EventArgs e)
@@ -34,7 +36,14 @@ namespace C_Sharp_2_Project
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           
+                
+            if ("admin"==Formlogin.user1  && "admin"== Formlogin.pass1)
+            {
+            empmanage.Enabled = true;
+            }
+            MessageBox.Show(Formlogin.user + Formlogin.pass);
+
+            
             toolStripLabel1.Text = System.DateTime.Now.ToString();
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
@@ -79,6 +88,7 @@ namespace C_Sharp_2_Project
         private void ລງທະບຽນແລະຊຳລະຄາຫToolStripMenuItem_Click(object sender, EventArgs e)
         {
             showform_in_panel(new Addstudent());
+            date1 = toolStripLabel1.Text;
         }
 
         private void crToolStripTextBox1_Click_1(object sender, EventArgs e)
@@ -95,11 +105,11 @@ namespace C_Sharp_2_Project
             this.panel_show.Tag = f;
             f.Show();
         }
-
+        
         private void ຊຳລະຄາຫToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            showform_in_panel(new payment());
            
+            showform_in_panel(new payment());
             
         }
 
@@ -135,6 +145,28 @@ namespace C_Sharp_2_Project
         {
             showform_in_panel(new study());
 
+        }
+
+        private void ລາຍງານນກສກສາເຂາພກToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            showform_in_panel(new Reportstudent());
+        }
+
+        private void ອອກຈາລະບບToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Formlogin lo = new Formlogin();
+            this.Hide ();
+            lo.ShowDialog();
+            
+            
+            
+        }
+
+        private void ຈດການຂມນພະນກງານToolStripMenuItem_Click(object sender, EventArgs e)
+            
+        {
+           
+            showform_in_panel(new employee());
         }
     }
 }

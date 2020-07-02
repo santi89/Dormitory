@@ -9,11 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data.Sql;
+using CrystalDecisions.CrystalReports.Engine;
 
 namespace C_Sharp_2_Project
 {
     public partial class payment : Form
     {
+        cardID cd = new cardID();
         SqlConnection con = Connect.getconnect();
         SqlCommand cmd;
         SqlDataAdapter da;
@@ -172,6 +174,7 @@ namespace C_Sharp_2_Project
                     if (cmd.ExecuteNonQuery() == 1)
                     {
                         MessageBox.Show("ສຳເລັດ");
+                        cd.ids = txtid.Text;                                          
                     }
                     
 
@@ -343,6 +346,11 @@ namespace C_Sharp_2_Project
             Addstudent ads = new Addstudent();
             ads.Show();
             this.Hide();
+        }
+
+        private void rbcontinues_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
