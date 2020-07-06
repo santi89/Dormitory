@@ -82,7 +82,18 @@ namespace C_Sharp_2_Project
         }
         }
 
-      
+      void clrtext()
+        {
+            txtroomid.Clear();
+            txtroomnum.Clear();
+            cbfloor.SelectedIndex =-1;
+            cbfloor. ResetText ();
+            cbroomtype.SelectedIndex = -1;
+            cbroomtype.ResetText();
+            txtstamount.Clear();
+            txtroomid.Focus();
+        }
+           
        
         public void comfloor()
         {
@@ -102,21 +113,20 @@ namespace C_Sharp_2_Project
         {
             try
             { 
-                sql = "insert into tbroom values(@roomID,@roomnum,@rtype,@flo,@stamount)";
+                sql = "insert into tbroom values(@roomID,@roomnum,@rtype,(select floorID from tbfloor where floornumber=@flo),@stamount)";
             cmd = new SqlCommand(sql, con);
             cmd.Parameters.Clear();
             cmd.Parameters.AddWithValue("@roomID",txtroomid .Text );
             cmd.Parameters.AddWithValue("@roomnum",txtroomnum.Text);
             cmd.Parameters.AddWithValue("@rtype",cbroomtype .SelectedIndex+1);
-            cmd.Parameters.AddWithValue("@flo",cbfloor.SelectedIndex+1);
+            cmd.Parameters.AddWithValue("@flo",cbfloor .SelectedItem);
             //cmd.Parameters.AddWithValue("@bui",cbbuildID .SelectedIndex +1);         
             cmd.Parameters.AddWithValue("@stamount",txtstamount .Text );
             cmd.ExecuteNonQuery();
             showdata();
-                comtype();
-               
+                comtype();               
                 comfloor();
-
+                clrtext();
 
             }
             catch (Exception ex)
@@ -131,12 +141,12 @@ namespace C_Sharp_2_Project
         {
             try
             {
-                sql = "update tbroom set room_number=@rnum,roomtypeID=@type,floorID=@floid,Student_amount=@stamount where roomID=@rID";
+                sql = "update tbroom set room_number=@rnum,roomtypeID=@type,floorID=(select floorID from tbfloor where floornumber=@floid),Student_amount=@stamount where roomID=@rID";
                 cmd = new SqlCommand(sql, con);
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@rnum",txtroomnum .Text);
                 cmd.Parameters.AddWithValue("@type",cbroomtype .SelectedIndex+1);
-                cmd.Parameters.AddWithValue("@floid",cbfloor .SelectedIndex+1);
+                cmd.Parameters.AddWithValue("@floid",cbfloor .SelectedItem);
               //  cmd.Parameters.AddWithValue("@buid",cbbuildID .SelectedIndex+1);
                
                 cmd.Parameters.AddWithValue("@stamount",txtstamount .Text );
@@ -145,7 +155,7 @@ namespace C_Sharp_2_Project
                 showdata();             
                 comtype();
                 comfloor();
-
+                clrtext();
 
             }
             catch (Exception ex)
@@ -168,6 +178,7 @@ namespace C_Sharp_2_Project
                 comtype();
                
                 comfloor();
+                clrtext();
 
             }
             catch (Exception ex)
@@ -201,6 +212,12 @@ namespace C_Sharp_2_Project
                 }
                 da.Fill(ds, "room");
                 dgvroom.DataSource = ds.Tables["room"];
+                for (int i = 0; i < strtitle.Length; i++)
+                {
+                    dgvroom.Columns[i].HeaderText = strtitle[i];
+                    // dgvroom.Columns[i].Width = siz[i];
+                }
+                dgvroom.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             }
             catch (Exception ex)
@@ -232,6 +249,31 @@ namespace C_Sharp_2_Project
 
                 MessageBox.Show(ex.Message.ToString());
             }
+        }
+
+        private void cbroomtype_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            sql = "select floornumber from tbfloor where buildingID in (select buildingID from tbbuilding inner join tbroomtype on tbbuilding.roomtypeID=tbroomtype.roomtypeID where typename=N'" + cbroomtype .SelectedItem +"')";
+            cmd = new SqlCommand(sql, con);
+            cbfloor.Items.Clear();
+            reader = cmd.ExecuteReader();
+                while(reader .Read())
+            {
+                cbfloor.Items.Add(reader.GetString(0));
+            }
+            reader.Close();
+        }
+
+        private void cbfloor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtroomnum.Text = cbfloor.Text;
+            txtroomnum.Focus();
+            txtroomnum.Select(txtroomnum.Text.Length, 0);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            clrtext();
         }
     }
 }

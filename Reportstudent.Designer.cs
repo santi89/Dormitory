@@ -37,11 +37,12 @@
             // 
             // crystalReportViewer1
             // 
-            this.crystalReportViewer1.ActiveViewIndex = -1;
+            this.crystalReportViewer1.ActiveViewIndex = 0;
             this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
             this.crystalReportViewer1.Location = new System.Drawing.Point(1, 72);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
+            this.crystalReportViewer1.ReportSource = this.studentreport1;
             this.crystalReportViewer1.Size = new System.Drawing.Size(1604, 762);
             this.crystalReportViewer1.TabIndex = 0;
             this.crystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
@@ -66,8 +67,8 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.IndianRed;
-            this.button1.Location = new System.Drawing.Point(796, 12);
+            this.button1.BackColor = System.Drawing.Color.Teal;
+            this.button1.Location = new System.Drawing.Point(792, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(89, 44);
             this.button1.TabIndex = 4;
@@ -89,6 +90,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.Name = "Reportstudent";
             this.Text = "Reportstudent";
+            this.Load += new System.EventHandler(this.Reportstudent_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

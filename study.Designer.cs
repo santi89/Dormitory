@@ -133,7 +133,6 @@
             // txtfacID
             // 
             this.txtfacID.Location = new System.Drawing.Point(155, 56);
-            this.txtfacID.Multiline = true;
             this.txtfacID.Name = "txtfacID";
             this.txtfacID.Size = new System.Drawing.Size(204, 42);
             this.txtfacID.TabIndex = 18;
@@ -188,7 +187,6 @@
             // txtfacname
             // 
             this.txtfacname.Location = new System.Drawing.Point(155, 110);
-            this.txtfacname.Multiline = true;
             this.txtfacname.Name = "txtfacname";
             this.txtfacname.Size = new System.Drawing.Size(204, 42);
             this.txtfacname.TabIndex = 20;
@@ -196,7 +194,6 @@
             // txtdepname
             // 
             this.txtdepname.Location = new System.Drawing.Point(141, 94);
-            this.txtdepname.Multiline = true;
             this.txtdepname.Name = "txtdepname";
             this.txtdepname.Size = new System.Drawing.Size(204, 42);
             this.txtdepname.TabIndex = 20;
@@ -264,7 +261,6 @@
             // txtdepID
             // 
             this.txtdepID.Location = new System.Drawing.Point(141, 44);
-            this.txtdepID.Multiline = true;
             this.txtdepID.Name = "txtdepID";
             this.txtdepID.Size = new System.Drawing.Size(204, 42);
             this.txtdepID.TabIndex = 18;
@@ -371,7 +367,6 @@
             // txtschoolID
             // 
             this.txtschoolID.Location = new System.Drawing.Point(176, 44);
-            this.txtschoolID.Multiline = true;
             this.txtschoolID.Name = "txtschoolID";
             this.txtschoolID.Size = new System.Drawing.Size(169, 42);
             this.txtschoolID.TabIndex = 18;
@@ -407,7 +402,6 @@
             // txtnameschool
             // 
             this.txtnameschool.Location = new System.Drawing.Point(176, 101);
-            this.txtnameschool.Multiline = true;
             this.txtnameschool.Name = "txtnameschool";
             this.txtnameschool.Size = new System.Drawing.Size(169, 42);
             this.txtnameschool.TabIndex = 20;

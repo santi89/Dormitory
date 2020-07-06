@@ -47,5 +47,10 @@ namespace C_Sharp_2_Project
             crystalReportViewer1.ReportSource = rpt;
             crystalReportViewer1.Refresh();
         }
+
+        private void Reportstudent_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

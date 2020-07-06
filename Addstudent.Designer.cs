@@ -191,9 +191,8 @@
             // 
             this.txtfilename.Enabled = false;
             this.txtfilename.Location = new System.Drawing.Point(24, 233);
-            this.txtfilename.Multiline = true;
             this.txtfilename.Name = "txtfilename";
-            this.txtfilename.Size = new System.Drawing.Size(168, 38);
+            this.txtfilename.Size = new System.Drawing.Size(168, 42);
             this.txtfilename.TabIndex = 38;
             // 
             // rbfemale
@@ -231,9 +230,8 @@
             // txtemail
             // 
             this.txtemail.Location = new System.Drawing.Point(214, 441);
-            this.txtemail.Multiline = true;
             this.txtemail.Name = "txtemail";
-            this.txtemail.Size = new System.Drawing.Size(220, 36);
+            this.txtemail.Size = new System.Drawing.Size(220, 42);
             this.txtemail.TabIndex = 24;
             // 
             // pictureBox1
@@ -268,17 +266,15 @@
             // txtdistrict
             // 
             this.txtdistrict.Location = new System.Drawing.Point(214, 284);
-            this.txtdistrict.Multiline = true;
             this.txtdistrict.Name = "txtdistrict";
-            this.txtdistrict.Size = new System.Drawing.Size(220, 37);
+            this.txtdistrict.Size = new System.Drawing.Size(220, 42);
             this.txtdistrict.TabIndex = 20;
             // 
             // txttel
             // 
             this.txttel.Location = new System.Drawing.Point(458, 106);
-            this.txttel.Multiline = true;
             this.txttel.Name = "txttel";
-            this.txttel.Size = new System.Drawing.Size(220, 41);
+            this.txttel.Size = new System.Drawing.Size(220, 42);
             this.txttel.TabIndex = 26;
             // 
             // label23
@@ -311,17 +307,15 @@
             // txtvillage
             // 
             this.txtvillage.Location = new System.Drawing.Point(214, 198);
-            this.txtvillage.Multiline = true;
             this.txtvillage.Name = "txtvillage";
-            this.txtvillage.Size = new System.Drawing.Size(220, 35);
+            this.txtvillage.Size = new System.Drawing.Size(220, 42);
             this.txtvillage.TabIndex = 18;
             // 
             // txtyearstudy
             // 
             this.txtyearstudy.Location = new System.Drawing.Point(454, 441);
-            this.txtyearstudy.Multiline = true;
             this.txtyearstudy.Name = "txtyearstudy";
-            this.txtyearstudy.Size = new System.Drawing.Size(224, 39);
+            this.txtyearstudy.Size = new System.Drawing.Size(224, 42);
             this.txtyearstudy.TabIndex = 30;
             // 
             // label11
@@ -380,10 +374,9 @@
             // 
             // txtstsurname
             // 
-            this.txtstsurname.Location = new System.Drawing.Point(24, 463);
-            this.txtstsurname.Multiline = true;
+            this.txtstsurname.Location = new System.Drawing.Point(23, 458);
             this.txtstsurname.Name = "txtstsurname";
-            this.txtstsurname.Size = new System.Drawing.Size(169, 34);
+            this.txtstsurname.Size = new System.Drawing.Size(169, 42);
             this.txtstsurname.TabIndex = 1;
             // 
             // label3
@@ -398,9 +391,8 @@
             // txtstname
             // 
             this.txtstname.Location = new System.Drawing.Point(23, 384);
-            this.txtstname.Multiline = true;
             this.txtstname.Name = "txtstname";
-            this.txtstname.Size = new System.Drawing.Size(169, 37);
+            this.txtstname.Size = new System.Drawing.Size(169, 42);
             this.txtstname.TabIndex = 1;
             // 
             // label27
@@ -415,7 +407,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 349);
+            this.label2.Location = new System.Drawing.Point(23, 353);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(28, 36);
             this.label2.TabIndex = 0;
@@ -424,9 +416,8 @@
             // txtstid
             // 
             this.txtstid.Location = new System.Drawing.Point(24, 310);
-            this.txtstid.Multiline = true;
             this.txtstid.Name = "txtstid";
-            this.txtstid.Size = new System.Drawing.Size(169, 36);
+            this.txtstid.Size = new System.Drawing.Size(169, 42);
             this.txtstid.TabIndex = 1;
             // 
             // label1
@@ -441,7 +432,6 @@
             // txtemername
             // 
             this.txtemername.Location = new System.Drawing.Point(151, 54);
-            this.txtemername.Multiline = true;
             this.txtemername.Name = "txtemername";
             this.txtemername.Size = new System.Drawing.Size(203, 42);
             this.txtemername.TabIndex = 34;
@@ -467,7 +457,6 @@
             // txtemerdistrict
             // 
             this.txtemerdistrict.Location = new System.Drawing.Point(490, 157);
-            this.txtemerdistrict.Multiline = true;
             this.txtemerdistrict.Name = "txtemerdistrict";
             this.txtemerdistrict.Size = new System.Drawing.Size(190, 42);
             this.txtemerdistrict.TabIndex = 14;
@@ -484,7 +473,6 @@
             // txtemervillage
             // 
             this.txtemervillage.Location = new System.Drawing.Point(490, 104);
-            this.txtemervillage.Multiline = true;
             this.txtemervillage.Name = "txtemervillage";
             this.txtemervillage.Size = new System.Drawing.Size(190, 42);
             this.txtemervillage.TabIndex = 12;
@@ -501,7 +489,6 @@
             // txtemerage
             // 
             this.txtemerage.Location = new System.Drawing.Point(151, 155);
-            this.txtemerage.Multiline = true;
             this.txtemerage.Name = "txtemerage";
             this.txtemerage.Size = new System.Drawing.Size(203, 42);
             this.txtemerage.TabIndex = 10;
@@ -518,7 +505,6 @@
             // txtemersurname
             // 
             this.txtemersurname.Location = new System.Drawing.Point(151, 107);
-            this.txtemersurname.Multiline = true;
             this.txtemersurname.Name = "txtemersurname";
             this.txtemersurname.Size = new System.Drawing.Size(203, 42);
             this.txtemersurname.TabIndex = 6;
@@ -545,7 +531,6 @@
             // txtemerrelationship
             // 
             this.txtemerrelationship.Location = new System.Drawing.Point(490, 52);
-            this.txtemerrelationship.Multiline = true;
             this.txtemerrelationship.Name = "txtemerrelationship";
             this.txtemerrelationship.Size = new System.Drawing.Size(190, 42);
             this.txtemerrelationship.TabIndex = 30;
@@ -562,7 +547,6 @@
             // txtemertel
             // 
             this.txtemertel.Location = new System.Drawing.Point(151, 263);
-            this.txtemertel.Multiline = true;
             this.txtemertel.Name = "txtemertel";
             this.txtemertel.Size = new System.Drawing.Size(203, 42);
             this.txtemertel.TabIndex = 28;
@@ -579,7 +563,6 @@
             // txtemerjob
             // 
             this.txtemerjob.Location = new System.Drawing.Point(151, 206);
-            this.txtemerjob.Multiline = true;
             this.txtemerjob.Name = "txtemerjob";
             this.txtemerjob.Size = new System.Drawing.Size(203, 42);
             this.txtemerjob.TabIndex = 26;

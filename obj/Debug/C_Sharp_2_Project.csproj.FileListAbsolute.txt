@@ -43,13 +43,13 @@ E:\work\C_Sharp_2_Project\C_Sharp_2_Project\obj\Debug\Interop.CrystalReportsRepo
 E:\work\C_Sharp_2_Project\C_Sharp_2_Project\obj\Debug\Interop.VLELib.dll
 E:\work\C_Sharp_2_Project\C_Sharp_2_Project\obj\Debug\C_Sharp_2_Project.csproj.ResolveComReference.cache
 E:\work\C_Sharp_2_Project\C_Sharp_2_Project\obj\Debug\C_Sharp_2_Project.csproj.CopyComplete
-E:\work\C_Sharp_2_Project\C_Sharp_2_Project\obj\Debug\C_Sharp_2_Project.checkroom.resources
 E:\work\C_Sharp_2_Project\C_Sharp_2_Project\obj\Debug\C_Sharp_2_Project.ຂໍ້ມູນຊັ້ນ.resources
 E:\work\C_Sharp_2_Project\C_Sharp_2_Project\obj\Debug\C_Sharp_2_Project.ຂໍ້ມູນຕຶກ.resources
 E:\work\C_Sharp_2_Project\C_Sharp_2_Project\obj\Debug\C_Sharp_2_Project.ຂໍ້ມູນປະເພດຫ້ອງ.resources
 E:\work\C_Sharp_2_Project\C_Sharp_2_Project\obj\Debug\C_Sharp_2_Project.ຂໍ້ມູນຫ້ອງ.resources
 E:\work\C_Sharp_2_Project\C_Sharp_2_Project\bin\Debug\Microsoft.Build.Framework.dll
 E:\work\C_Sharp_2_Project\C_Sharp_2_Project\obj\Debug\C_Sharp_2_Project.Addstudent.resources
-E:\work\C_Sharp_2_Project\C_Sharp_2_Project\obj\Debug\C_Sharp_2_Project.ບັດຫໍພັກ.resources
 E:\work\C_Sharp_2_Project\C_Sharp_2_Project\obj\Debug\C_Sharp_2_Project.Reportstudent.resources
 E:\work\C_Sharp_2_Project\C_Sharp_2_Project\bin\Debug\Guna.UI.dll
+E:\work\C_Sharp_2_Project\C_Sharp_2_Project\obj\Debug\C_Sharp_2_Project.cardID.resources
+E:\work\C_Sharp_2_Project\C_Sharp_2_Project\obj\Debug\C_Sharp_2_Project.exprirestudent.resources

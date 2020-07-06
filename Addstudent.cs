@@ -27,6 +27,8 @@ namespace C_Sharp_2_Project
         SqlDataReader dr;
         AutoCompleteStringCollection auto = new AutoCompleteStringCollection();
 
+        string [] str = {"ລະຫັດນັກສຶກສາ", "ຊື່", "ນາມສະກຸນ", "ເພດ", "ວັນເດືອນປີເກີດ", "ບ້ານ", "ເມືອງ", "ແຂວງ", "ອີເມວ", "ເບີໂທ", "ສະຖາບັນ", "ຄະນະ", "ພາກວິຊາ", "ປີຮຽນ", "ຊື່ຜູ້ຕິດຕໍສຸກເສີນ", "ນາມສະກຸນ", "ອາຍຸ", "ບ້ານ", "ເມືອງ", "ແຂວງ", "ເຮັດວຽກ", "ເບີໂທ", "ສາຍສຳພັນ", "ຮູບຕົນເອງ" };
+
         public void showstudent()
         {
             try
@@ -42,6 +44,11 @@ namespace C_Sharp_2_Project
                 da.Fill(ds, "im");
 
                 dgvregister.DataSource = ds.Tables["im"];
+                for (int i = 0; i < str.Length; i++)
+                {
+                    dgvregister.Columns[i].HeaderText = str[i];
+                    // dgvroom.Columns[i].Width = siz[i];
+                }
             }
             catch (Exception ex)
             {
@@ -448,6 +455,11 @@ namespace C_Sharp_2_Project
                     txtsearch.AutoCompleteCustomSource = auto;
                     txtsearch.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
                     txtsearch.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                    for (int i = 0; i < str.Length; i++)
+                    {
+                        dgvregister.Columns[i].HeaderText = str[i];
+                        // dgvroom.Columns[i].Width = siz[i];
+                    }
                 }
 
             }

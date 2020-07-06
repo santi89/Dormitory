@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.cbroomtype = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.txtsearch = new System.Windows.Forms.TextBox();
@@ -42,7 +43,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtbuildingnum = new System.Windows.Forms.TextBox();
             this.btbsave = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvbuild)).BeginInit();
             this.SuspendLayout();
@@ -72,6 +72,16 @@
             this.groupBox2.TabIndex = 36;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "ຈັດການຂໍ້ມູນຕືກ";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(127, 304);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(93, 50);
+            this.button2.TabIndex = 33;
+            this.button2.Text = "ຍົກເລີກ";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // cbroomtype
             // 
@@ -125,18 +135,17 @@
             // 
             // txtbuildingid
             // 
-            this.txtbuildingid.Location = new System.Drawing.Point(129, 76);
+            this.txtbuildingid.Location = new System.Drawing.Point(127, 65);
             this.txtbuildingid.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
-            this.txtbuildingid.Multiline = true;
             this.txtbuildingid.Name = "txtbuildingid";
-            this.txtbuildingid.Size = new System.Drawing.Size(229, 36);
+            this.txtbuildingid.Size = new System.Drawing.Size(229, 42);
             this.txtbuildingid.TabIndex = 18;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(27, 76);
+            this.label1.Location = new System.Drawing.Point(25, 65);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 36);
@@ -192,9 +201,8 @@
             // 
             this.txtbuildingnum.Location = new System.Drawing.Point(129, 139);
             this.txtbuildingnum.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
-            this.txtbuildingnum.Multiline = true;
             this.txtbuildingnum.Name = "txtbuildingnum";
-            this.txtbuildingnum.Size = new System.Drawing.Size(229, 39);
+            this.txtbuildingnum.Size = new System.Drawing.Size(229, 42);
             this.txtbuildingnum.TabIndex = 20;
             // 
             // btbsave
@@ -208,16 +216,6 @@
             this.btbsave.Text = "ບັນທຶກ";
             this.btbsave.UseVisualStyleBackColor = true;
             this.btbsave.Click += new System.EventHandler(this.btbsave_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(127, 304);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(93, 50);
-            this.button2.TabIndex = 33;
-            this.button2.Text = "ຍົກເລີກ";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // ຂໍ້ມູນຕຶກ
             // 

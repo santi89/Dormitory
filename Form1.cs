@@ -37,11 +37,10 @@ namespace C_Sharp_2_Project
         private void Form1_Load(object sender, EventArgs e)
         {
                 
-            if ("admin"==Formlogin.user1  && "admin"== Formlogin.pass1)
+            if ("admin" == Formlogin.user  && "admin" == Formlogin.pass)
             {
             empmanage.Enabled = true;
-            }
-            MessageBox.Show(Formlogin.user + Formlogin.pass);
+            }           
 
             
             toolStripLabel1.Text = System.DateTime.Now.ToString();
@@ -167,6 +166,11 @@ namespace C_Sharp_2_Project
         {
            
             showform_in_panel(new employee());
+        }
+
+        private void ລາຍງານນກສກສາໝດກຳນດພກເຊາToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -180,7 +180,6 @@
             // txtsurname
             // 
             this.txtsurname.Location = new System.Drawing.Point(163, 221);
-            this.txtsurname.Multiline = true;
             this.txtsurname.Name = "txtsurname";
             this.txtsurname.Size = new System.Drawing.Size(212, 42);
             this.txtsurname.TabIndex = 5;
@@ -188,7 +187,6 @@
             // txtemail
             // 
             this.txtemail.Location = new System.Drawing.Point(158, 522);
-            this.txtemail.Multiline = true;
             this.txtemail.Name = "txtemail";
             this.txtemail.Size = new System.Drawing.Size(212, 42);
             this.txtemail.TabIndex = 5;
@@ -196,7 +194,6 @@
             // txtaddress
             // 
             this.txtaddress.Location = new System.Drawing.Point(158, 412);
-            this.txtaddress.Multiline = true;
             this.txtaddress.Name = "txtaddress";
             this.txtaddress.Size = new System.Drawing.Size(212, 42);
             this.txtaddress.TabIndex = 5;
@@ -231,7 +228,6 @@
             // txtpassword
             // 
             this.txtpassword.Location = new System.Drawing.Point(163, 109);
-            this.txtpassword.Multiline = true;
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.Size = new System.Drawing.Size(212, 42);
             this.txtpassword.TabIndex = 6;
@@ -266,7 +262,6 @@
             // txttel
             // 
             this.txttel.Location = new System.Drawing.Point(158, 466);
-            this.txttel.Multiline = true;
             this.txttel.Name = "txttel";
             this.txttel.Size = new System.Drawing.Size(212, 42);
             this.txttel.TabIndex = 7;
@@ -283,7 +278,6 @@
             // txtname
             // 
             this.txtname.Location = new System.Drawing.Point(163, 166);
-            this.txtname.Multiline = true;
             this.txtname.Name = "txtname";
             this.txtname.Size = new System.Drawing.Size(212, 42);
             this.txtname.TabIndex = 7;
@@ -309,7 +303,6 @@
             // txtsearch
             // 
             this.txtsearch.Location = new System.Drawing.Point(546, 97);
-            this.txtsearch.Multiline = true;
             this.txtsearch.Name = "txtsearch";
             this.txtsearch.Size = new System.Drawing.Size(259, 42);
             this.txtsearch.TabIndex = 7;
@@ -318,7 +311,6 @@
             // txtempID
             // 
             this.txtempID.Location = new System.Drawing.Point(163, 51);
-            this.txtempID.Multiline = true;
             this.txtempID.Name = "txtempID";
             this.txtempID.Size = new System.Drawing.Size(212, 42);
             this.txtempID.TabIndex = 7;

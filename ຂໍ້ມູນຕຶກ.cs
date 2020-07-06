@@ -195,6 +195,10 @@ sql = "select buildingID,buildingnumber,typename from tbbuilding inner join tbro
             //}
             //da.Fill(ds,"bs");
             dgvbuild.DataSource = ds.Tables["bs"];
+                dgvbuild.Columns[0].HeaderText = "ລະຫັດຕຶກ";
+                dgvbuild.Columns[1].HeaderText = "ເບີ້ຕຶກ";
+                dgvbuild.Columns[2].HeaderText = "ປະເພດຫ້ອງ";
+                dgvbuild.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }
 
         }

@@ -128,9 +128,8 @@
             // 
             this.txtroomtypeID.Location = new System.Drawing.Point(144, 49);
             this.txtroomtypeID.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
-            this.txtroomtypeID.Multiline = true;
             this.txtroomtypeID.Name = "txtroomtypeID";
-            this.txtroomtypeID.Size = new System.Drawing.Size(222, 41);
+            this.txtroomtypeID.Size = new System.Drawing.Size(222, 42);
             this.txtroomtypeID.TabIndex = 18;
             // 
             // label6
@@ -140,7 +139,7 @@
             this.label6.Location = new System.Drawing.Point(49, 44);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(54, 29);
+            this.label6.Size = new System.Drawing.Size(68, 36);
             this.label6.TabIndex = 17;
             this.label6.Text = "ລະຫັດ";
             // 
@@ -151,7 +150,7 @@
             this.label12.Location = new System.Drawing.Point(49, 104);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(68, 29);
+            this.label12.Size = new System.Drawing.Size(89, 36);
             this.label12.TabIndex = 19;
             this.label12.Text = "ຊື່ປະເພດ";
             // 
@@ -159,18 +158,16 @@
             // 
             this.txttypeprice.Location = new System.Drawing.Point(144, 159);
             this.txttypeprice.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
-            this.txttypeprice.Multiline = true;
             this.txttypeprice.Name = "txttypeprice";
-            this.txttypeprice.Size = new System.Drawing.Size(222, 41);
+            this.txttypeprice.Size = new System.Drawing.Size(222, 42);
             this.txttypeprice.TabIndex = 24;
             // 
             // txtnametype
             // 
             this.txtnametype.Location = new System.Drawing.Point(144, 104);
             this.txtnametype.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
-            this.txtnametype.Multiline = true;
             this.txtnametype.Name = "txtnametype";
-            this.txtnametype.Size = new System.Drawing.Size(222, 41);
+            this.txtnametype.Size = new System.Drawing.Size(222, 42);
             this.txtnametype.TabIndex = 20;
             // 
             // label13
@@ -180,16 +177,16 @@
             this.label13.Location = new System.Drawing.Point(49, 159);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(49, 29);
+            this.label13.Size = new System.Drawing.Size(61, 36);
             this.label13.TabIndex = 23;
             this.label13.Text = "ລາຄາ";
             // 
             // ຂໍ້ມູນປະເພດຫ້ອງ
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 36F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(208)))), ((int)(((byte)(203)))));
-            this.ClientSize = new System.Drawing.Size(1149, 457);
+            this.ClientSize = new System.Drawing.Size(1147, 449);
             this.Controls.Add(this.groupBox3);
             this.Font = new System.Drawing.Font("Saysettha OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);

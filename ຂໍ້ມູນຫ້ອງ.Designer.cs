@@ -46,6 +46,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtstamount = new System.Windows.Forms.TextBox();
             this.txtsearch = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvroom)).BeginInit();
             this.SuspendLayout();
@@ -53,6 +54,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(208)))), ((int)(((byte)(203)))));
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.cbroomtype);
             this.groupBox1.Controls.Add(this.cbfloor);
             this.groupBox1.Controls.Add(this.btrdelete);
@@ -82,25 +84,27 @@
             // cbroomtype
             // 
             this.cbroomtype.FormattingEnabled = true;
-            this.cbroomtype.Location = new System.Drawing.Point(144, 153);
+            this.cbroomtype.Location = new System.Drawing.Point(144, 93);
             this.cbroomtype.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.cbroomtype.Name = "cbroomtype";
             this.cbroomtype.Size = new System.Drawing.Size(216, 44);
             this.cbroomtype.TabIndex = 29;
+            this.cbroomtype.SelectedIndexChanged += new System.EventHandler(this.cbroomtype_SelectedIndexChanged);
             // 
             // cbfloor
             // 
             this.cbfloor.FormattingEnabled = true;
-            this.cbfloor.Location = new System.Drawing.Point(143, 207);
+            this.cbfloor.Location = new System.Drawing.Point(143, 147);
             this.cbfloor.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.cbfloor.Name = "cbfloor";
             this.cbfloor.Size = new System.Drawing.Size(216, 44);
             this.cbfloor.TabIndex = 29;
+            this.cbfloor.SelectedIndexChanged += new System.EventHandler(this.cbfloor_SelectedIndexChanged);
             // 
             // btrdelete
             // 
             this.btrdelete.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btrdelete.Location = new System.Drawing.Point(264, 362);
+            this.btrdelete.Location = new System.Drawing.Point(221, 407);
             this.btrdelete.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.btrdelete.Name = "btrdelete";
             this.btrdelete.Size = new System.Drawing.Size(100, 46);
@@ -125,9 +129,8 @@
             // 
             this.txtroomid.Location = new System.Drawing.Point(143, 47);
             this.txtroomid.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
-            this.txtroomid.Multiline = true;
             this.txtroomid.Name = "txtroomid";
-            this.txtroomid.Size = new System.Drawing.Size(217, 41);
+            this.txtroomid.Size = new System.Drawing.Size(217, 42);
             this.txtroomid.TabIndex = 18;
             // 
             // btrsearch
@@ -145,7 +148,7 @@
             // btredit
             // 
             this.btredit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btredit.Location = new System.Drawing.Point(156, 363);
+            this.btredit.Location = new System.Drawing.Point(221, 354);
             this.btredit.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.btredit.Name = "btredit";
             this.btredit.Size = new System.Drawing.Size(100, 45);
@@ -168,7 +171,7 @@
             // btrsave
             // 
             this.btrsave.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btrsave.Location = new System.Drawing.Point(45, 365);
+            this.btrsave.Location = new System.Drawing.Point(110, 356);
             this.btrsave.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.btrsave.Name = "btrsave";
             this.btrsave.Size = new System.Drawing.Size(100, 44);
@@ -192,7 +195,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label10.Location = new System.Drawing.Point(98, 207);
+            this.label10.Location = new System.Drawing.Point(98, 147);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(41, 36);
@@ -203,7 +206,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label7.Location = new System.Drawing.Point(64, 102);
+            this.label7.Location = new System.Drawing.Point(59, 208);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(75, 36);
@@ -212,18 +215,17 @@
             // 
             // txtroomnum
             // 
-            this.txtroomnum.Location = new System.Drawing.Point(143, 102);
+            this.txtroomnum.Location = new System.Drawing.Point(142, 205);
             this.txtroomnum.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
-            this.txtroomnum.Multiline = true;
             this.txtroomnum.Name = "txtroomnum";
-            this.txtroomnum.Size = new System.Drawing.Size(217, 43);
+            this.txtroomnum.Size = new System.Drawing.Size(217, 42);
             this.txtroomnum.TabIndex = 20;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label9.Location = new System.Drawing.Point(24, 156);
+            this.label9.Location = new System.Drawing.Point(24, 96);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(115, 36);
@@ -245,20 +247,28 @@
             // 
             this.txtstamount.Location = new System.Drawing.Point(143, 277);
             this.txtstamount.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
-            this.txtstamount.Multiline = true;
             this.txtstamount.Name = "txtstamount";
-            this.txtstamount.Size = new System.Drawing.Size(217, 41);
+            this.txtstamount.Size = new System.Drawing.Size(217, 42);
             this.txtstamount.TabIndex = 22;
             // 
             // txtsearch
             // 
             this.txtsearch.Location = new System.Drawing.Point(133, 495);
             this.txtsearch.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
-            this.txtsearch.Multiline = true;
             this.txtsearch.Name = "txtsearch";
             this.txtsearch.Size = new System.Drawing.Size(222, 42);
             this.txtsearch.TabIndex = 22;
             this.txtsearch.TextChanged += new System.EventHandler(this.txtsearch_TextChanged);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(110, 410);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 43);
+            this.button1.TabIndex = 30;
+            this.button1.Text = "ລ້າງບ໊ອກ";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ຂໍ້ມູນຫ້ອງ
             // 
@@ -300,5 +310,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtstamount;
         private System.Windows.Forms.TextBox txtsearch;
+        private System.Windows.Forms.Button button1;
     }
 }
