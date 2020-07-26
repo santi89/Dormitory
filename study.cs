@@ -22,8 +22,9 @@ namespace C_Sharp_2_Project
         string sql = "";
 
         public void showschool()
-        {  
-           
+        {
+            try
+            {
 dgvschool.Refresh();
             dgvschool.Parent.Refresh();
             sql = "select * from tbschool";
@@ -39,12 +40,23 @@ dgvschool.DataSource = ds.Tables["sh"];
             dgvschool.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvschool.Columns[0].HeaderText = "ລະຫັດໂຮງຮຽນ";
             dgvschool.Columns[1].HeaderText = "ຊື່ໂຮງຮຽນ";
-            
+            }
+            catch (Exception ex )
+            {
+
+                MessageBox.Show(ex.Message);
+
+            }
+
+
+
 
         }
         public void showconoboxschool()
         {
-            sql = "select *from tbschool";
+            try
+            {
+sql = "select *from tbschool";
          
             cmd = new SqlCommand(sql, con);
             SqlDataReader reader ;
@@ -54,24 +66,42 @@ dgvschool.DataSource = ds.Tables["sh"];
             {  string scho = reader.GetString(1);
                 int schoID = reader.GetInt32(0);                
                     cbschool.Items.Add(scho);                  
-            }reader.Close();           
+            }reader.Close();     
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+
+            }
+
         }
         public void facshow()
         {
-            ds.Tables.Clear();
-            sql = "select facID,facname,schoolname from tbfaculty inner join tbschool on tbschool.schoolID=tbfaculty.schoolID";
-            da = new SqlDataAdapter(sql, con);
-            da.Fill(ds, "fac");
-            dgvfaculty.DataSource = ds.Tables["fac"];
-            dgvfaculty.Update();
-            dgvfaculty.Refresh();
-            dgvfaculty.Parent.Refresh();
-            dgvfaculty.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            
-            dgvfaculty.Columns[0].HeaderText = "ລະຫັດຄະນະ";
-            dgvfaculty.Columns[1].HeaderText = "ຊື່ຄະນະ";
-            dgvfaculty.Columns[2].HeaderText = "ຊື່ໂຮງຮຽນ";
-            
+            try
+            {
+                ds.Tables.Clear();
+                sql = "select facID,facname,schoolname from tbfaculty inner join tbschool on tbschool.schoolID=tbfaculty.schoolID";
+                da = new SqlDataAdapter(sql, con);
+                da.Fill(ds, "fac");
+                dgvfaculty.DataSource = ds.Tables["fac"];
+                dgvfaculty.Update();
+                dgvfaculty.Refresh();
+                dgvfaculty.Parent.Refresh();
+                dgvfaculty.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+                dgvfaculty.Columns[0].HeaderText = "ລະຫັດຄະນະ";
+                dgvfaculty.Columns[1].HeaderText = "ຊື່ຄະນະ";
+                dgvfaculty.Columns[2].HeaderText = "ຊື່ໂຮງຮຽນ";
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+
+            }
+
+
         }
         public void deptcombo()
         {
@@ -130,20 +160,32 @@ dgvschool.DataSource = ds.Tables["sh"];
 
         private void btssave_Click(object sender, EventArgs e)
         {
-            sql = "insert into tbschool values (@schoolID,@schoolname)";
+            try
+            {
+ sql = "insert into tbschool values (@schoolname)";
             cmd = new SqlCommand(sql, con);
             cmd.Parameters.Clear();
-            cmd.Parameters.AddWithValue("@schoolID", txtschoolID.Text);
+           // cmd.Parameters.AddWithValue("@schoolID", txtschoolID.Text);
             cmd.Parameters.AddWithValue("@schoolname", txtnameschool.Text);
             cmd.ExecuteNonQuery();
             showschool();
             showconoboxschool();
             cleartext();
+            }
+            catch (Exception ex )
+            {
+
+                MessageBox.Show(ex.Message);
+
+            }
+
         }
 
         private void btsedit_Click(object sender, EventArgs e)
         {
-            sql = "update tbschool set schoolname=@schoolname where schoolID=@schoolID";
+            try
+            {
+ sql = "update tbschool set schoolname=@schoolname where schoolID=@schoolID";
             cmd = new SqlCommand(sql, con);
             cmd.Parameters.Clear();
             cmd.Parameters.AddWithValue("@schoolname", txtnameschool.Text);
@@ -152,11 +194,21 @@ dgvschool.DataSource = ds.Tables["sh"];
             cleartext();
             showschool();
             showconoboxschool();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+
+            }
+
         }
 
         private void btdelete_Click(object sender, EventArgs e)
         {
-            sql = "delete from tbschool where schoolID=@schoolID";
+            try
+            {
+ sql = "delete from tbschool where schoolID=@schoolID";
             cmd = new SqlCommand(sql, con);
             cmd.Parameters.Clear();
             cmd.Parameters.AddWithValue("@schoolID", txtschoolID.Text);
@@ -164,6 +216,14 @@ dgvschool.DataSource = ds.Tables["sh"];
             cleartext();
             showschool();
             showconoboxschool();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+
+            }
+
 
         }
 
@@ -182,25 +242,38 @@ dgvschool.DataSource = ds.Tables["sh"];
             showdept();
             showconoboxschool();
             deptcombo();
+            g1.Enabled = false;
+            g2.Enabled = false;
+            g3.Enabled = false;
         }
 
         private void btfsave_Click(object sender, EventArgs e)
         {
-            sql = "insert into tbfaculty values (@facID,@facname,@shoolID)";
+            try
+            {
+            sql = "insert into tbfaculty values (@facname,@shoolID)";
             cmd = new SqlCommand(sql, con);
             cmd.Parameters.Clear();
-            cmd.Parameters.AddWithValue("@facID", txtfacID .Text);
+           // cmd.Parameters.AddWithValue("@facID", txtfacID .Text);
             cmd.Parameters.AddWithValue("@facname", txtfacname .Text);
             cmd.Parameters.AddWithValue("@shoolID", cbschool.SelectedIndex +1);
             cmd.ExecuteNonQuery();
             cleartext();
             facshow();
             deptcombo();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
 
         }
 
         private void btfedit_Click(object sender, EventArgs e)
         {
+            try
+            {
             sql = "update tbfaculty set facname=@facname ,schoolID=@schoolID where facID=@facID";
             cmd = new SqlCommand(sql, con);
             cmd.Parameters.Clear();
@@ -211,11 +284,21 @@ dgvschool.DataSource = ds.Tables["sh"];
             cleartext();
             facshow();
             deptcombo();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+
+            }
+
 
         }
 
         private void btfdelete_Click(object sender, EventArgs e)
         {
+            try
+            {
             sql = "delete from tbfaculty where facID=@facID";
             cmd = new SqlCommand(sql, con);
             cmd.Parameters.AddWithValue("@facID", txtfacID.Text);
@@ -223,26 +306,45 @@ dgvschool.DataSource = ds.Tables["sh"];
             cleartext();
             facshow();
             deptcombo();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+           
 
         }
 
         private void btdsave_Click(object sender, EventArgs e)
         {
-            sql = "insert into tbdepartment values (@deptID,@deptname,@facID)";
+            try
+            {
+ sql = "insert into tbdepartment values (@deptname,@facID)";
             cmd = new SqlCommand(sql, con);
-            cmd.Parameters.AddWithValue("@deptID", txtdepID .Text);
+            //cmd.Parameters.AddWithValue("@deptID", txtdepID .Text);
             cmd.Parameters.AddWithValue("@deptname", txtdepname.Text);
             cmd.Parameters.AddWithValue("@facID", cbdepart.SelectedIndex +1);
             cmd.ExecuteNonQuery();
            
             cleartext();
             showdept(); 
-            dgvdepartment.Refresh();dgvdepartment.Update();
+            dgvdepartment.Refresh();
+                dgvdepartment.Update();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+           
         }
 
         private void btdedit_Click(object sender, EventArgs e)
         {
-            sql = "update tbdepartment set deptname=@deptname,facID=@facID where deptID=@deptID";
+            try
+            {
+ sql = "update tbdepartment set deptname=@deptname,facID=@facID where deptID=@deptID";
             cmd = new SqlCommand(sql, con);
             cmd.Parameters.AddWithValue("@deptname", txtdepname.Text);
             //cmd.Parameters.AddWithValue("@facID", cbdepart.SelectedIndex +1);
@@ -251,18 +353,34 @@ dgvschool.DataSource = ds.Tables["sh"];
             cmd.ExecuteNonQuery();
             cleartext();
             showdept();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+           
            
 
         }
 
         private void btddelete_Click(object sender, EventArgs e)
         {
-            sql = "delete from tbdepartment where deptID=@deptID";
+            try
+            {
+ sql = "delete from tbdepartment where deptID=@deptID";
             cmd = new SqlCommand(sql, con);
             cmd.Parameters.AddWithValue("@deptID", txtdepID.Text);
             cmd.ExecuteNonQuery();
             cleartext();
             showdept();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+           
            
 
         }
@@ -303,6 +421,66 @@ dgvschool.DataSource = ds.Tables["sh"];
         private void cbschool_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        public void groupcheck()
+        {
+            if (radioButton1.Checked == true)
+            {
+                g1.Enabled = true;
+               
+                g2.Enabled = false;
+                g3.Enabled = false;
+            }
+            else if (radioButton2.Checked == true)
+            {
+                g2.Enabled = true;
+                g1.Enabled = false;
+                
+                g3.Enabled = false;
+            }
+            else if (radioButton3.Checked == true)
+            {
+                g3.Enabled = true;
+                g1.Enabled = false;
+                g2.Enabled = false;
+               
+            }
+            else
+            {
+                g1.Enabled = false;
+                g2.Enabled = false;
+                g3.Enabled = false;
+            }
+        }
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            groupcheck();
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            groupcheck();
+
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            groupcheck();
+
+        }
+
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+
+            g1.Enabled = false;
+            g2.Enabled = false;
+            g3.Enabled = false;
         }
     }
 }

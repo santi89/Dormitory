@@ -21,19 +21,17 @@ namespace C_Sharp_2_Project
         DataSet ds =new DataSet();
         string sql;
         public static string user="", pass="";
-        public static string user1 = "", pass1 = "";
 
+        
         public Formlogin()
         {
-            InitializeComponent();
-            
+            InitializeComponent();                       
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
-
         private void button1_Click(object sender, EventArgs e)
         
         {    try 
@@ -58,17 +56,16 @@ namespace C_Sharp_2_Project
                 pass = reader.GetString(2).ToString();
             }
             reader.Close();
-               
-            if (da.Fill(ds, "emp") > 0)
-            {           
-                    Form1 f1 = new Form1();
+                if (da.Fill(ds, "emp") > 0)
+                {
+                    Form1 f1 = new Form1(txtname.Text,txtpassword.Text);
                     txtname.Clear();
                     txtpassword.Clear();
                     this.Hide();
                     f1.Show();
-                    user1 = txtname.Text;
-                    pass1 = txtpassword.Text;
-            }
+                   
+                   
+                }
             else
                 {
                     MessageBox.Show("ກະລຸນາກວດເບິ່ງລະຫັດແລະຊື່ຜູ້ໃຊ້ໃໝ່","ແຈ້ງເຕືອນ", MessageBoxButtons.OK,MessageBoxIcon.Warning);
@@ -93,6 +90,18 @@ namespace C_Sharp_2_Project
         {
             if (checkBox1.Checked == true) txtpassword.PasswordChar = '\0';
             else txtpassword.PasswordChar = '*';
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            txtname.Clear();
+            txtpassword.Clear();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            this.Dispose();
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)

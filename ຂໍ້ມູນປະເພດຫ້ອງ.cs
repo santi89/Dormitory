@@ -132,5 +132,10 @@ sql = "insert into tbroomtype values(@rtID,@rtname,@price)";
             txtroomtypeID.Clear();
             txttypeprice.Clear();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

@@ -40,6 +40,7 @@
             this.txttypeprice = new System.Windows.Forms.TextBox();
             this.txtnametype = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvroomtype)).BeginInit();
             this.SuspendLayout();
@@ -57,11 +58,11 @@
             this.groupBox3.Controls.Add(this.txttypeprice);
             this.groupBox3.Controls.Add(this.txtnametype);
             this.groupBox3.Controls.Add(this.label13);
-            this.groupBox3.Location = new System.Drawing.Point(1, 1);
+            this.groupBox3.Location = new System.Drawing.Point(13, 57);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 7, 4, 7);
-            this.groupBox3.Size = new System.Drawing.Size(1145, 445);
+            this.groupBox3.Size = new System.Drawing.Size(1105, 445);
             this.groupBox3.TabIndex = 33;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "ຈັດການຂໍ້ມູນປະເພດຫ້ອງ";
@@ -120,7 +121,7 @@
             this.dgvroomtype.Name = "dgvroomtype";
             this.dgvroomtype.RowHeadersWidth = 51;
             this.dgvroomtype.RowTemplate.Height = 24;
-            this.dgvroomtype.Size = new System.Drawing.Size(763, 403);
+            this.dgvroomtype.Size = new System.Drawing.Size(722, 403);
             this.dgvroomtype.TabIndex = 27;
             this.dgvroomtype.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvroomtype_CellContentClick);
             // 
@@ -181,16 +182,30 @@
             this.label13.TabIndex = 23;
             this.label13.Text = "ລາຄາ";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label2.Location = new System.Drawing.Point(1133, 0);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(28, 36);
+            this.label2.TabIndex = 34;
+            this.label2.Text = "X";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
             // ຂໍ້ມູນປະເພດຫ້ອງ
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 36F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(208)))), ((int)(((byte)(203)))));
-            this.ClientSize = new System.Drawing.Size(1147, 449);
+            this.ClientSize = new System.Drawing.Size(1147, 508);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox3);
             this.Font = new System.Drawing.Font("Saysettha OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
-            this.MaximumSize = new System.Drawing.Size(1165, 496);
             this.MinimumSize = new System.Drawing.Size(1165, 496);
             this.Name = "ຂໍ້ມູນປະເພດຫ້ອງ";
             this.Text = "ຂໍ້ມູນປະເພດຫ້ອງ";
@@ -199,6 +214,7 @@
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvroomtype)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -216,5 +232,6 @@
         private System.Windows.Forms.TextBox txtnametype;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label2;
     }
 }

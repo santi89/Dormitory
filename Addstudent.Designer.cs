@@ -88,6 +88,7 @@
             this.txtsearch = new System.Windows.Forms.TextBox();
             this.btsearch = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -520,7 +521,7 @@
             // 
             // txtregister
             // 
-            this.txtregister.Location = new System.Drawing.Point(820, 451);
+            this.txtregister.Location = new System.Drawing.Point(820, 457);
             this.txtregister.Name = "txtregister";
             this.txtregister.Size = new System.Drawing.Size(116, 51);
             this.txtregister.TabIndex = 2;
@@ -596,7 +597,7 @@
             this.groupBox2.Controls.Add(this.txtemervillage);
             this.groupBox2.Controls.Add(this.txtemerdistrict);
             this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Location = new System.Drawing.Point(753, 12);
+            this.groupBox2.Location = new System.Drawing.Point(741, 25);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(710, 353);
             this.groupBox2.TabIndex = 35;
@@ -630,7 +631,7 @@
             // 
             // btdelete
             // 
-            this.btdelete.Location = new System.Drawing.Point(946, 451);
+            this.btdelete.Location = new System.Drawing.Point(946, 457);
             this.btdelete.Name = "btdelete";
             this.btdelete.Size = new System.Drawing.Size(116, 51);
             this.btdelete.TabIndex = 2;
@@ -641,7 +642,7 @@
             // dgvregister
             // 
             this.dgvregister.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvregister.Location = new System.Drawing.Point(49, 517);
+            this.dgvregister.Location = new System.Drawing.Point(37, 517);
             this.dgvregister.Name = "dgvregister";
             this.dgvregister.RowHeadersWidth = 51;
             this.dgvregister.RowTemplate.Height = 24;
@@ -651,7 +652,7 @@
             // 
             // btedit
             // 
-            this.btedit.Location = new System.Drawing.Point(1078, 451);
+            this.btedit.Location = new System.Drawing.Point(1078, 457);
             this.btedit.Name = "btedit";
             this.btedit.Size = new System.Drawing.Size(102, 51);
             this.btedit.TabIndex = 2;
@@ -662,7 +663,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(765, 384);
+            this.label26.Location = new System.Drawing.Point(765, 390);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(66, 36);
             this.label26.TabIndex = 29;
@@ -670,7 +671,7 @@
             // 
             // txtsearch
             // 
-            this.txtsearch.Location = new System.Drawing.Point(837, 381);
+            this.txtsearch.Location = new System.Drawing.Point(837, 387);
             this.txtsearch.Multiline = true;
             this.txtsearch.Name = "txtsearch";
             this.txtsearch.Size = new System.Drawing.Size(255, 42);
@@ -679,7 +680,7 @@
             // 
             // btsearch
             // 
-            this.btsearch.Location = new System.Drawing.Point(1098, 379);
+            this.btsearch.Location = new System.Drawing.Point(1098, 385);
             this.btsearch.Name = "btsearch";
             this.btsearch.Size = new System.Drawing.Size(121, 47);
             this.btsearch.TabIndex = 2;
@@ -689,7 +690,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1186, 451);
+            this.button1.Location = new System.Drawing.Point(1186, 457);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(121, 51);
             this.button1.TabIndex = 2;
@@ -697,12 +698,25 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.ForeColor = System.Drawing.Color.Red;
+            this.label15.Location = new System.Drawing.Point(1469, 2);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(28, 36);
+            this.label15.TabIndex = 37;
+            this.label15.Text = "X";
+            this.label15.Click += new System.EventHandler(this.label15_Click);
+            // 
             // Addstudent
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(208)))), ((int)(((byte)(203)))));
-            this.ClientSize = new System.Drawing.Size(1482, 800);
+            this.ClientSize = new System.Drawing.Size(1500, 847);
+            this.ControlBox = false;
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.dgvregister);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btedit);
@@ -714,12 +728,14 @@
             this.Controls.Add(this.label26);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Saysettha OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1500, 847);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1500, 847);
             this.Name = "Addstudent";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "ເພີ່ມນັກສຶກສາ";
             this.Load += new System.EventHandler(this.register_Load);
@@ -796,5 +812,6 @@
         private System.Windows.Forms.ComboBox cbfac;
         private System.Windows.Forms.ComboBox cbschool;
         private System.Windows.Forms.ComboBox cbemerprovince;
+        private System.Windows.Forms.Label label15;
     }
 }

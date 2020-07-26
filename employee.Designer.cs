@@ -55,13 +55,14 @@
             this.txtsearch = new System.Windows.Forms.TextBox();
             this.txtempID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvemp)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(208)))), ((int)(((byte)(203)))));
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.groupBox1.Controls.Add(this.txtdateTime);
             this.groupBox1.Controls.Add(this.btsearch);
             this.groupBox1.Controls.Add(this.btdelete);
@@ -88,7 +89,7 @@
             this.groupBox1.Controls.Add(this.txtsearch);
             this.groupBox1.Controls.Add(this.txtempID);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(2, 3);
+            this.groupBox1.Location = new System.Drawing.Point(10, 36);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 7, 4, 7);
@@ -324,13 +325,29 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "ລະຫັດພະນັກງານ";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.ForeColor = System.Drawing.Color.Red;
+            this.label11.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label11.Location = new System.Drawing.Point(1513, 2);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(28, 36);
+            this.label11.TabIndex = 18;
+            this.label11.Text = "X";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
+            // 
             // employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 36F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1530, 615);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.ClientSize = new System.Drawing.Size(1544, 666);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Saysettha OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.MinimumSize = new System.Drawing.Size(1422, 662);
             this.Name = "employee";
@@ -341,6 +358,7 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvemp)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -372,5 +390,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtsearch;
         private System.Windows.Forms.DateTimePicker txtdateTime;
+        private System.Windows.Forms.Label label11;
     }
 }

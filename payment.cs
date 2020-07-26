@@ -21,6 +21,8 @@ namespace C_Sharp_2_Project
         SqlDataAdapter da;
         SqlDataReader dr;
         DataSet ds = new DataSet();
+        string sql1 = "";
+        SqlCommand cmd1;
         string sql = "";
         public payment()
         {
@@ -176,9 +178,14 @@ namespace C_Sharp_2_Project
                         MessageBox.Show("ສຳເລັດ");
                         cd.ids = txtid.Text;                                          
                     }
-                    
 
-                }else if (rbnewadd.Checked ==true)
+                    sql1 = "update tbroom set Student_amount=Student_amount +1 where room_number='" + cbroom.SelectedItem + "'";
+                    cmd1= new SqlCommand(sql1, con);                
+                    cmd1.ExecuteNonQuery();
+
+                    cd.Show();
+                }
+                else if (rbnewadd.Checked ==true)
                 {
                  sql = "insert into tbrendetail values (@id,@stid,@troom,@bui,@flo,@room,@now,@enddate,@cost";
                 cmd = new SqlCommand(sql, con);
@@ -194,7 +201,14 @@ namespace C_Sharp_2_Project
                 cmd.Parameters.AddWithValue("@cost", txtcost.Text);
                 cmd.ExecuteNonQuery();
 
-                }else
+                    sql1 = "update tbroom set Student_amount=Student_amount +1 where room_number='" + cbroom.SelectedItem + "'";
+                    cmd1 = new SqlCommand(sql1, con);
+
+                    cmd1.ExecuteNonQuery();
+                    cd.Show();
+
+                }
+                else
                 {
                     return;
                 }
@@ -215,8 +229,7 @@ namespace C_Sharp_2_Project
             txtcost.Clear();
             while (dr.Read())
             {
-                txtcost.Text = dr.GetDecimal(0).ToString();
-                
+                txtcost.Text = dr.GetDecimal(0).ToString();              
             }
             dr.Close();
         }

@@ -43,6 +43,7 @@
             this.btfdelete = new System.Windows.Forms.Button();
             this.txtfloornum = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvfloor)).BeginInit();
             this.SuspendLayout();
@@ -63,7 +64,7 @@
             this.groupBox4.Controls.Add(this.btfdelete);
             this.groupBox4.Controls.Add(this.txtfloornum);
             this.groupBox4.Controls.Add(this.label18);
-            this.groupBox4.Location = new System.Drawing.Point(13, 6);
+            this.groupBox4.Location = new System.Drawing.Point(31, 65);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 7, 4, 7);
@@ -220,15 +221,29 @@
             this.label18.TabIndex = 23;
             this.label18.Text = "ຕຶກ";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label2.Location = new System.Drawing.Point(1018, 0);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(28, 36);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "X";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
             // ຂໍ້ມູນຊັ້ນ
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 36F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(208)))), ((int)(((byte)(203)))));
-            this.ClientSize = new System.Drawing.Size(1008, 508);
+            this.ClientSize = new System.Drawing.Size(1044, 574);
             this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.label2);
             this.Font = new System.Drawing.Font("Saysettha OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.Name = "ຂໍ້ມູນຊັ້ນ";
             this.Text = "ຂໍ້ມູນຊັ້ນ";
@@ -237,6 +252,7 @@
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvfloor)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -257,5 +273,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtsearch;
         private System.Windows.Forms.Button search;
+        private System.Windows.Forms.Label label2;
     }
 }

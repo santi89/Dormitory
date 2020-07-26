@@ -176,7 +176,6 @@ namespace C_Sharp_2_Project
                 MemoryStream mem = new MemoryStream();
                 pictureBox1.Image.Save(mem, System.Drawing.Imaging.ImageFormat.Png);
                 byte[] imarr = mem.ToArray();
-
                 cmd.Parameters.AddWithValue("@picture",imarr );
 
 
@@ -240,9 +239,16 @@ namespace C_Sharp_2_Project
         {
             OpenFileDialog opf = new OpenFileDialog();
             opf.ShowDialog();
+            if (opf.FileName=="" )
+            {
+                path = "";
+            }else
+            {
             path = opf.FileName;
             pictureBox1.Load(path);
             txtfilename.Text = path;
+            }
+            
         }
         string idex;
         string gdr = "male";
@@ -478,6 +484,11 @@ namespace C_Sharp_2_Project
         private void txtdatestart_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

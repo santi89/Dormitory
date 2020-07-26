@@ -13,10 +13,20 @@ namespace C_Sharp_2_Project
     public partial class Form1 : Form
     {
         public static string date1;
-        public Form1()
+        public string pa,us1;
+     
+        public Form1( string u,string p )
         {
             InitializeComponent();
-           
+            pa = p;
+            us1 = u;
+            if (us1 == "admin" && pa == "admin")
+            {
+                empmanage.Enabled = true;
+            }else
+            {
+                empmanage.Enabled = false;
+            }
         }
 
         private void ການຊຳລະຕາຫToolStripMenuItem_Click(object sender, EventArgs e)
@@ -36,13 +46,13 @@ namespace C_Sharp_2_Project
 
         private void Form1_Load(object sender, EventArgs e)
         {
-                
-            if ("admin" == Formlogin.user  && "admin" == Formlogin.pass)
+            if (us1 == "admin" && pa == "admin")
             {
-            empmanage.Enabled = true;
-            }           
+                empmanage.Enabled = true;
+            }
 
-            
+
+
             toolStripLabel1.Text = System.DateTime.Now.ToString();
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
@@ -114,6 +124,7 @@ namespace C_Sharp_2_Project
 
         private void ຈດການຂມນToolStripMenuItem_Click(object sender, EventArgs e)
         {
+           
 
         }
 

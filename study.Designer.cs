@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.g2 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.cbschool = new System.Windows.Forms.ComboBox();
             this.btfdelete = new System.Windows.Forms.Button();
@@ -41,7 +41,7 @@
             this.btfsave = new System.Windows.Forms.Button();
             this.txtfacname = new System.Windows.Forms.TextBox();
             this.txtdepname = new System.Windows.Forms.TextBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.g3 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
             this.cbdepart = new System.Windows.Forms.ComboBox();
             this.btddelete = new System.Windows.Forms.Button();
@@ -52,7 +52,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.btdsave = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.g1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.btdelete = new System.Windows.Forms.Button();
             this.dgvschool = new System.Windows.Forms.DataGridView();
@@ -62,33 +62,39 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtnameschool = new System.Windows.Forms.TextBox();
             this.btssave = new System.Windows.Forms.Button();
-            this.groupBox6.SuspendLayout();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.g2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvfaculty)).BeginInit();
-            this.groupBox5.SuspendLayout();
+            this.g3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvdepartment)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.g1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvschool)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox6
+            // g2
             // 
-            this.groupBox6.Controls.Add(this.button2);
-            this.groupBox6.Controls.Add(this.cbschool);
-            this.groupBox6.Controls.Add(this.btfdelete);
-            this.groupBox6.Controls.Add(this.dgvfaculty);
-            this.groupBox6.Controls.Add(this.txtfacID);
-            this.groupBox6.Controls.Add(this.label14);
-            this.groupBox6.Controls.Add(this.btfedit);
-            this.groupBox6.Controls.Add(this.label19);
-            this.groupBox6.Controls.Add(this.label16);
-            this.groupBox6.Controls.Add(this.btfsave);
-            this.groupBox6.Controls.Add(this.txtfacname);
-            this.groupBox6.Location = new System.Drawing.Point(791, 22);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(408, 618);
-            this.groupBox6.TabIndex = 28;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "ຈັດການຂໍ້ມູນຄະນະ";
+            this.g2.Controls.Add(this.button2);
+            this.g2.Controls.Add(this.cbschool);
+            this.g2.Controls.Add(this.btfdelete);
+            this.g2.Controls.Add(this.dgvfaculty);
+            this.g2.Controls.Add(this.txtfacID);
+            this.g2.Controls.Add(this.label14);
+            this.g2.Controls.Add(this.btfedit);
+            this.g2.Controls.Add(this.label19);
+            this.g2.Controls.Add(this.label16);
+            this.g2.Controls.Add(this.btfsave);
+            this.g2.Controls.Add(this.txtfacname);
+            this.g2.Location = new System.Drawing.Point(792, 89);
+            this.g2.Name = "g2";
+            this.g2.Size = new System.Drawing.Size(408, 618);
+            this.g2.TabIndex = 28;
+            this.g2.TabStop = false;
+            this.g2.Text = "ຈັດການຂໍ້ມູນຄະນະ";
             // 
             // button2
             // 
@@ -132,6 +138,7 @@
             // 
             // txtfacID
             // 
+            this.txtfacID.Enabled = false;
             this.txtfacID.Location = new System.Drawing.Point(155, 56);
             this.txtfacID.Name = "txtfacID";
             this.txtfacID.Size = new System.Drawing.Size(204, 42);
@@ -198,26 +205,26 @@
             this.txtdepname.Size = new System.Drawing.Size(204, 42);
             this.txtdepname.TabIndex = 20;
             // 
-            // groupBox5
+            // g3
             // 
-            this.groupBox5.Controls.Add(this.button3);
-            this.groupBox5.Controls.Add(this.cbdepart);
-            this.groupBox5.Controls.Add(this.btddelete);
-            this.groupBox5.Controls.Add(this.dgvdepartment);
-            this.groupBox5.Controls.Add(this.txtdepID);
-            this.groupBox5.Controls.Add(this.label4);
-            this.groupBox5.Controls.Add(this.btdedit);
-            this.groupBox5.Controls.Add(this.label3);
-            this.groupBox5.Controls.Add(this.label11);
-            this.groupBox5.Controls.Add(this.txtdepname);
-            this.groupBox5.Controls.Add(this.btdsave);
-            this.groupBox5.Location = new System.Drawing.Point(12, 325);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(763, 315);
-            this.groupBox5.TabIndex = 29;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "ຈັດການຂໍ້ມູນພາກ";
-            this.groupBox5.Enter += new System.EventHandler(this.groupBox5_Enter);
+            this.g3.Controls.Add(this.button3);
+            this.g3.Controls.Add(this.cbdepart);
+            this.g3.Controls.Add(this.btddelete);
+            this.g3.Controls.Add(this.dgvdepartment);
+            this.g3.Controls.Add(this.txtdepID);
+            this.g3.Controls.Add(this.label4);
+            this.g3.Controls.Add(this.btdedit);
+            this.g3.Controls.Add(this.label3);
+            this.g3.Controls.Add(this.label11);
+            this.g3.Controls.Add(this.txtdepname);
+            this.g3.Controls.Add(this.btdsave);
+            this.g3.Location = new System.Drawing.Point(12, 402);
+            this.g3.Name = "g3";
+            this.g3.Size = new System.Drawing.Size(763, 315);
+            this.g3.TabIndex = 29;
+            this.g3.TabStop = false;
+            this.g3.Text = "ຈັດການຂໍ້ມູນພາກ";
+            this.g3.Enter += new System.EventHandler(this.groupBox5_Enter);
             // 
             // button3
             // 
@@ -260,6 +267,7 @@
             // 
             // txtdepID
             // 
+            this.txtdepID.Enabled = false;
             this.txtdepID.Location = new System.Drawing.Point(141, 44);
             this.txtdepID.Name = "txtdepID";
             this.txtdepID.Size = new System.Drawing.Size(204, 42);
@@ -312,23 +320,23 @@
             this.btdsave.UseVisualStyleBackColor = true;
             this.btdsave.Click += new System.EventHandler(this.btdsave_Click);
             // 
-            // groupBox1
+            // g1
             // 
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.btdelete);
-            this.groupBox1.Controls.Add(this.dgvschool);
-            this.groupBox1.Controls.Add(this.txtschoolID);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.btsedit);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtnameschool);
-            this.groupBox1.Controls.Add(this.btssave);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(763, 300);
-            this.groupBox1.TabIndex = 29;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "ຈັດການຂໍ້ມູນໂຮງຮຽນ";
+            this.g1.Controls.Add(this.button1);
+            this.g1.Controls.Add(this.btdelete);
+            this.g1.Controls.Add(this.dgvschool);
+            this.g1.Controls.Add(this.txtschoolID);
+            this.g1.Controls.Add(this.label1);
+            this.g1.Controls.Add(this.btsedit);
+            this.g1.Controls.Add(this.label2);
+            this.g1.Controls.Add(this.txtnameschool);
+            this.g1.Controls.Add(this.btssave);
+            this.g1.Location = new System.Drawing.Point(12, 89);
+            this.g1.Name = "g1";
+            this.g1.Size = new System.Drawing.Size(763, 300);
+            this.g1.TabIndex = 29;
+            this.g1.TabStop = false;
+            this.g1.Text = "ຈັດການຂໍ້ມູນສະຖາບັນ";
             // 
             // button1
             // 
@@ -366,6 +374,7 @@
             // 
             // txtschoolID
             // 
+            this.txtschoolID.Enabled = false;
             this.txtschoolID.Location = new System.Drawing.Point(176, 44);
             this.txtschoolID.Name = "txtschoolID";
             this.txtschoolID.Size = new System.Drawing.Size(169, 42);
@@ -416,36 +425,118 @@
             this.btssave.UseVisualStyleBackColor = true;
             this.btssave.Click += new System.EventHandler(this.btssave_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(1236, -3);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(28, 36);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "X";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(35, 27);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(219, 36);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "ກະລຸນາເລືອກລາຍການ=>";
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.BackColor = System.Drawing.Color.White;
+            this.radioButton1.Location = new System.Drawing.Point(286, 25);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(211, 40);
+            this.radioButton1.TabIndex = 30;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "ຈັດການຂໍ້ມູນສະຖາບັນ";
+            this.radioButton1.UseVisualStyleBackColor = false;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.BackColor = System.Drawing.Color.White;
+            this.radioButton2.Location = new System.Drawing.Point(515, 25);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(186, 40);
+            this.radioButton2.TabIndex = 30;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "ຈັດການຂໍ້ມູນຄະນະ";
+            this.radioButton2.UseVisualStyleBackColor = false;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.BackColor = System.Drawing.Color.White;
+            this.radioButton3.Location = new System.Drawing.Point(717, 25);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(174, 40);
+            this.radioButton3.TabIndex = 30;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "ຈັດການຂໍ້ມູນພາກ";
+            this.radioButton3.UseVisualStyleBackColor = false;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+            // 
+            // radioButton4
+            // 
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.BackColor = System.Drawing.Color.White;
+            this.radioButton4.Checked = true;
+            this.radioButton4.Location = new System.Drawing.Point(910, 25);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(205, 40);
+            this.radioButton4.TabIndex = 30;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.Text = "ບໍ່ເລືອກລາຍການໃດໆ";
+            this.radioButton4.UseVisualStyleBackColor = false;
+            this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
+            // 
             // study
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 36F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(208)))), ((int)(((byte)(203)))));
-            this.ClientSize = new System.Drawing.Size(1202, 646);
-            this.Controls.Add(this.groupBox6);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.groupBox5);
+            this.ClientSize = new System.Drawing.Size(1262, 726);
+            this.ControlBox = false;
+            this.Controls.Add(this.radioButton4);
+            this.Controls.Add(this.radioButton3);
+            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.g2);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.g1);
+            this.Controls.Add(this.g3);
+            this.Controls.Add(this.label5);
             this.Font = new System.Drawing.Font("Saysettha OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.Name = "study";
             this.Text = "study";
             this.Load += new System.EventHandler(this.study_Load);
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
+            this.g2.ResumeLayout(false);
+            this.g2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvfaculty)).EndInit();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
+            this.g3.ResumeLayout(false);
+            this.g3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvdepartment)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.g1.ResumeLayout(false);
+            this.g1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvschool)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.GroupBox g2;
         private System.Windows.Forms.Button btfdelete;
         private System.Windows.Forms.DataGridView dgvfaculty;
         private System.Windows.Forms.TextBox txtfacID;
@@ -455,7 +546,7 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox txtdepname;
         private System.Windows.Forms.Button btfsave;
-        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.GroupBox g3;
         private System.Windows.Forms.Button btddelete;
         private System.Windows.Forms.DataGridView dgvdepartment;
         private System.Windows.Forms.TextBox txtdepID;
@@ -465,7 +556,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtfacname;
         private System.Windows.Forms.Button btdsave;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox g1;
         private System.Windows.Forms.Button btdelete;
         private System.Windows.Forms.DataGridView dgvschool;
         private System.Windows.Forms.TextBox txtschoolID;
@@ -479,5 +570,11 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton4;
     }
 }

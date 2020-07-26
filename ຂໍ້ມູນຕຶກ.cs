@@ -213,5 +213,10 @@ sql = "select buildingID,buildingnumber,typename from tbbuilding inner join tbro
             clrtext();
 
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }
