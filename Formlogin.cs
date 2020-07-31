@@ -100,8 +100,26 @@ namespace C_Sharp_2_Project
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
             this.Dispose();
+        }
+
+        private void txtname_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtname_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
+
+        private void txtname_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtpassword.Focus();
+            }
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)

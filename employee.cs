@@ -213,7 +213,7 @@ namespace C_Sharp_2_Project
 
         private void label11_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
     }
 }

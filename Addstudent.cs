@@ -57,7 +57,8 @@ namespace C_Sharp_2_Project
         }
         int  schoID;
         string scho;
-        
+      
+
         public void showconoboxschool()
         {
             
@@ -129,14 +130,77 @@ namespace C_Sharp_2_Project
             try
             {
                 date2 = Form1.date1;
-                
-                if (txtstid .Text ==null && txtstname .Text ==null && txtstsurname.Text ==null && txtvillage .Text==null && txtdistrict .Text ==null && cbprovince .SelectedItem ==null && txtemail .Text ==null && txttel .Text ==null && txtyearstudy .Text ==null && txtemername .Text ==null && txtemersurname .Text ==null && txtemerage.Text ==null && txtemervillage.Text ==null && txtemerdistrict.Text ==null && txtemerjob .Text ==null && txtemertel.Text ==null &&txtemerrelationship .Text ==null)
+                if (pictureBox1.Image == null)
+                {
+                    if (txtstid.Text == null && txtstname.Text == null && txtstsurname.Text == null && txtvillage.Text == null && txtdistrict.Text == null && cbprovince.SelectedItem == null && txtemail.Text == null && txttel.Text == null && txtyearstudy.Text == null && txtemername.Text == null && txtemersurname.Text == null && txtemerage.Text == null && txtemervillage.Text == null && txtemerdistrict.Text == null && txtemerjob.Text == null && txtemertel.Text == null && txtemerrelationship.Text == null)
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        sql = "INSERT INTO tbstudent VALUEs (@studentID,@name,@surname,@gender,@birthofdate,@village,@district,@province,@email,@phone,(select schoolID from tbschool where schoolname=@schoolID),(select facID from tbfaculty where facname=@facID),(select deptID from tbdepartment where deptname=@deptID),@session,@emgcname,@emgcsurname,@emgcage,@emgcvillage,@emgcdistrict,@emgcprovince,@emgcjob,@emgctel,@relationship,@datesign)";
+                        cmd = new SqlCommand(sql, con);
+                        cmd.Parameters.Clear();
+                        cmd.Parameters.AddWithValue("studentID", txtstid.Text);
+                        cmd.Parameters.AddWithValue("name", txtstname.Text);
+                        cmd.Parameters.AddWithValue("surname", txtstsurname.Text);
+                        string gd = "";
+                        if (rbfemale.Checked)
+                        {
+                            gd = rbfemale.Text;
+                        }
+                        else if (rbmale.Checked)
+                        {
+                            gd = rbmale.Text;
+                        }
+                        else
+                        {
+                            gd = rbmale.Text;
+                        }
+                        cmd.Parameters.AddWithValue("@gender", gd);
+                        cmd.Parameters.AddWithValue("@birthofdate", txtbdatetime.Value);
+
+                        cmd.Parameters.AddWithValue("@village", txtvillage.Text);
+                        cmd.Parameters.AddWithValue("@district", txtdistrict.Text);
+                        cmd.Parameters.AddWithValue("@province", cbprovince.SelectedItem);
+                        cmd.Parameters.AddWithValue("@email", txtemail.Text);
+                        cmd.Parameters.AddWithValue("@phone", txttel.Text);
+                        cmd.Parameters.AddWithValue("@schoolID", cbschool.SelectedItem);
+                        cmd.Parameters.AddWithValue("@facID", cbfac.SelectedItem);
+                        cmd.Parameters.AddWithValue("@deptID", cbdep.SelectedItem);
+                        cmd.Parameters.AddWithValue("@session", txtyearstudy.Text);
+                        cmd.Parameters.AddWithValue("@emgcname", txtemername.Text);
+                        cmd.Parameters.AddWithValue("@emgcsurname", txtemersurname.Text);
+                        cmd.Parameters.AddWithValue("@emgcage", txtemerage.Text);
+                        cmd.Parameters.AddWithValue("@emgcvillage", txtemervillage.Text);
+                        cmd.Parameters.AddWithValue("@emgcdistrict", txtemerdistrict.Text);
+                        cmd.Parameters.AddWithValue("@emgcprovince", cbemerprovince.SelectedItem);
+                        cmd.Parameters.AddWithValue("emgcjob", txtemerjob.Text);
+                        cmd.Parameters.AddWithValue("emgctel", txtemertel.Text);
+                        cmd.Parameters.AddWithValue("@relationship", txtemerrelationship.Text);
+                        cmd.Parameters.AddWithValue("@datesign", DateTime.Now);
+
+                        /* MemoryStream mem = new MemoryStream();
+                         pictureBox1.Image.Save(mem, System.Drawing.Imaging.ImageFormat.Png);
+                         byte[] imarr = mem.ToArray();
+                         cmd.Parameters.AddWithValue("@picture", imarr);*/
+
+
+
+                        cmd.ExecuteNonQuery();
+                        showstudent();
+                    }
+                }
+                else
+                {
+                if (txtstid.Text == null && txtstname.Text == null && txtstsurname.Text == null && txtvillage.Text == null && txtdistrict.Text == null && cbprovince.SelectedItem == null && txtemail.Text == null && txttel.Text == null && txtyearstudy.Text == null && txtemername.Text == null && txtemersurname.Text == null && txtemerage.Text == null && txtemervillage.Text == null && txtemerdistrict.Text == null && txtemerjob.Text == null && txtemertel.Text == null && txtemerrelationship.Text == null)
                 {
                     return;
-                }else { 
+                }             else
+                {
 
 
-                sql = "INSERT INTO tbstudent VALUEs (@studentID,@name,@surname,@gender,@birthofdate,@village,@district,@province,@email,@phone,(select schoolID from tbschool where schoolname=@schoolID),(select facID from tbfaculty where facname=@facID),(select deptID from tbdepartment where deptname=@deptID),@session,@emgcname,@emgcsurname,@emgcage,@emgcvillage,@emgcdistrict,@emgcprovince,@emgcjob,@emgctel,@relationship,@picture)";
+                    sql = "INSERT INTO tbstudent VALUEs (@studentID,@name,@surname,@gender,@birthofdate,@village,@district,@province,@email,@phone,(select schoolID from tbschool where schoolname=@schoolID),(select facID from tbfaculty where facname=@facID),(select deptID from tbdepartment where deptname=@deptID),@session,@emgcname,@emgcsurname,@emgcage,@emgcvillage,@emgcdistrict,@emgcprovince,@emgcjob,@emgctel,@relationship,@picture,@datesign)";
                 cmd = new SqlCommand(sql, con);
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("studentID",txtstid .Text);
@@ -177,12 +241,15 @@ namespace C_Sharp_2_Project
                 pictureBox1.Image.Save(mem, System.Drawing.Imaging.ImageFormat.Png);
                 byte[] imarr = mem.ToArray();
                 cmd.Parameters.AddWithValue("@picture",imarr );
+                        cmd.Parameters.AddWithValue("@datesign", DateTime.Now);
 
 
 
-                cmd.ExecuteNonQuery();
+
+                        cmd.ExecuteNonQuery();
                     showstudent();
 
+                }
                 }
             }
             catch (Exception ex)
@@ -367,8 +434,8 @@ namespace C_Sharp_2_Project
         private void btedit_Click(object sender, EventArgs e)
         {
             try
-            {
-                sql = "update tbstudent set name=@name,surname=@surname,gender=@gender,birthofdate=@birthofdate,village=@village,district=@district,province=@province,email=@email,phone=@phone,(select schoolID from tbschool where schoolname=@schoolID),(select facID from tbfaculty where facname=@facID),(select deptID from tbdepartment where deptname=@deptID),session=@session,emgcname=@emgcname,emgcsurname=@emgcsurname,emgcage=@emgcage,emgcvillage=@emgcvillage,emgcdistrict=@emgcdistrict,emgcprovince=@emgcprovince,emgcjob=@emgcjob,emgctel=@emgctel,relationship=@relationship,picture=@picture where studentID=@studentID";
+            { 
+                 sql = "update tbstudent set name=@name,surname=@surname,gender=@gender,birthofdate=@birthofdate,village=@village,district=@district,province=@province,email=@email,phone=@phone,schoolID=(select schoolID from tbschool where schoolname=@schoolID),facID=(select facID from tbfaculty where facname=@facID),deptID=(select deptID from tbdepartment where deptname=@deptID),session=@session,emgcname=@emgcname,emgcsurname=@emgcsurname,emgcage=@emgcage,emgcvillage=@emgcvillage,emgcdistrict=@emgcdistrict,emgcprovince=@emgcprovince,emgcjob=@emgcjob,emgctel=@emgctel,relationship=@relationship,picture=@picture,datesign=@datesign where studentID=@studentID";
                 cmd = new SqlCommand(sql, con);
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("name", txtstname.Text);
@@ -410,6 +477,8 @@ namespace C_Sharp_2_Project
                 pictureBox1.Image.Save(mem, System.Drawing.Imaging.ImageFormat.Png);
                 byte[] imarr = mem.ToArray();
                 cmd.Parameters.AddWithValue("@picture", imarr);
+                cmd.Parameters.AddWithValue("@datesign", DateTime.Now);
+
                 cmd.Parameters.AddWithValue("studentID", txtstid.Text);
 
                 cmd.ExecuteNonQuery();
@@ -423,7 +492,7 @@ namespace C_Sharp_2_Project
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
+        {                        
             payment pay = new payment();
             pay.Show();
             this.Hide();
@@ -488,7 +557,7 @@ namespace C_Sharp_2_Project
 
         private void label15_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            this.Close() ;
         }
     }
 }

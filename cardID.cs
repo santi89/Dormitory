@@ -22,7 +22,7 @@ namespace C_Sharp_2_Project
         {
 
         }
-        public string ids = "";
+        public string ids ="";
         private void cardID_Load(object sender, EventArgs e)
         {
             ReportDocument rpt = new ReportDocument();
@@ -31,6 +31,11 @@ namespace C_Sharp_2_Project
             rpt.SetParameterValue("id",ids);
             crystalReportViewer1.ReportSource = rpt;
             crystalReportViewer1.Refresh();
+        }
+
+        private void crystalReportViewer1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

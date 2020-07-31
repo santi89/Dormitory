@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel_show = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -47,14 +48,12 @@
             this.ລາຍງານນກສກສາເຂາພກToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ລາຍງານນກສກສາໝດກຳນດພກເຊາToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crToolStripTextBox1 = new CrystalDecisions.Windows.Forms.CRToolStripTextBox();
-            this.ກຽວກບໂປຣແກຣມToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ອອກຈາລະບບToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel_show.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_show
@@ -68,6 +67,19 @@
             this.panel_show.Size = new System.Drawing.Size(1121, 693);
             this.panel_show.TabIndex = 0;
             this.panel_show.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Enabled = false;
+            this.pictureBox1.Location = new System.Drawing.Point(268, 168);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(580, 428);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // toolStrip1
             // 
@@ -111,7 +123,6 @@
             this.ຈດການຂມນToolStripMenuItem,
             this.ລາຍງານToolStripMenuItem,
             this.crToolStripTextBox1,
-            this.ກຽວກບໂປຣແກຣມToolStripMenuItem,
             this.ອອກຈາລະບບToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -233,31 +244,12 @@
             this.crToolStripTextBox1.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.crToolStripTextBox1.Click += new System.EventHandler(this.crToolStripTextBox1_Click_1);
             // 
-            // ກຽວກບໂປຣແກຣມToolStripMenuItem
-            // 
-            this.ກຽວກບໂປຣແກຣມToolStripMenuItem.Name = "ກຽວກບໂປຣແກຣມToolStripMenuItem";
-            this.ກຽວກບໂປຣແກຣມToolStripMenuItem.Size = new System.Drawing.Size(161, 42);
-            this.ກຽວກບໂປຣແກຣມToolStripMenuItem.Text = "ກ່ຽວກັບໂປຣແກຣມ";
-            // 
             // ອອກຈາລະບບToolStripMenuItem
             // 
             this.ອອກຈາລະບບToolStripMenuItem.Name = "ອອກຈາລະບບToolStripMenuItem";
             this.ອອກຈາລະບບToolStripMenuItem.Size = new System.Drawing.Size(132, 42);
             this.ອອກຈາລະບບToolStripMenuItem.Text = "ອອກຈາລະບົບ";
             this.ອອກຈາລະບບToolStripMenuItem.Click += new System.EventHandler(this.ອອກຈາລະບບToolStripMenuItem_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Enabled = false;
-            this.pictureBox1.Location = new System.Drawing.Point(268, 168);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(580, 428);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
@@ -282,13 +274,13 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel_show.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -315,7 +307,6 @@
         private System.Windows.Forms.ToolStripMenuItem ລາຍງານນກສກສາໝດກຳນດພກເຊາToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ອອກຈາລະບບToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem empmanage;
-        private System.Windows.Forms.ToolStripMenuItem ກຽວກບໂປຣແກຣມToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

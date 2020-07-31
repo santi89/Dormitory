@@ -60,22 +60,7 @@ namespace C_Sharp_2_Project
         }
         private void btrtsave_Click(object sender, EventArgs e)
         {
-            try
-            {
-sql = "insert into tbroomtype values(@rtID,@rtname,@price)";
-            cmd = new SqlCommand(sql, con);
-            cmd.Parameters.Clear();
-            cmd.Parameters.AddWithValue("@rtID", txtroomtypeID.Text);
-            cmd.Parameters.AddWithValue("@rtname", txtnametype.Text);
-            cmd.Parameters.AddWithValue("@price", txttypeprice.Text);
-            cmd.ExecuteNonQuery();
-            clrtext();
-            showdata();
-            }
-            catch (Exception ex )
-            {
-                MessageBox.Show(ex.Message.ToString());
-            }
+           
         }
         private void ຂໍ້ມູນປະເພດຫ້ອງ_Load(object sender, EventArgs e)
         {
@@ -84,39 +69,11 @@ sql = "insert into tbroomtype values(@rtID,@rtname,@price)";
         }
         private void btrtedit_Click(object sender, EventArgs e)
         {
-            try
-            {
-                sql = "update tbroomtype set typename=@rtname,roomprice=@price where roomtypeID=@rtID";
-                cmd = new SqlCommand(sql, con);
-                cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@rtname", txtnametype.Text);
-                cmd.Parameters.AddWithValue("@price", txttypeprice.Text);
-                cmd.Parameters.AddWithValue("@rtID", txtroomtypeID.Text);
-                cmd.ExecuteNonQuery();
-                clrtext();
-                showdata();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString());
-            }
+           
         }
         private void btrtdelete_Click(object sender, EventArgs e)
         {
-            try
-            {
-                sql = "delete from tbroomtype where roomtypeID=@rtID";
-                cmd = new SqlCommand(sql, con);
-                cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@rtID",txtroomtypeID .Text);
-                cmd.ExecuteNonQuery();
-                clrtext();
-                showdata();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString());
-            }
+           
         }
 
         private void dgvroomtype_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -136,6 +93,88 @@ sql = "insert into tbroomtype values(@rtID,@rtname,@price)";
         private void label2_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btrtsave_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                sql = "insert into tbroomtype values(@rtID,@rtname,@price)";
+                cmd = new SqlCommand(sql, con);
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@rtID", txtroomtypeID.Text);
+                cmd.Parameters.AddWithValue("@rtname", txtnametype.Text);
+                cmd.Parameters.AddWithValue("@price", txttypeprice.Text);
+                cmd.ExecuteNonQuery();
+                clrtext();
+                showdata();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
+        }
+
+        private void btrtedit_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                sql = "update tbroomtype set typename=@rtname,roomprice=@price where roomtypeID=@rtID";
+                cmd = new SqlCommand(sql, con);
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@rtname", txtnametype.Text);
+                cmd.Parameters.AddWithValue("@price", txttypeprice.Text);
+                cmd.Parameters.AddWithValue("@rtID", txtroomtypeID.Text);
+                cmd.ExecuteNonQuery();
+                clrtext();
+                showdata();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
+        }
+
+        private void btrtdelete_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                sql = "delete from tbroomtype where roomtypeID=@rtID";
+                cmd = new SqlCommand(sql, con);
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@rtID", txtroomtypeID.Text);
+                cmd.ExecuteNonQuery();
+                clrtext();
+                showdata();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            txtnametype.Clear();
+            txtroomtypeID.Clear();
+            txttypeprice.Clear();
+        }
+
+        private void dgvroomtype_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            txtroomtypeID.Text = dgvroomtype.CurrentRow.Cells[0].Value.ToString();
+            txtnametype.Text = dgvroomtype.CurrentRow.Cells[1].Value.ToString();
+            txttypeprice.Text = dgvroomtype.CurrentRow.Cells[2].Value.ToString();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

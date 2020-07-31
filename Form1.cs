@@ -103,8 +103,10 @@ namespace C_Sharp_2_Project
         private void crToolStripTextBox1_Click_1(object sender, EventArgs e)
         {
             this.Close();
+            Formlogin fo = new Formlogin();
+            fo.Show();
         }
-        private void showform_in_panel(object formget)
+        public  void showform_in_panel(object formget)
         {
             if (this.panel_show.Controls.Count > 0) this.panel_show.Controls.RemoveAt(0);
             Form f = formget as Form;

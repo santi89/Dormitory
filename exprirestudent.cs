@@ -36,5 +36,10 @@ namespace C_Sharp_2_Project
             }
            
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

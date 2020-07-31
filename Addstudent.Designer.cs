@@ -694,7 +694,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(121, 51);
             this.button1.TabIndex = 2;
-            this.button1.Text = "ລົງທະບຽນ";
+            this.button1.Text = "ຊຳລະເງິນ";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -711,7 +711,8 @@
             // 
             // Addstudent
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(208)))), ((int)(((byte)(203)))));
             this.ClientSize = new System.Drawing.Size(1500, 847);
