@@ -62,6 +62,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox3.Controls.Add(this.button1);
             this.groupBox3.Controls.Add(this.btrtdelete);
             this.groupBox3.Controls.Add(this.btrtedit);
@@ -198,6 +199,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.Red;
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -211,9 +213,11 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(443, 3);
+            this.label1.Location = new System.Drawing.Point(470, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(215, 36);
@@ -232,7 +236,9 @@
             this.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.MinimumSize = new System.Drawing.Size(1165, 496);
             this.Name = "ຂໍ້ມູນປະເພດຫ້ອງ";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ຂໍ້ມູນປະເພດຫ້ອງ";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ຂໍ້ມູນປະເພດຫ້ອງ_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

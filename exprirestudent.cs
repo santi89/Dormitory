@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,15 +18,23 @@ namespace C_Sharp_2_Project
         {
             InitializeComponent();
         }
+        SqlConnection con = Connect.getconnect();
+        SqlDataAdapter da;
+        SqlCommand cmd;
 
+        DataSet ds = new DataSet();
+        string sql = "";
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
+                sql = "SELECT dbo.Rentdetail.studentID, dbo.tbstudent.name, dbo.tbstudent.surname, dbo.Rentdetail.enddate, dbo.tbroom.room_number, dbo.tbfloor.floornumber, dbo.tbbuilding.buildingnumber FROM dbo.tbfloor INNER JOIN dbo.tbbuilding ON dbo.tbfloor.buildingID = dbo.tbbuilding.buildingID INNER JOIN  dbo.tbroom ON dbo.tbfloor.floorID = dbo.tbroom.floorID INNER JOIN dbo.Rentdetail INNER JOIN dbo.tbstudent ON dbo.Rentdetail.studentID = dbo.tbstudent.studentID ON dbo.tbroom.roomID = dbo.Rentdetail.roomID where enddate between '"+ dateTimePicker1 .Value .ToString ("yyyy-MM-dd")+ "' and '" + dateTimePicker2.Value.ToString("yyyy-MM-dd") + "'";
+                da = new SqlDataAdapter(sql, con);
+                da.Fill(ds, "exprice");
                 ReportDocument rpt = new ReportDocument();
             string path = "E:\\work\\C_Sharp_2_Project\\C_Sharp_2_Project\\expriredate.rpt";
             rpt.Load(path);
-            rpt.SetParameterValue("date", dateTimePicker1.Value);
+                rpt.SetDataSource (ds);
             crystalReportViewer1.ReportSource = rpt;
             crystalReportViewer1.Refresh();
             }

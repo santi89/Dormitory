@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.cbroomtype = new System.Windows.Forms.ComboBox();
             this.cbfloor = new System.Windows.Forms.ComboBox();
             this.btrdelete = new System.Windows.Forms.Button();
@@ -46,13 +47,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtstamount = new System.Windows.Forms.TextBox();
             this.txtsearch = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvroom)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(208)))), ((int)(((byte)(203)))));
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.cbroomtype);
@@ -72,7 +74,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtstamount);
             this.groupBox1.Controls.Add(this.txtsearch);
-            this.groupBox1.Location = new System.Drawing.Point(13, 2);
+            this.groupBox1.Location = new System.Drawing.Point(13, 50);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 7, 4, 7);
@@ -80,6 +82,16 @@
             this.groupBox1.TabIndex = 35;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ຈັດການຂໍ້ມູນຫ້ອງ";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(110, 410);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 43);
+            this.button1.TabIndex = 30;
+            this.button1.Text = "ລ້າງບ໊ອກ";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // cbroomtype
             // 
@@ -260,33 +272,41 @@
             this.txtsearch.TabIndex = 22;
             this.txtsearch.TextChanged += new System.EventHandler(this.txtsearch_TextChanged);
             // 
-            // button1
+            // label1
             // 
-            this.button1.Location = new System.Drawing.Point(110, 410);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 43);
-            this.button1.TabIndex = 30;
-            this.button1.Text = "ລ້າງບ໊ອກ";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label1.Location = new System.Drawing.Point(1301, 3);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(28, 36);
+            this.label1.TabIndex = 38;
+            this.label1.Text = "X";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // ຂໍ້ມູນຫ້ອງ
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 36F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(208)))), ((int)(((byte)(203)))));
-            this.ClientSize = new System.Drawing.Size(1320, 630);
+            this.ClientSize = new System.Drawing.Size(1330, 697);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Saysettha OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.Name = "ຂໍ້ມູນຫ້ອງ";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ຂໍ້ມູນຫ້ອງ";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ຂໍ້ມູນຫ້ອງ_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvroom)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -311,5 +331,6 @@
         private System.Windows.Forms.TextBox txtstamount;
         private System.Windows.Forms.TextBox txtsearch;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
     }
 }

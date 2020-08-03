@@ -101,7 +101,7 @@ namespace C_Sharp_2_Project
         private void button3_Click(object sender, EventArgs e)
         {
             Application.Exit();
-            this.Dispose();
+            
         }
 
         private void txtname_TextChanged(object sender, EventArgs e)

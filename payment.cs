@@ -347,14 +347,8 @@ namespace C_Sharp_2_Project
                     cd.Show();
                     }
                     else
-                    {
-                       string ssql = "delete from Rentdetail where studentID=@stid";
-                        SqlCommand  cmd2 = new SqlCommand(ssql, con);
-                        cmd2.Parameters.AddWithValue("@stid", txtstid.Text);
-                        if(cmd2.ExecuteNonQuery() == 1){
-                            MessageBox.Show("ບັນທຶກຜິດຜາດ");
-                        }
-
+                    {          
+                            MessageBox.Show("ບັນທຶກຜິດຜາດ");                    
                     }
 
                     
@@ -382,14 +376,8 @@ namespace C_Sharp_2_Project
                     cd.Show();
                     }
                     else
-                    {
-                        string ssql = "delete from Rentdetail where studentID=@stid";
-                        SqlCommand cmd2 = new SqlCommand(ssql, con);
-                        cmd2.Parameters.AddWithValue("@stid", txtstid.Text);
-                        if (cmd2.ExecuteNonQuery() == 1)
-                        {
-                            MessageBox.Show("ບັນທຶກຜິດຜາດ");
-                        }
+                    {                      
+                            MessageBox.Show("ບັນທຶກຜິດຜາດ");                    
 
                     }
                 }

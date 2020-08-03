@@ -106,6 +106,7 @@
             // 
             // datesearch
             // 
+            this.datesearch.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.datesearch.CustomFormat = "yyyy-MM-dd";
             this.datesearch.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.datesearch.Location = new System.Drawing.Point(85, 105);
@@ -473,8 +474,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.Name = "payment";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "payment";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.payment_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

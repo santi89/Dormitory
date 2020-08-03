@@ -16,7 +16,7 @@ namespace C_Sharp_2_Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new payment  ());
+            Application.Run(new Formlogin());
         }
     }
 }

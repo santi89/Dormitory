@@ -50,6 +50,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.cbroomtype);
             this.groupBox2.Controls.Add(this.button1);
@@ -220,6 +221,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.Red;
             this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -243,7 +245,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.Name = "ຂໍ້ມູນຕຶກ";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ຂໍ້ມູນຕຶກ";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ຂໍ້ມູນຕຶກ_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

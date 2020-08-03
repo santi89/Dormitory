@@ -97,6 +97,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.Controls.Add(this.cbprovince);
             this.groupBox1.Controls.Add(this.cbdep);
             this.groupBox1.Controls.Add(this.cbfac);
@@ -521,6 +522,7 @@
             // 
             // txtregister
             // 
+            this.txtregister.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtregister.Location = new System.Drawing.Point(820, 457);
             this.txtregister.Name = "txtregister";
             this.txtregister.Size = new System.Drawing.Size(116, 51);
@@ -579,6 +581,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox2.Controls.Add(this.cbemerprovince);
             this.groupBox2.Controls.Add(this.txtemername);
             this.groupBox2.Controls.Add(this.label24);
@@ -631,6 +634,7 @@
             // 
             // btdelete
             // 
+            this.btdelete.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btdelete.Location = new System.Drawing.Point(946, 457);
             this.btdelete.Name = "btdelete";
             this.btdelete.Size = new System.Drawing.Size(116, 51);
@@ -641,6 +645,7 @@
             // 
             // dgvregister
             // 
+            this.dgvregister.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvregister.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvregister.Location = new System.Drawing.Point(37, 517);
             this.dgvregister.Name = "dgvregister";
@@ -652,6 +657,7 @@
             // 
             // btedit
             // 
+            this.btedit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btedit.Location = new System.Drawing.Point(1078, 457);
             this.btedit.Name = "btedit";
             this.btedit.Size = new System.Drawing.Size(102, 51);
@@ -662,6 +668,7 @@
             // 
             // label26
             // 
+            this.label26.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label26.AutoSize = true;
             this.label26.Location = new System.Drawing.Point(765, 390);
             this.label26.Name = "label26";
@@ -671,6 +678,7 @@
             // 
             // txtsearch
             // 
+            this.txtsearch.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtsearch.Location = new System.Drawing.Point(837, 387);
             this.txtsearch.Multiline = true;
             this.txtsearch.Name = "txtsearch";
@@ -680,6 +688,7 @@
             // 
             // btsearch
             // 
+            this.btsearch.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btsearch.Location = new System.Drawing.Point(1098, 385);
             this.btsearch.Name = "btsearch";
             this.btsearch.Size = new System.Drawing.Size(121, 47);
@@ -690,6 +699,7 @@
             // 
             // button1
             // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button1.Location = new System.Drawing.Point(1186, 457);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(121, 51);
@@ -700,6 +710,7 @@
             // 
             // label15
             // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label15.AutoSize = true;
             this.label15.ForeColor = System.Drawing.Color.Red;
             this.label15.Location = new System.Drawing.Point(1469, 2);
@@ -737,8 +748,9 @@
             this.MinimumSize = new System.Drawing.Size(1500, 847);
             this.Name = "Addstudent";
             this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ເພີ່ມນັກສຶກສາ";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.register_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

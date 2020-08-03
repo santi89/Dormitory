@@ -160,12 +160,12 @@ sql = "select buildingID,buildingnumber,typename from tbbuilding inner join tbro
               cmd = new SqlCommand(sql, con);
               da = new SqlDataAdapter(cmd);
               da.Fill(ds, "bs");
-              //if (ds.Tables ["bs"] != null)
-              //{
-              //    ds.Tables.Clear();
-              //}
-              //da.Fill(ds,"bs");
-              dgvbuild.DataSource = ds.Tables["bs"];
+            if (ds.Tables["bs"] != null)
+            {
+                ds.Tables.Clear();
+            }
+            da.Fill(ds, "bs");
+            dgvbuild.DataSource = ds.Tables["bs"];
         }
 
         private void dgvbuild_CellContentClick(object sender, DataGridViewCellEventArgs e)

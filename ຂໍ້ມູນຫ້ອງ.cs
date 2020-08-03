@@ -275,5 +275,10 @@ namespace C_Sharp_2_Project
         {
             clrtext();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
