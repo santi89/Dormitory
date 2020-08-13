@@ -76,6 +76,17 @@
       <DependentUpon>Crystalcard.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dataset.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dbDormitoryDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -110,6 +121,12 @@
     </Compile>
     <Compile Include="Formlogin.Designer.cs">
       <DependentUpon>Formlogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MoveRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MoveRoom.Designer.cs">
+      <DependentUpon>MoveRoom.cs</DependentUpon>
     </Compile>
     <Compile Include="payment.cs">
       <SubType>Form</SubType>
@@ -174,6 +191,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Crystalcard.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="employee.resx">
       <DependentUpon>employee.cs</DependentUpon>
     </EmbeddedResource>
@@ -189,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlogin.resx">
       <DependentUpon>Formlogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoveRoom.resx">
+      <DependentUpon>MoveRoom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="payment.resx">
       <DependentUpon>payment.cs</DependentUpon>
@@ -227,6 +251,20 @@
     <EmbeddedResource Include="ຂໍ້ມູນຫ້ອງ.resx">
       <DependentUpon>ຂໍ້ມູນຫ້ອງ.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
+    <None Include="Dataset.xsc">
+      <DependentUpon>Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Dataset.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset.xss">
+      <DependentUpon>Dataset.xsd</DependentUpon>
+    </None>
     <None Include="dbDormitoryDataSet.xsc">
       <DependentUpon>dbDormitoryDataSet.xsd</DependentUpon>
     </None>

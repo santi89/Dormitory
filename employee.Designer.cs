@@ -111,42 +111,46 @@
             // btsearch
             // 
             this.btsearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btsearch.Location = new System.Drawing.Point(1332, 135);
+            this.btsearch.Location = new System.Drawing.Point(1307, 590);
             this.btsearch.Name = "btsearch";
-            this.btsearch.Size = new System.Drawing.Size(181, 47);
+            this.btsearch.Size = new System.Drawing.Size(127, 47);
             this.btsearch.TabIndex = 66;
             this.btsearch.Text = "ຄົ້ນຫາ";
             this.btsearch.UseVisualStyleBackColor = true;
+            this.btsearch.Click += new System.EventHandler(this.btsearch_Click_1);
             // 
             // btdelete
             // 
             this.btdelete.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btdelete.Location = new System.Drawing.Point(715, 83);
+            this.btdelete.Location = new System.Drawing.Point(715, 590);
             this.btdelete.Name = "btdelete";
-            this.btdelete.Size = new System.Drawing.Size(116, 47);
+            this.btdelete.Size = new System.Drawing.Size(88, 47);
             this.btdelete.TabIndex = 65;
             this.btdelete.Text = "ລືບ";
             this.btdelete.UseVisualStyleBackColor = true;
+            this.btdelete.Click += new System.EventHandler(this.btdelete_Click_1);
             // 
             // btedit
             // 
             this.btedit.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btedit.Location = new System.Drawing.Point(559, 83);
+            this.btedit.Location = new System.Drawing.Point(559, 590);
             this.btedit.Name = "btedit";
-            this.btedit.Size = new System.Drawing.Size(137, 47);
+            this.btedit.Size = new System.Drawing.Size(109, 47);
             this.btedit.TabIndex = 64;
             this.btedit.Text = "ແກ້ໄຂ";
             this.btedit.UseVisualStyleBackColor = true;
+            this.btedit.Click += new System.EventHandler(this.btedit_Click_1);
             // 
             // btsave
             // 
             this.btsave.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btsave.Location = new System.Drawing.Point(410, 83);
+            this.btsave.Location = new System.Drawing.Point(410, 590);
             this.btsave.Name = "btsave";
-            this.btsave.Size = new System.Drawing.Size(132, 47);
+            this.btsave.Size = new System.Drawing.Size(104, 47);
             this.btsave.TabIndex = 63;
             this.btsave.Text = "ບັນທຶກ";
             this.btsave.UseVisualStyleBackColor = true;
+            this.btsave.Click += new System.EventHandler(this.btsave_Click);
             // 
             // rbfemale
             // 
@@ -177,11 +181,12 @@
             // 
             this.dgvemp.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvemp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvemp.Location = new System.Drawing.Point(394, 191);
+            this.dgvemp.Location = new System.Drawing.Point(394, 85);
             this.dgvemp.Name = "dgvemp";
             this.dgvemp.RowHeadersWidth = 51;
             this.dgvemp.Size = new System.Drawing.Size(1134, 454);
             this.dgvemp.TabIndex = 60;
+            this.dgvemp.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvemp_CellContentClick_1);
             // 
             // txtsurname
             // 
@@ -242,6 +247,7 @@
             this.txtpassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtpassword.Location = new System.Drawing.Point(176, 146);
             this.txtpassword.Name = "txtpassword";
+            this.txtpassword.PasswordChar = '*';
             this.txtpassword.Size = new System.Drawing.Size(212, 42);
             this.txtpassword.TabIndex = 55;
             // 
@@ -269,7 +275,7 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 143);
+            this.label2.Location = new System.Drawing.Point(12, 146);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(151, 36);
             this.label2.TabIndex = 45;
@@ -305,7 +311,7 @@
             // 
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(870, 140);
+            this.label10.Location = new System.Drawing.Point(896, 595);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(66, 36);
             this.label10.TabIndex = 49;
@@ -324,10 +330,11 @@
             // txtsearch
             // 
             this.txtsearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtsearch.Location = new System.Drawing.Point(973, 137);
+            this.txtsearch.Location = new System.Drawing.Point(999, 592);
             this.txtsearch.Name = "txtsearch";
             this.txtsearch.Size = new System.Drawing.Size(259, 42);
             this.txtsearch.TabIndex = 59;
+            this.txtsearch.TextChanged += new System.EventHandler(this.txtsearch_TextChanged_1);
             // 
             // txtempID
             // 
@@ -352,9 +359,10 @@
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(681, 33);
+            this.label12.Font = new System.Drawing.Font("Saysettha OT", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(761, 34);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(202, 36);
+            this.label12.Size = new System.Drawing.Size(272, 48);
             this.label12.TabIndex = 22;
             this.label12.Text = "ຈັດການຂໍ້ມູນພະນັກງານ";
             // 
@@ -370,6 +378,7 @@
             this.label11.Size = new System.Drawing.Size(28, 36);
             this.label11.TabIndex = 21;
             this.label11.Text = "X";
+            this.label11.Click += new System.EventHandler(this.label11_Click_1);
             // 
             // employee
             // 

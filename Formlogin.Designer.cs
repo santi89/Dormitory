@@ -54,13 +54,13 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(313, 498);
+            this.panel1.Size = new System.Drawing.Size(276, 498);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(25, 161);
+            this.pictureBox1.Location = new System.Drawing.Point(10, 161);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(259, 183);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -72,7 +72,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Saysettha OT", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(97)))), ((int)(((byte)(121)))));
-            this.label1.Location = new System.Drawing.Point(79, 53);
+            this.label1.Location = new System.Drawing.Point(75, 54);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(160, 50);
             this.label1.TabIndex = 2;
@@ -91,9 +91,9 @@
             this.panel2.Controls.Add(this.txtpassword);
             this.panel2.Controls.Add(this.txtname);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(313, 0);
+            this.panel2.Location = new System.Drawing.Point(276, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(498, 498);
+            this.panel2.Size = new System.Drawing.Size(403, 498);
             this.panel2.TabIndex = 1;
             // 
             // button3
@@ -108,7 +108,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Red;
-            this.button3.Location = new System.Drawing.Point(463, 3);
+            this.button3.Location = new System.Drawing.Point(365, 3);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(32, 35);
             this.button3.TabIndex = 5;
@@ -121,7 +121,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Saysettha OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(7, 145);
+            this.label3.Location = new System.Drawing.Point(1, 222);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(107, 36);
             this.label3.TabIndex = 3;
@@ -131,7 +131,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Saysettha OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(43, 80);
+            this.label2.Location = new System.Drawing.Point(37, 157);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 36);
             this.label2.TabIndex = 3;
@@ -141,7 +141,7 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Saysettha OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(98, 238);
+            this.checkBox1.Location = new System.Drawing.Point(111, 268);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(152, 40);
             this.checkBox1.TabIndex = 2;
@@ -153,7 +153,7 @@
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(39)))), ((int)(((byte)(82)))));
             this.button2.Font = new System.Drawing.Font("Saysettha OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(262, 294);
+            this.button2.Location = new System.Drawing.Point(250, 343);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(131, 50);
             this.button2.TabIndex = 4;
@@ -165,7 +165,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.Lime;
             this.button1.Font = new System.Drawing.Font("Saysettha OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(73, 294);
+            this.button1.Location = new System.Drawing.Point(77, 343);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(144, 50);
             this.button1.TabIndex = 3;
@@ -176,7 +176,7 @@
             // txtpassword
             // 
             this.txtpassword.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpassword.Location = new System.Drawing.Point(117, 151);
+            this.txtpassword.Location = new System.Drawing.Point(111, 228);
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.PasswordChar = '*';
             this.txtpassword.Size = new System.Drawing.Size(270, 34);
@@ -187,7 +187,7 @@
             // txtname
             // 
             this.txtname.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtname.Location = new System.Drawing.Point(116, 84);
+            this.txtname.Location = new System.Drawing.Point(110, 161);
             this.txtname.Name = "txtname";
             this.txtname.Size = new System.Drawing.Size(270, 34);
             this.txtname.TabIndex = 0;
@@ -199,7 +199,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(811, 498);
+            this.ClientSize = new System.Drawing.Size(679, 498);
             this.ControlBox = false;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

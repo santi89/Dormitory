@@ -84,7 +84,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(163, 335);
+            this.button1.Location = new System.Drawing.Point(199, 287);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(98, 52);
             this.button1.TabIndex = 29;
@@ -95,7 +95,7 @@
             // btrtdelete
             // 
             this.btrtdelete.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btrtdelete.Location = new System.Drawing.Point(269, 274);
+            this.btrtdelete.Location = new System.Drawing.Point(305, 226);
             this.btrtdelete.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.btrtdelete.Name = "btrtdelete";
             this.btrtdelete.Size = new System.Drawing.Size(98, 51);
@@ -107,7 +107,7 @@
             // btrtedit
             // 
             this.btrtedit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btrtedit.Location = new System.Drawing.Point(163, 274);
+            this.btrtedit.Location = new System.Drawing.Point(199, 226);
             this.btrtedit.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.btrtedit.Name = "btrtedit";
             this.btrtedit.Size = new System.Drawing.Size(98, 51);
@@ -119,7 +119,7 @@
             // btrtsave
             // 
             this.btrtsave.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btrtsave.Location = new System.Drawing.Point(59, 274);
+            this.btrtsave.Location = new System.Drawing.Point(95, 226);
             this.btrtsave.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.btrtsave.Name = "btrtsave";
             this.btrtsave.Size = new System.Drawing.Size(98, 51);

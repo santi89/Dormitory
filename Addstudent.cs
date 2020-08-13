@@ -132,7 +132,7 @@ namespace C_Sharp_2_Project
                 date2 = Form1.date1;
                 if (pictureBox1.Image == null)
                 {
-                    if (txtstid.Text == null && txtstname.Text == null && txtstsurname.Text == null && txtvillage.Text == null && txtdistrict.Text == null && cbprovince.SelectedItem == null && txtemail.Text == null && txttel.Text == null && txtyearstudy.Text == null && txtemername.Text == null && txtemersurname.Text == null && txtemerage.Text == null && txtemervillage.Text == null && txtemerdistrict.Text == null && txtemerjob.Text == null && txtemertel.Text == null && txtemerrelationship.Text == null)
+                    if (txtstid.Text == null && txtstname.Text == null && txtstsurname.Text == null && txtvillage.Text == null && txtdistrict.Text == null && cbprovince.SelectedItem == null && txtemail.Text == null && txttel.Text == null &&txtyear.Text  == null && txtemername.Text == null && txtemersurname.Text == null && txtemerage.Text == null && txtemervillage.Text == null && txtemerdistrict.Text == null && txtemerjob.Text == null && txtemertel.Text == null && txtemerrelationship.Text == null)
                     {
                         return;
                     }
@@ -168,7 +168,7 @@ namespace C_Sharp_2_Project
                         cmd.Parameters.AddWithValue("@schoolID", cbschool.SelectedItem);
                         cmd.Parameters.AddWithValue("@facID", cbfac.SelectedItem);
                         cmd.Parameters.AddWithValue("@deptID", cbdep.SelectedItem);
-                        cmd.Parameters.AddWithValue("@session", txtyearstudy.Text);
+                        cmd.Parameters.AddWithValue("@session", txtyear.Text );
                         cmd.Parameters.AddWithValue("@emgcname", txtemername.Text);
                         cmd.Parameters.AddWithValue("@emgcsurname", txtemersurname.Text);
                         cmd.Parameters.AddWithValue("@emgcage", txtemerage.Text);
@@ -193,7 +193,7 @@ namespace C_Sharp_2_Project
                 }
                 else
                 {
-                if (txtstid.Text == null && txtstname.Text == null && txtstsurname.Text == null && txtvillage.Text == null && txtdistrict.Text == null && cbprovince.SelectedItem == null && txtemail.Text == null && txttel.Text == null && txtyearstudy.Text == null && txtemername.Text == null && txtemersurname.Text == null && txtemerage.Text == null && txtemervillage.Text == null && txtemerdistrict.Text == null && txtemerjob.Text == null && txtemertel.Text == null && txtemerrelationship.Text == null)
+                if (txtstid.Text == null && txtstname.Text == null && txtstsurname.Text == null && txtvillage.Text == null && txtdistrict.Text == null && cbprovince.SelectedItem == null && txtemail.Text == null && txttel.Text == null &&txtyear.Text  == null && txtemername.Text == null && txtemersurname.Text == null && txtemerage.Text == null && txtemervillage.Text == null && txtemerdistrict.Text == null && txtemerjob.Text == null && txtemertel.Text == null && txtemerrelationship.Text == null)
                 {
                     return;
                 }             else
@@ -227,7 +227,7 @@ namespace C_Sharp_2_Project
                 cmd.Parameters.AddWithValue("@schoolID", cbschool .SelectedItem );
                 cmd.Parameters.AddWithValue("@facID",cbfac .SelectedItem);
                 cmd.Parameters.AddWithValue("@deptID",cbdep .SelectedItem);
-                cmd.Parameters.AddWithValue("@session",txtyearstudy.Text );
+                cmd.Parameters.AddWithValue("@session",txtyear .Text );
                 cmd.Parameters.AddWithValue("@emgcname",txtemername .Text);
                 cmd.Parameters.AddWithValue("@emgcsurname",txtemersurname .Text );
                 cmd.Parameters.AddWithValue("@emgcage",txtemerage .Text );
@@ -341,10 +341,11 @@ namespace C_Sharp_2_Project
             cbprovince.SelectedItem = dgvregister.CurrentRow.Cells[7].Value.ToString();
             txtemail.Text = dgvregister.CurrentRow.Cells[8].Value.ToString();
             txttel.Text = dgvregister.CurrentRow.Cells[9].Value.ToString();
-            cbschool .SelectedItem =dgvregister.CurrentRow.Cells[10].Value.ToString();
+            cbschool.SelectedItem = dgvregister.CurrentRow.Cells[10].Value.ToString();
                 cbfac .SelectedItem =dgvregister.CurrentRow.Cells[11].Value.ToString();
                 cbdep .SelectedItem =dgvregister.CurrentRow.Cells[12].Value.ToString();
-            txtyearstudy.Text = dgvregister.CurrentRow.Cells[13].Value.ToString();
+      txtyear .Text  = dgvregister.CurrentRow.Cells[13].Value.ToString ();
+            
             txtemername.Text = dgvregister.CurrentRow.Cells[14].Value.ToString();
             txtemersurname.Text = dgvregister.CurrentRow.Cells[15].Value.ToString();
             txtemerage.Text = dgvregister.CurrentRow.Cells[16].Value.ToString();
@@ -435,7 +436,7 @@ namespace C_Sharp_2_Project
         {
             try
             { 
-                 sql = "update tbstudent set name=@name,surname=@surname,gender=@gender,birthofdate=@birthofdate,village=@village,district=@district,province=@province,email=@email,phone=@phone,schoolID=(select schoolID from tbschool where schoolname=@schoolID),facID=(select facID from tbfaculty where facname=@facID),deptID=(select deptID from tbdepartment where deptname=@deptID),session=@session,emgcname=@emgcname,emgcsurname=@emgcsurname,emgcage=@emgcage,emgcvillage=@emgcvillage,emgcdistrict=@emgcdistrict,emgcprovince=@emgcprovince,emgcjob=@emgcjob,emgctel=@emgctel,relationship=@relationship,picture=@picture,datesign=@datesign where studentID=@studentID";
+                 sql = "update tbstudent set name=@name,surname=@surname,gender=@gender,birthofdate=@birthofdate,village=@village,district=@district,province=@province,email=@email,phone=@phone,schoolID=(select schoolID from tbschool where schoolname=@schoolID),facID=(select facID from tbfaculty where facname=@facID),deptID=(select deptID from tbdepartment where deptname=@deptID),session=@session,emgcname=@emgcname,emgcsurname=@emgcsurname,emgcage=@emgcage,emgcvillage=@emgcvillage,emgcdistrict=@emgcdistrict,emgcprovince=@emgcprovince,emgcjob=@emgcjob,emgctel=@emgctel,relationship=@relationship,picture=@picture where studentID=@studentID";
                 cmd = new SqlCommand(sql, con);
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("name", txtstname.Text);
@@ -463,7 +464,7 @@ namespace C_Sharp_2_Project
                 cmd.Parameters.AddWithValue("@schoolID", cbschool.SelectedItem);
                 cmd.Parameters.AddWithValue("@facID", cbfac.SelectedItem);
                 cmd.Parameters.AddWithValue("@deptID", cbdep .SelectedItem);
-                cmd.Parameters.AddWithValue("@session", txtyearstudy.Text);
+                cmd.Parameters.AddWithValue("@session", txtyear .Text );
                 cmd.Parameters.AddWithValue("@emgcname", txtemername.Text);
                 cmd.Parameters.AddWithValue("@emgcsurname", txtemersurname.Text);
                 cmd.Parameters.AddWithValue("@emgcage", txtemerage.Text);
@@ -477,9 +478,8 @@ namespace C_Sharp_2_Project
                 pictureBox1.Image.Save(mem, System.Drawing.Imaging.ImageFormat.Png);
                 byte[] imarr = mem.ToArray();
                 cmd.Parameters.AddWithValue("@picture", imarr);
-                cmd.Parameters.AddWithValue("@datesign", DateTime.Now);
-
-                cmd.Parameters.AddWithValue("studentID", txtstid.Text);
+                //cmd.Parameters.AddWithValue("@dat",DateTime.Now);
+                cmd.Parameters.AddWithValue("studentID",txtstid.Text);
 
                 cmd.ExecuteNonQuery();
                 showstudent();
@@ -558,6 +558,79 @@ namespace C_Sharp_2_Project
         private void label15_Click(object sender, EventArgs e)
         {
             this.Close() ;
+        }
+
+        private void txttel_TextChanged(object sender, EventArgs e)
+        {
+            /*string s = txttel .Text;
+            if (s.Length == 8)
+            {
+                double sAsD = double.Parse(s);
+                txttel.Text = string.Format("{0:####-####}", sAsD).ToString();
+            }
+            if (txttel.Text.Length > 1)
+                txttel.SelectionStart = txttel.Text.Length;
+            txttel.SelectionLength = 0;*/
+        }
+
+        private void txtyearstudy_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtemertel_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void txtemerage_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtemerage_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+        (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txttel_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+        (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtemertel_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+        (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

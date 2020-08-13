@@ -104,6 +104,24 @@ namespace C_Sharp_2_Project
         {
             try
             {
+                if (txtnametype.Text ==null || txtroomtypeID.Text == null || txttypeprice .Text ==null) {
+                    MessageBox.Show("ຂໍ້ມູນບໍ່ມີ.");
+                    return;
+                }
+                
+                string s = "select typename from tbroomtype where typename =N'" + txtnametype.Text + "'";
+                cmd = new SqlCommand(s, con);
+                da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                int i = dt.Rows.Count;
+                if (i >= 1)
+                {
+                    MessageBox.Show("ຂໍ້ມູນນີ້ມີແລ້ວ.", "Duplicate", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                }
+                else
+                {
                 sql = "insert into tbroomtype values(@rtID,@rtname,@price)";
                 cmd = new SqlCommand(sql, con);
                 cmd.Parameters.Clear();
@@ -113,7 +131,9 @@ namespace C_Sharp_2_Project
                 cmd.ExecuteNonQuery();
                 clrtext();
                 showdata();
+                }
             }
+            
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message.ToString());
@@ -124,6 +144,11 @@ namespace C_Sharp_2_Project
         {
             try
             {
+                if (txtnametype.Text == null || txtroomtypeID.Text == null || txttypeprice.Text == null)
+                {
+                    MessageBox.Show("ຂໍ້ມູນບໍ່ມີ.");
+                    return;
+                }
                 sql = "update tbroomtype set typename=@rtname,roomprice=@price where roomtypeID=@rtID";
                 cmd = new SqlCommand(sql, con);
                 cmd.Parameters.Clear();
@@ -144,6 +169,11 @@ namespace C_Sharp_2_Project
         {
             try
             {
+                if (txtroomtypeID.Text == null)
+                {
+                    MessageBox.Show("ຂໍ້ມູນບໍ່ມີ.");
+                    return;
+                }
                 sql = "delete from tbroomtype where roomtypeID=@rtID";
                 cmd = new SqlCommand(sql, con);
                 cmd.Parameters.Clear();

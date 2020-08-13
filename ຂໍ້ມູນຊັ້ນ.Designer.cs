@@ -94,7 +94,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(34, 400);
+            this.button1.Location = new System.Drawing.Point(102, 314);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(90, 44);
             this.button1.TabIndex = 31;
@@ -105,7 +105,7 @@
             // cbbuilding
             // 
             this.cbbuilding.FormattingEnabled = true;
-            this.cbbuilding.Location = new System.Drawing.Point(50, 166);
+            this.cbbuilding.Location = new System.Drawing.Point(102, 126);
             this.cbbuilding.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.cbbuilding.Name = "cbbuilding";
             this.cbbuilding.Size = new System.Drawing.Size(217, 44);
@@ -127,7 +127,7 @@
             // btfsave
             // 
             this.btfsave.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btfsave.Location = new System.Drawing.Point(33, 338);
+            this.btfsave.Location = new System.Drawing.Point(101, 252);
             this.btfsave.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.btfsave.Name = "btfsave";
             this.btfsave.Size = new System.Drawing.Size(91, 52);
@@ -139,7 +139,7 @@
             // txtfloorid
             // 
             this.txtfloorid.Enabled = false;
-            this.txtfloorid.Location = new System.Drawing.Point(47, 73);
+            this.txtfloorid.Location = new System.Drawing.Point(102, 70);
             this.txtfloorid.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.txtfloorid.Name = "txtfloorid";
             this.txtfloorid.Size = new System.Drawing.Size(217, 42);
@@ -159,7 +159,7 @@
             // btfedit
             // 
             this.btfedit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btfedit.Location = new System.Drawing.Point(173, 338);
+            this.btfedit.Location = new System.Drawing.Point(200, 252);
             this.btfedit.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.btfedit.Name = "btfedit";
             this.btfedit.Size = new System.Drawing.Size(91, 52);
@@ -172,7 +172,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label15.Location = new System.Drawing.Point(42, 37);
+            this.label15.Location = new System.Drawing.Point(33, 70);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(68, 36);
@@ -183,7 +183,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label17.Location = new System.Drawing.Point(45, 221);
+            this.label17.Location = new System.Drawing.Point(11, 183);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(74, 36);
@@ -193,7 +193,7 @@
             // btfdelete
             // 
             this.btfdelete.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btfdelete.Location = new System.Drawing.Point(173, 396);
+            this.btfdelete.Location = new System.Drawing.Point(200, 310);
             this.btfdelete.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.btfdelete.Name = "btfdelete";
             this.btfdelete.Size = new System.Drawing.Size(91, 52);
@@ -204,7 +204,7 @@
             // 
             // txtfloornum
             // 
-            this.txtfloornum.Location = new System.Drawing.Point(50, 259);
+            this.txtfloornum.Location = new System.Drawing.Point(102, 184);
             this.txtfloornum.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.txtfloornum.Name = "txtfloornum";
             this.txtfloornum.Size = new System.Drawing.Size(217, 42);
@@ -215,7 +215,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label18.Location = new System.Drawing.Point(45, 128);
+            this.label18.Location = new System.Drawing.Point(44, 129);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(41, 36);

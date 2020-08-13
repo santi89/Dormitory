@@ -115,7 +115,22 @@ namespace C_Sharp_2_Project
         {
             try
             {
-        sql = "insert into tbfloor values(@floornum,@build)";//@floorID,
+                string s = "select floornumber from tbfloor where floornumber ='" + txtfloornum.Text + "'";
+                cmd = new SqlCommand(s, con);
+                da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                int i = dt.Rows.Count;
+                if (i >= 1)
+                {
+                    MessageBox.Show("ເບີຊັ້ນນີ້ມີແລ້ວ.", "Duplicate", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    
+                }else
+                {
+
+
+
+                sql = "insert into tbfloor values(@floornum,@build)";//@floorID,
                 cmd = new SqlCommand(sql, con);
             cmd.Parameters.Clear();
           //  cmd.Parameters.AddWithValue("@floorID", txtfloorid.Text);
@@ -125,7 +140,8 @@ namespace C_Sharp_2_Project
                 clrtext();
             showfloor();
             showcombo();
-             
+                }
+
             }
             catch (Exception ex)
             {
@@ -190,7 +206,7 @@ namespace C_Sharp_2_Project
         {
             try
             {
-                sql = "select * from tbfloor where floorID like '%" + txtsearch.Text + "' or floornumber LIKE '%"+txtsearch .Text +"'";
+                sql = "select * from tbfloor where floorID like '%" + txtsearch.Text + "%' or floornumber like '%"+txtsearch .Text +"%'";
                 da = new SqlDataAdapter(sql, con);
                 da.Fill(ds, "flo");
                 if (ds.Tables["flo"] != null) ds.Tables.Clear();                

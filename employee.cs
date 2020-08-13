@@ -77,96 +77,24 @@ namespace C_Sharp_2_Project
         string gen = "";
         private void button1_Click(object sender, EventArgs e)
         {
-            sql = "INSERT INTO [tbemployee](empID,empname,userpassword ,empsurname,gender,dateofbirth,address,phone,email) VALUES (@empID,@empname,@userpassword,@empsurname,@gender,@dateofbirth,@address,@phone,@email) ";
-            cmd = new SqlCommand(sql, con);
-            cmd.Parameters.Clear();
-            cmd.Parameters.AddWithValue("@empID", txtempID.Text);
-            cmd.Parameters.AddWithValue("@empname", txtname.Text);
-            cmd.Parameters.AddWithValue("@userpassword", txtpassword.Text);
-            cmd.Parameters.AddWithValue("@empsurname", txtsurname.Text);
-            if (rbmale.Checked)
-            {    gen = rbmale.Text;
-            } else if (rbfemale.Checked)
-            {     gen = rbfemale.Text;
-            }   else {    gen = rbmale.Text;
-            }
-            cmd.Parameters.AddWithValue("@gender",gen);
-            cmd.Parameters.AddWithValue("@dateofbirth", txtdateTime .Value );
-            cmd.Parameters.AddWithValue("@address",txtaddress .Text );
-            cmd.Parameters.AddWithValue("@phone",txttel.Text );
-            cmd.Parameters.AddWithValue("@email", txtemail.Text);
-
-            cmd.ExecuteNonQuery();
-            showdata();
+           
 
         }
 
         private void btedit_Click(object sender, EventArgs e)
         {
-            try
-            {
-
-            }
-            catch (Exception ex)
-            {
-
-                
-            }
-            sql = "update tbemployee set empname=@empname,userpassword=@userpassword ,empsurname=@empsurname,gender=@gender,dateofbirth=@dateofbirth,address=@addrss,phone=@phone ,email=@email where empID=@empID ";
-                 cmd = new SqlCommand(sql, con);
-            cmd.Parameters.Clear();
-            cmd.Parameters.AddWithValue("@empname", txtname.Text);
-            cmd.Parameters.AddWithValue("@userpassword", txtpassword.Text);
-            cmd.Parameters.AddWithValue("@empsurname", txtsurname.Text);
-            if (rbmale.Checked)
-            {
-                gen = rbmale.Text;
-            }
-            else if (rbfemale.Checked)
-            {
-                gen = rbfemale.Text;
-            }
-            else
-            {
-                gen = rbmale.Text;
-            }
-            cmd.Parameters.AddWithValue("@gender", gen);
-            cmd.Parameters.AddWithValue("@dateofbirth", txtdateTime.Value);
-            cmd.Parameters.AddWithValue("@address", txtaddress.Text);
-            cmd.Parameters.AddWithValue("@phone", txttel.Text);
-            cmd.Parameters.AddWithValue("@email", txtemail.Text);
-            cmd.Parameters.AddWithValue("@empID", txtempID.Text);
-            cmd.ExecuteNonQuery();
-            showdata();
+           
+           
         }
 
         private void btdelete_Click(object sender, EventArgs e)
         {
-            sql = "delete * from employee where empID=@empID";
-            cmd = new SqlCommand(sql, con);
-            cmd.Parameters.AddWithValue("@empID", txtempID.Text);
-            cmd.ExecuteNonQuery();
-            showdata();
+           
         }
 
         private void dgvemp_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow indexrow = dgvemp.CurrentRow;
-            txtempID.Text = indexrow.Cells[0].Value.ToString();
-            txtname.Text =indexrow.Cells[1].Value.ToString();
-            txtpassword.Text = indexrow.Cells[2].Value.ToString();
-            txtsurname.Text = indexrow.Cells[3].Value .ToString ();
-            if (rbfemale.Text == indexrow .Cells [4].Value.ToString()){
-                rbfemale.Checked=true;
-            } else
-            {
-                rbmale.Checked = true;
-            }
-             
-            txtaddress.Text =indexrow .Cells [6].Value .ToString ();
-            txtdateTime.Text =indexrow .Cells [5].Value.ToString() ;
-            txtemail.Text =indexrow.Cells [8].Value .ToString ();
-            txttel.Text = indexrow.Cells[7].Value.ToString() ;
+           
         }
 
         private void txtsearch_TextChanged(object sender, EventArgs e)
@@ -176,20 +104,143 @@ namespace C_Sharp_2_Project
 
         private void btsearch_Click(object sender, EventArgs e)
         {
-            if (txtsearch .Text == "")
+           
+           
+           
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btsave_Click(object sender, EventArgs e)
+        {
+            try
             {
+                sql = "INSERT INTO [tbemployee](empID,empname,userpassword,empsurname,gender,dateofbirth,address,phone,email) VALUES (@empID,@empname,@userpassword,@empsurname,@gender,@dateofbirth,@address,@phone,@email) ";
+                cmd = new SqlCommand(sql, con);
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@empID", txtempID.Text);
+                cmd.Parameters.AddWithValue("@empname", txtname.Text);
+                cmd.Parameters.AddWithValue("@userpassword", txtpassword.Text);
+                cmd.Parameters.AddWithValue("@empsurname", txtsurname.Text);
+                if (rbmale.Checked)
+                {
+                    gen = rbmale.Text;
+                }
+                else if (rbfemale.Checked)
+                {
+                    gen = rbfemale.Text;
+                }
+                else
+                {
+                    gen = rbmale.Text;
+                }
+                cmd.Parameters.AddWithValue("@gender", gen);
+                cmd.Parameters.AddWithValue("@dateofbirth", txtdateTime.Value);
+                cmd.Parameters.AddWithValue("@address", txtaddress.Text);
+                cmd.Parameters.AddWithValue("@phone", txttel.Text);
+                cmd.Parameters.AddWithValue("@email", txtemail.Text);
+
+                cmd.ExecuteNonQuery();
                 showdata();
-            }else
+            }
+            catch (Exception ex)
             {
-      sql="select *from tbemployee where empID='"+txtsearch .Text+ "' or empname='" + txtsearch.Text + "'";
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btedit_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                sql = "update tbemployee set empname=@empname,userpassword=@userpassword,empsurname=@empsurname,gender=@gender,dateofbirth=@dateofbirth,address=@address,phone=@phone,email=@email where empID=@empID ";
+                cmd = new SqlCommand(sql, con);
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@empname", txtname.Text);
+                cmd.Parameters.AddWithValue("@userpassword", txtpassword.Text);
+                cmd.Parameters.AddWithValue("@empsurname", txtsurname.Text);
+                if (rbmale.Checked)
+                {
+                    gen = rbmale.Text;
+                }
+                else if (rbfemale.Checked)
+                {
+                    gen = rbfemale.Text;
+                }
+                else
+                {
+                    gen = rbmale.Text;
+                }
+                cmd.Parameters.AddWithValue("@gender", gen);
+                cmd.Parameters.AddWithValue("@dateofbirth", txtdateTime.Value);
+                cmd.Parameters.AddWithValue("@address", txtaddress.Text);
+                cmd.Parameters.AddWithValue("@phone", txttel.Text);
+                cmd.Parameters.AddWithValue("@email", txtemail.Text);
+                cmd.Parameters.AddWithValue("@empID", txtempID.Text);
+                cmd.ExecuteNonQuery();
+                showdata();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+        }
+
+        private void btdelete_Click_1(object sender, EventArgs e)
+        {
+            sql = "delete * from employee where empID=@empID";
             cmd = new SqlCommand(sql, con);
-            da = new SqlDataAdapter(cmd);
-            da.Fill(ds,"emp");
+            cmd.Parameters.AddWithValue("@empID", txtempID.Text);
+            cmd.ExecuteNonQuery();
+            showdata();
+        }
+
+        private void dgvemp_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow indexrow = dgvemp.CurrentRow;
+            txtempID.Text = indexrow.Cells[0].Value.ToString();
+             txtpassword.Text  = indexrow.Cells[1].Value.ToString();
+             txtname.Text = indexrow.Cells[2].Value.ToString();
+            txtsurname.Text = indexrow.Cells[3].Value.ToString();
+            if (rbfemale.Text == indexrow.Cells[4].Value.ToString())
+            {
+                rbfemale.Checked = true;
+            }
+            else
+            {
+                rbmale.Checked = true;
+            }
+            txtaddress.Text = indexrow.Cells[6].Value.ToString();
+            txtdateTime.Text = indexrow.Cells[5].Value.ToString();
+            txttel.Text = indexrow.Cells[7].Value.ToString();
+            txtemail.Text = indexrow.Cells[8].Value.ToString();
+           
+        }
+
+        private void txtsearch_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btsearch_Click_1(object sender, EventArgs e)
+        {
+            try
+            {                
+                sql = "select * from tbemployee where empID='"+ txtsearch .Text +"' or empname='"+ txtsearch .Text +"'";
+                cmd = new SqlCommand(sql, con);
+                da = new SqlDataAdapter(cmd);
+                da.Fill(ds, "emp");
                 if (ds.Tables["emp"] != null)
                 {
-                    ds.Tables["emp"].Clear ();
+                    ds.Tables["emp"].Clear();
                 }
-                da.Fill (ds, "emp");
+                da.Fill(ds, "emp");
                 dgvemp.DataSource = ds.Tables["emp"];
                 dgvemp.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dgvemp.Columns[0].HeaderText = "ລະຫັດພະນັກງານ";
@@ -206,12 +257,15 @@ namespace C_Sharp_2_Project
                 dgvemp.Columns[4].Width = 80;
                 dgvemp.Columns[5].Width = 120;
             }
-           
-           
+            catch (Exception ex)
+            {
 
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
-        private void label11_Click(object sender, EventArgs e)
+        private void label11_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }

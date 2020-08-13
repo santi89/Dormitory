@@ -227,13 +227,16 @@ namespace C_Sharp_2_Project
             if (rbnewadd .Checked ==true)
             {
                 txtsearch.Enabled = false;
+                datesearch.Enabled = true;
 
             }else if (rbcontinues.Checked ==true)
             {
                 txtsearch.Enabled = true;
+                datesearch.Enabled = false;
+
             }
-               
-           
+
+
         }
 
         private void txtsearch_TextChanged(object sender, EventArgs e)
@@ -271,9 +274,6 @@ namespace C_Sharp_2_Project
                     dgvpayment.Columns[7].HeaderText = "ວັນໝົດກຳນົດ";
                     dgvpayment.Columns[8].HeaderText = "ລາຄາ";
                     dgvpayment.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
-
-
                 }
 
                 else if(rbnewadd.Checked == true)
@@ -325,7 +325,7 @@ namespace C_Sharp_2_Project
                 if (rbcontinues.Checked == true)
                 {
 
-                    sql = "update Rentdetail set studentID= @stid,roomtypeID=(select roomtypeID from tbroomtype where typename=@troom),roomID=(select roomID from tbroom where room_number=@room),startdate=@now,enddate=@enddate,cost=@cs where rentID=@rentID"; //,buildingID=(select buildingID from tbbuilding buildingnumber=@bui),floorID=(select floorID from tbfloor where floornumber=@flo),
+                    sql = "update Rentdetail set studentID= @stid,roomtypeID=(select roomtypeID from tbroomtype where typename=@troom),roomID=(select roomID from tbroom where room_number=@room),startdate=@now,enddate=@enddate where rentID=@rentID"; //,buildingID=(select buildingID from tbbuilding buildingnumber=@bui),floorID=(select floorID from tbfloor where floornumber=@flo),,cost=@cs
                     cmd = new SqlCommand(sql, con);
                     cmd.Parameters.Clear();
                     cmd.Parameters.AddWithValue("@stid", txtstid.Text);
@@ -335,7 +335,7 @@ namespace C_Sharp_2_Project
                     cmd.Parameters.AddWithValue("@room", cbroom.SelectedItem);
                     cmd.Parameters.AddWithValue("@now", startdate.Value);
                     cmd.Parameters.AddWithValue("@enddate", enddate.Value);
-                    cmd.Parameters.AddWithValue("@cs", Convert.ToInt32(txtcost.Text ));
+                   // cmd.Parameters.AddWithValue("@cs", Convert.ToInt32(txtcost.Text ));
                     cmd.Parameters.AddWithValue("@rentID", txtid.Text);
                     if (cmd.ExecuteNonQuery() == 1)
                     {
@@ -348,17 +348,15 @@ namespace C_Sharp_2_Project
                     }
                     else
                     {          
-                            MessageBox.Show("ບັນທຶກຜິດຜາດ");                    
+                            MessageBox.Show("ບັນທຶກຜິດຜາດກະລຸນາກວດສອບຂໍ້ມູນຄືນ");                    
                     }
-
                     
                 }
                 else if (rbnewadd.Checked == true)
                 {
-                    sql = "insert into Rentdetail values (@stid,(select roomtypeID from tbroomtype where typename=@troom),(select roomID from tbroom where room_number=@room),@now,@enddate,@cost)";
+                    sql = "insert into Rentdetail values (@stid,(select roomtypeID from tbroomtype where typename=@troom),(select roomID from tbroom where room_number=@room),@now,@enddate)";
                     cmd = new SqlCommand(sql, con);
-                    cmd.Parameters.Clear();
-                   
+                    cmd.Parameters.Clear();                  
                     cmd.Parameters.AddWithValue("@stid", txtstid.Text);
                     cmd.Parameters.AddWithValue("@troom", cbtroom.SelectedItem);
                    /* cmd.Parameters.AddWithValue("@bui", cbbuilding.SelectedItem);
@@ -366,7 +364,7 @@ namespace C_Sharp_2_Project
                     cmd.Parameters.AddWithValue("@room", cbroom.SelectedItem);
                     cmd.Parameters.AddWithValue("@now", startdate.Value);
                     cmd.Parameters.AddWithValue("@enddate", enddate.Value);
-                    cmd.Parameters.AddWithValue("@cost", txtcost.Text);
+                   // cmd.Parameters.AddWithValue("@cost", txtcost.Text);
                     if (cmd.ExecuteNonQuery() == 1) { 
 
                     sql1 = "update tbroom set Student_amount=Student_amount +1 where room_number='" + cbroom.SelectedItem + "'";
@@ -408,10 +406,26 @@ namespace C_Sharp_2_Project
             if (rbcontinues .Checked ==true)
             {
                 txtstid.Text = dgvpayment.CurrentRow.Cells[1].Value.ToString();
+                sql = "select name from tbstudent where studentID ='" + txtstid.Text + "'";
+                cmd = new SqlCommand(sql, con);
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                   txtstname.Text = dr.GetString (0);
+                }dr.Close();
+                cbtroom.SelectedItem = dgvpayment.CurrentRow.Cells[2].Value.ToString();
+                cbbuilding.SelectedItem = dgvpayment.CurrentRow.Cells[3].Value.ToString();
+                cbfloor.SelectedItem = dgvpayment.CurrentRow.Cells[4].Value.ToString();
+                cbroom.SelectedItem = dgvpayment.CurrentRow.Cells[5].Value.ToString();
+                startdate.Value = DateTime.Now;
+                cbtroom.Enabled = false;
+                cbroom.Enabled = false;
+                cbbuilding.Enabled = false;
+                cbfloor.Enabled = false;
             }
             else
             {
- txtstid.Text = dgvpayment.CurrentRow.Cells[0].Value.ToString();
+            txtstid.Text = dgvpayment.CurrentRow.Cells[0].Value.ToString();
             txtstname.Text = dgvpayment.CurrentRow.Cells[1].Value.ToString();
             }
            
@@ -452,7 +466,7 @@ namespace C_Sharp_2_Project
 
         private void startdate_ValueChanged(object sender, EventArgs e)
         {
-            if (startdate.Value <= DateTime.Now)
+            if (startdate.Value < DateTime.Now)
             {
                 MessageBox.Show("ວັນທີຈະຕ້ອງເລີມແຕ່ມື້ນີ້ຫຼືພາຍໃນອາທິດນີ້ເທົ່ານັ້ນ", "ແຈ້ງເຕືອນ");
                 startdate.Value = DateTime.Today;
@@ -460,7 +474,7 @@ namespace C_Sharp_2_Project
             }
             else
             {
-                enddate.Value = startdate.Value.AddDays(365);
+                enddate.Value = startdate.Value.AddDays(300);
 
             }
         }
@@ -509,6 +523,11 @@ namespace C_Sharp_2_Project
 
             dgvpayment.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

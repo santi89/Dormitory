@@ -47,7 +47,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.txtvillage = new System.Windows.Forms.TextBox();
-            this.txtyearstudy = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
@@ -87,8 +86,8 @@
             this.label26 = new System.Windows.Forms.Label();
             this.txtsearch = new System.Windows.Forms.TextBox();
             this.btsearch = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
+            this.txtyear = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -98,6 +97,7 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.Controls.Add(this.txtyear);
             this.groupBox1.Controls.Add(this.cbprovince);
             this.groupBox1.Controls.Add(this.cbdep);
             this.groupBox1.Controls.Add(this.cbfac);
@@ -116,7 +116,6 @@
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label22);
             this.groupBox1.Controls.Add(this.txtvillage);
-            this.groupBox1.Controls.Add(this.txtyearstudy);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label25);
             this.groupBox1.Controls.Add(this.label21);
@@ -146,7 +145,7 @@
             "Xaisomboun",
             "Sekong",
             "Xaignabouli",
-            "Vientiane Prefecture",
+            "Vientiane capital",
             "Vientiane",
             "Savannakhet",
             "Salavan",
@@ -156,8 +155,9 @@
             "Luang Namtha",
             "Khammouane",
             "Houaphanh",
-            "Bokeo"});
-            this.cbprovince.Location = new System.Drawing.Point(214, 363);
+            "Bokeo",
+            "Borikhamxay"});
+            this.cbprovince.Location = new System.Drawing.Point(214, 369);
             this.cbprovince.Name = "cbprovince";
             this.cbprovince.Size = new System.Drawing.Size(220, 44);
             this.cbprovince.TabIndex = 39;
@@ -200,7 +200,7 @@
             // rbfemale
             // 
             this.rbfemale.AutoSize = true;
-            this.rbfemale.Location = new System.Drawing.Point(373, 112);
+            this.rbfemale.Location = new System.Drawing.Point(373, 122);
             this.rbfemale.Name = "rbfemale";
             this.rbfemale.Size = new System.Drawing.Size(61, 40);
             this.rbfemale.TabIndex = 37;
@@ -212,7 +212,7 @@
             // 
             this.rbmale.AutoSize = true;
             this.rbmale.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.rbmale.Location = new System.Drawing.Point(278, 112);
+            this.rbmale.Location = new System.Drawing.Point(278, 122);
             this.rbmale.Name = "rbmale";
             this.rbmale.Size = new System.Drawing.Size(73, 40);
             this.rbmale.TabIndex = 37;
@@ -231,7 +231,7 @@
             // 
             // txtemail
             // 
-            this.txtemail.Location = new System.Drawing.Point(214, 441);
+            this.txtemail.Location = new System.Drawing.Point(214, 455);
             this.txtemail.Name = "txtemail";
             this.txtemail.Size = new System.Drawing.Size(220, 42);
             this.txtemail.TabIndex = 24;
@@ -250,7 +250,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(208, 402);
+            this.label14.Location = new System.Drawing.Point(208, 424);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(60, 36);
             this.label14.TabIndex = 23;
@@ -259,7 +259,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(208, 324);
+            this.label13.Location = new System.Drawing.Point(208, 330);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(64, 36);
             this.label13.TabIndex = 21;
@@ -267,7 +267,7 @@
             // 
             // txtdistrict
             // 
-            this.txtdistrict.Location = new System.Drawing.Point(214, 284);
+            this.txtdistrict.Location = new System.Drawing.Point(214, 290);
             this.txtdistrict.Name = "txtdistrict";
             this.txtdistrict.Size = new System.Drawing.Size(220, 42);
             this.txtdistrict.TabIndex = 20;
@@ -278,6 +278,8 @@
             this.txttel.Name = "txttel";
             this.txttel.Size = new System.Drawing.Size(220, 42);
             this.txttel.TabIndex = 26;
+            this.txttel.TextChanged += new System.EventHandler(this.txttel_TextChanged);
+            this.txttel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttel_KeyPress);
             // 
             // label23
             // 
@@ -291,7 +293,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(208, 246);
+            this.label12.Location = new System.Drawing.Point(208, 252);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(59, 36);
             this.label12.TabIndex = 19;
@@ -308,22 +310,15 @@
             // 
             // txtvillage
             // 
-            this.txtvillage.Location = new System.Drawing.Point(214, 198);
+            this.txtvillage.Location = new System.Drawing.Point(214, 204);
             this.txtvillage.Name = "txtvillage";
             this.txtvillage.Size = new System.Drawing.Size(220, 42);
             this.txtvillage.TabIndex = 18;
             // 
-            // txtyearstudy
-            // 
-            this.txtyearstudy.Location = new System.Drawing.Point(454, 441);
-            this.txtyearstudy.Name = "txtyearstudy";
-            this.txtyearstudy.Size = new System.Drawing.Size(224, 42);
-            this.txtyearstudy.TabIndex = 30;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(208, 159);
+            this.label11.Location = new System.Drawing.Point(208, 165);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(52, 36);
             this.label11.TabIndex = 17;
@@ -368,7 +363,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(210, 114);
+            this.label4.Location = new System.Drawing.Point(210, 124);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(50, 36);
             this.label4.TabIndex = 3;
@@ -494,6 +489,8 @@
             this.txtemerage.Name = "txtemerage";
             this.txtemerage.Size = new System.Drawing.Size(203, 42);
             this.txtemerage.TabIndex = 10;
+            this.txtemerage.TextChanged += new System.EventHandler(this.txtemerage_TextChanged);
+            this.txtemerage.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtemerage_KeyPress);
             // 
             // label7
             // 
@@ -553,6 +550,8 @@
             this.txtemertel.Name = "txtemertel";
             this.txtemertel.Size = new System.Drawing.Size(203, 42);
             this.txtemertel.TabIndex = 28;
+            this.txtemertel.TextChanged += new System.EventHandler(this.txtemertel_TextChanged);
+            this.txtemertel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtemertel_KeyPress);
             // 
             // label18
             // 
@@ -697,17 +696,6 @@
             this.btsearch.UseVisualStyleBackColor = true;
             this.btsearch.Click += new System.EventHandler(this.btsearch_Click);
             // 
-            // button1
-            // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Location = new System.Drawing.Point(1186, 457);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(121, 51);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "ຊຳລະເງິນ";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // label15
             // 
             this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -719,6 +707,13 @@
             this.label15.TabIndex = 37;
             this.label15.Text = "X";
             this.label15.Click += new System.EventHandler(this.label15_Click);
+            // 
+            // txtyear
+            // 
+            this.txtyear.Location = new System.Drawing.Point(454, 455);
+            this.txtyear.Name = "txtyear";
+            this.txtyear.Size = new System.Drawing.Size(220, 42);
+            this.txtyear.TabIndex = 40;
             // 
             // Addstudent
             // 
@@ -733,7 +728,6 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btedit);
             this.Controls.Add(this.btdelete);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.btsearch);
             this.Controls.Add(this.txtregister);
             this.Controls.Add(this.txtsearch);
@@ -780,7 +774,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox txtvillage;
-        private System.Windows.Forms.TextBox txtyearstudy;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
@@ -817,7 +810,6 @@
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.TextBox txtsearch;
         private System.Windows.Forms.Button btsearch;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtfilename;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.ComboBox cbprovince;
@@ -826,5 +818,6 @@
         private System.Windows.Forms.ComboBox cbschool;
         private System.Windows.Forms.ComboBox cbemerprovince;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox txtyear;
     }
 }

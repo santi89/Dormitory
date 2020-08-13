@@ -87,15 +87,35 @@ sql = "select buildingID,buildingnumber,typename from tbbuilding inner join tbro
         {
             try
             {
-            sql = "insert into tbbuilding values (@build,@num ,(select roomtypeID from tbroomtype where typename=@roomtype))";
-            cmd = new SqlCommand(sql, con);
-            cmd.Parameters.Clear();
-            cmd.Parameters.AddWithValue("@build",txtbuildingid .Text );
-            cmd.Parameters.AddWithValue("@num", txtbuildingnum.Text);
-            cmd.Parameters.AddWithValue("@roomtype", cbroomtype.SelectedItem );
-                cmd.ExecuteNonQuery();
-            showbuild();
-            clrtext();
+                string s = "select buildingnumber from tbbuilding where buildingnumber ='" + txtbuildingnum.Text + "'";
+                cmd = new SqlCommand(s, con);
+                da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                int i = dt.Rows.Count;
+                if (i >= 1)
+                {
+                    MessageBox.Show("ເບີຕຶກນີ້ມີແລ້ວ.", "Duplicate", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    //  ds1.Clear();
+                    //showdata();
+                }
+                else {   
+                        sql = "insert into tbbuilding values (@build,@num ,(select roomtypeID from tbroomtype where typename=@roomtype))";
+                        cmd = new SqlCommand(sql, con);
+                        cmd.Parameters.Clear();
+                        cmd.Parameters.AddWithValue("@build", txtbuildingid.Text);
+                        cmd.Parameters.AddWithValue("@num", txtbuildingnum.Text);
+                        cmd.Parameters.AddWithValue("@roomtype", cbroomtype.SelectedItem);
+                        cmd.ExecuteNonQuery();
+                        showbuild();
+                        clrtext();
+                       
+                    }
+                
+
+
+
+
             }
             catch (Exception ex)
             {

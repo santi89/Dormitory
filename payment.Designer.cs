@@ -150,7 +150,7 @@
             this.rbnewadd.FlatAppearance.BorderColor = System.Drawing.Color.HotPink;
             this.rbnewadd.FlatAppearance.CheckedBackColor = System.Drawing.Color.Lime;
             this.rbnewadd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.rbnewadd.Location = new System.Drawing.Point(56, 31);
+            this.rbnewadd.Location = new System.Drawing.Point(103, 31);
             this.rbnewadd.Name = "rbnewadd";
             this.rbnewadd.Size = new System.Drawing.Size(149, 40);
             this.rbnewadd.TabIndex = 34;
@@ -348,12 +348,12 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(487, 115);
+            this.label1.Location = new System.Drawing.Point(398, 112);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 36);
+            this.label1.Size = new System.Drawing.Size(157, 36);
             this.label1.TabIndex = 17;
-            this.label1.Text = "ຄົ້ນຫາຊື່";
+            this.label1.Text = "ຄົ້ນຫາຊື່ຫຼື ລະຫັດ";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtcost
@@ -426,7 +426,7 @@
             // button2
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.Location = new System.Drawing.Point(1058, 689);
+            this.button2.Location = new System.Drawing.Point(1061, 689);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(166, 52);

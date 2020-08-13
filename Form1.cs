@@ -120,7 +120,7 @@ namespace C_Sharp_2_Project
         private void ຊຳລະຄາຫToolStripMenuItem_Click(object sender, EventArgs e)
         {
            
-            showform_in_panel(new payment());
+           
             
         }
 
@@ -179,6 +179,16 @@ namespace C_Sharp_2_Project
         {
            
             showform_in_panel(new employee());
+        }
+
+        private void ຊຳລະຄາຫToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            showform_in_panel(new payment());
+        }
+
+        private void ຍາຍຫອງToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            showform_in_panel(new MoveRoom());
         }
 
         private void ລາຍງານນກສກສາໝດກຳນດພກເຊາToolStripMenuItem_Click(object sender, EventArgs e)
