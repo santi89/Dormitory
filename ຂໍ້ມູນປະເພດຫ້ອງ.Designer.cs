@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ຂໍ້ມູນປະເພດຫ້ອງ));
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -63,6 +64,7 @@
             // groupBox3
             // 
             this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox3.BackColor = System.Drawing.Color.White;
             this.groupBox3.Controls.Add(this.button1);
             this.groupBox3.Controls.Add(this.btrtdelete);
             this.groupBox3.Controls.Add(this.btrtedit);
@@ -74,7 +76,7 @@
             this.groupBox3.Controls.Add(this.txttypeprice);
             this.groupBox3.Controls.Add(this.txtnametype);
             this.groupBox3.Controls.Add(this.label13);
-            this.groupBox3.Location = new System.Drawing.Point(8, 46);
+            this.groupBox3.Location = new System.Drawing.Point(6, 45);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 7, 4, 7);
@@ -84,47 +86,59 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(199, 287);
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(138, 346);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 52);
+            this.button1.Size = new System.Drawing.Size(120, 60);
             this.button1.TabIndex = 29;
             this.button1.Text = "Clear";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // btrtdelete
             // 
+            this.btrtdelete.Image = ((System.Drawing.Image)(resources.GetObject("btrtdelete.Image")));
+            this.btrtdelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btrtdelete.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btrtdelete.Location = new System.Drawing.Point(305, 226);
+            this.btrtdelete.Location = new System.Drawing.Point(265, 346);
             this.btrtdelete.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.btrtdelete.Name = "btrtdelete";
-            this.btrtdelete.Size = new System.Drawing.Size(98, 51);
+            this.btrtdelete.Size = new System.Drawing.Size(115, 61);
             this.btrtdelete.TabIndex = 28;
             this.btrtdelete.Text = "ລຶບ";
+            this.btrtdelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btrtdelete.UseVisualStyleBackColor = true;
             this.btrtdelete.Click += new System.EventHandler(this.btrtdelete_Click_1);
             // 
             // btrtedit
             // 
+            this.btrtedit.Image = ((System.Drawing.Image)(resources.GetObject("btrtedit.Image")));
+            this.btrtedit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btrtedit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btrtedit.Location = new System.Drawing.Point(199, 226);
+            this.btrtedit.Location = new System.Drawing.Point(260, 275);
             this.btrtedit.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.btrtedit.Name = "btrtedit";
-            this.btrtedit.Size = new System.Drawing.Size(98, 51);
+            this.btrtedit.Size = new System.Drawing.Size(120, 61);
             this.btrtedit.TabIndex = 28;
             this.btrtedit.Text = "ແກ້ໄຂ";
+            this.btrtedit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btrtedit.UseVisualStyleBackColor = true;
             this.btrtedit.Click += new System.EventHandler(this.btrtedit_Click_1);
             // 
             // btrtsave
             // 
+            this.btrtsave.Image = ((System.Drawing.Image)(resources.GetObject("btrtsave.Image")));
+            this.btrtsave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btrtsave.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btrtsave.Location = new System.Drawing.Point(95, 226);
+            this.btrtsave.Location = new System.Drawing.Point(138, 275);
             this.btrtsave.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.btrtsave.Name = "btrtsave";
-            this.btrtsave.Size = new System.Drawing.Size(98, 51);
+            this.btrtsave.Size = new System.Drawing.Size(114, 61);
             this.btrtsave.TabIndex = 28;
             this.btrtsave.Text = "ບັນທຶກ";
+            this.btrtsave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btrtsave.UseVisualStyleBackColor = true;
             this.btrtsave.Click += new System.EventHandler(this.btrtsave_Click_1);
             // 
@@ -213,16 +227,15 @@
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(470, 9);
+            this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(215, 36);
+            this.label1.Size = new System.Drawing.Size(1165, 39);
             this.label1.TabIndex = 35;
             this.label1.Text = "ຈັດການຂໍ້ມູນປະເພດຫ້ອງ";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // ຂໍ້ມູນປະເພດຫ້ອງ
             // 

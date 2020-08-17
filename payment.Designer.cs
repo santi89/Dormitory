@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(payment));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.datesearch = new System.Windows.Forms.DateTimePicker();
             this.cbtroom = new System.Windows.Forms.ComboBox();
             this.rbcontinues = new System.Windows.Forms.RadioButton();
@@ -48,6 +50,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -66,6 +69,8 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.checkBox1);
             this.panel1.Controls.Add(this.datesearch);
             this.panel1.Controls.Add(this.cbtroom);
             this.panel1.Controls.Add(this.rbcontinues);
@@ -85,6 +90,7 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.label1);
@@ -100,16 +106,28 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1425, 797);
+            this.panel1.Size = new System.Drawing.Size(1425, 860);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(118, 55);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(137, 40);
+            this.checkBox1.TabIndex = 38;
+            this.checkBox1.Text = "ຄົ້ນຫາຕາມຊື່";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // datesearch
             // 
             this.datesearch.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.datesearch.CustomFormat = "yyyy-MM-dd";
             this.datesearch.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.datesearch.Location = new System.Drawing.Point(85, 105);
+            this.datesearch.Location = new System.Drawing.Point(112, 126);
             this.datesearch.Name = "datesearch";
             this.datesearch.Size = new System.Drawing.Size(218, 42);
             this.datesearch.TabIndex = 37;
@@ -119,7 +137,7 @@
             // 
             this.cbtroom.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbtroom.FormattingEnabled = true;
-            this.cbtroom.Location = new System.Drawing.Point(1207, 288);
+            this.cbtroom.Location = new System.Drawing.Point(1211, 327);
             this.cbtroom.Name = "cbtroom";
             this.cbtroom.Size = new System.Drawing.Size(206, 44);
             this.cbtroom.TabIndex = 36;
@@ -133,7 +151,7 @@
             this.rbcontinues.FlatAppearance.BorderColor = System.Drawing.Color.HotPink;
             this.rbcontinues.FlatAppearance.CheckedBackColor = System.Drawing.Color.Lime;
             this.rbcontinues.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.rbcontinues.Location = new System.Drawing.Point(574, 31);
+            this.rbcontinues.Location = new System.Drawing.Point(299, 187);
             this.rbcontinues.Name = "rbcontinues";
             this.rbcontinues.Size = new System.Drawing.Size(76, 40);
             this.rbcontinues.TabIndex = 35;
@@ -150,7 +168,7 @@
             this.rbnewadd.FlatAppearance.BorderColor = System.Drawing.Color.HotPink;
             this.rbnewadd.FlatAppearance.CheckedBackColor = System.Drawing.Color.Lime;
             this.rbnewadd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.rbnewadd.Location = new System.Drawing.Point(103, 31);
+            this.rbnewadd.Location = new System.Drawing.Point(106, 187);
             this.rbnewadd.Name = "rbnewadd";
             this.rbnewadd.Size = new System.Drawing.Size(149, 40);
             this.rbnewadd.TabIndex = 34;
@@ -164,7 +182,7 @@
             this.enddate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.enddate.Enabled = false;
             this.enddate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.enddate.Location = new System.Drawing.Point(1207, 564);
+            this.enddate.Location = new System.Drawing.Point(1211, 603);
             this.enddate.Name = "enddate";
             this.enddate.Size = new System.Drawing.Size(206, 42);
             this.enddate.TabIndex = 33;
@@ -173,7 +191,7 @@
             // 
             this.startdate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.startdate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.startdate.Location = new System.Drawing.Point(1207, 510);
+            this.startdate.Location = new System.Drawing.Point(1211, 549);
             this.startdate.Name = "startdate";
             this.startdate.Size = new System.Drawing.Size(206, 42);
             this.startdate.TabIndex = 32;
@@ -183,7 +201,7 @@
             // 
             this.cbroom.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbroom.FormattingEnabled = true;
-            this.cbroom.Location = new System.Drawing.Point(1207, 450);
+            this.cbroom.Location = new System.Drawing.Point(1211, 489);
             this.cbroom.Name = "cbroom";
             this.cbroom.Size = new System.Drawing.Size(206, 44);
             this.cbroom.TabIndex = 31;
@@ -193,7 +211,7 @@
             // 
             this.cbfloor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbfloor.FormattingEnabled = true;
-            this.cbfloor.Location = new System.Drawing.Point(1207, 392);
+            this.cbfloor.Location = new System.Drawing.Point(1211, 431);
             this.cbfloor.Name = "cbfloor";
             this.cbfloor.Size = new System.Drawing.Size(206, 44);
             this.cbfloor.TabIndex = 30;
@@ -203,7 +221,7 @@
             // 
             this.cbbuilding.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbbuilding.FormattingEnabled = true;
-            this.cbbuilding.Location = new System.Drawing.Point(1207, 338);
+            this.cbbuilding.Location = new System.Drawing.Point(1211, 377);
             this.cbbuilding.Name = "cbbuilding";
             this.cbbuilding.Size = new System.Drawing.Size(206, 44);
             this.cbbuilding.TabIndex = 29;
@@ -213,7 +231,7 @@
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(1098, 622);
+            this.label8.Location = new System.Drawing.Point(1036, 660);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(80, 36);
@@ -224,7 +242,7 @@
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(1039, 564);
+            this.label7.Location = new System.Drawing.Point(1036, 602);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(139, 36);
@@ -235,7 +253,7 @@
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(1061, 516);
+            this.label6.Location = new System.Drawing.Point(1036, 554);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(117, 36);
@@ -246,7 +264,7 @@
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(1063, 288);
+            this.label11.Location = new System.Drawing.Point(1036, 326);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(115, 36);
@@ -257,7 +275,7 @@
             // 
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(1137, 338);
+            this.label10.Location = new System.Drawing.Point(1036, 376);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(41, 36);
@@ -268,7 +286,7 @@
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(1137, 395);
+            this.label9.Location = new System.Drawing.Point(1036, 433);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(41, 36);
@@ -279,7 +297,7 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(1064, 450);
+            this.label5.Location = new System.Drawing.Point(1036, 488);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(112, 36);
@@ -290,7 +308,7 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(1033, 173);
+            this.label4.Location = new System.Drawing.Point(1036, 211);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(143, 36);
@@ -301,7 +319,7 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(1075, 226);
+            this.label3.Location = new System.Drawing.Point(1036, 264);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(103, 36);
@@ -312,6 +330,7 @@
             // 
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.label12.ForeColor = System.Drawing.Color.Red;
             this.label12.Location = new System.Drawing.Point(1397, 0);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -321,11 +340,24 @@
             this.label12.Text = "X";
             this.label12.Click += new System.EventHandler(this.label12_Click_1);
             // 
+            // label14
+            // 
+            this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label14.Font = new System.Drawing.Font("Saysettha OT", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(0, 0);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(1425, 52);
+            this.label14.TabIndex = 18;
+            this.label14.Text = "ຊຳລະຄ່າຫໍ";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(1026, 107);
+            this.label2.Location = new System.Drawing.Point(1036, 145);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(152, 36);
@@ -336,7 +368,7 @@
             // 
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(24, 110);
+            this.label13.Location = new System.Drawing.Point(51, 127);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(54, 36);
@@ -348,7 +380,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(398, 112);
+            this.label1.Location = new System.Drawing.Point(426, 132);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(157, 36);
@@ -360,11 +392,10 @@
             // 
             this.txtcost.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtcost.Enabled = false;
-            this.txtcost.Location = new System.Drawing.Point(1207, 619);
+            this.txtcost.Location = new System.Drawing.Point(1211, 658);
             this.txtcost.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
-            this.txtcost.Multiline = true;
             this.txtcost.Name = "txtcost";
-            this.txtcost.Size = new System.Drawing.Size(206, 39);
+            this.txtcost.Size = new System.Drawing.Size(206, 42);
             this.txtcost.TabIndex = 16;
             this.txtcost.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtcost.TextChanged += new System.EventHandler(this.txtcost_TextChanged_1);
@@ -372,39 +403,36 @@
             // txtstid
             // 
             this.txtstid.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtstid.Location = new System.Drawing.Point(1207, 173);
+            this.txtstid.Location = new System.Drawing.Point(1211, 212);
             this.txtstid.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
-            this.txtstid.Multiline = true;
             this.txtstid.Name = "txtstid";
-            this.txtstid.Size = new System.Drawing.Size(206, 39);
+            this.txtstid.Size = new System.Drawing.Size(206, 42);
             this.txtstid.TabIndex = 15;
             // 
             // txtstname
             // 
             this.txtstname.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtstname.Location = new System.Drawing.Point(1207, 226);
+            this.txtstname.Location = new System.Drawing.Point(1211, 265);
             this.txtstname.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
-            this.txtstname.Multiline = true;
             this.txtstname.Name = "txtstname";
-            this.txtstname.Size = new System.Drawing.Size(206, 44);
+            this.txtstname.Size = new System.Drawing.Size(206, 42);
             this.txtstname.TabIndex = 14;
             // 
             // txtid
             // 
             this.txtid.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtid.Enabled = false;
-            this.txtid.Location = new System.Drawing.Point(1207, 107);
+            this.txtid.Location = new System.Drawing.Point(1211, 146);
             this.txtid.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
-            this.txtid.Multiline = true;
             this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(206, 47);
+            this.txtid.Size = new System.Drawing.Size(206, 42);
             this.txtid.TabIndex = 13;
             // 
             // txtsearch
             // 
             this.txtsearch.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtsearch.Enabled = false;
-            this.txtsearch.Location = new System.Drawing.Point(574, 112);
+            this.txtsearch.Location = new System.Drawing.Point(608, 127);
             this.txtsearch.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.txtsearch.Name = "txtsearch";
             this.txtsearch.Size = new System.Drawing.Size(169, 42);
@@ -414,36 +442,45 @@
             // button3
             // 
             this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.Location = new System.Drawing.Point(1235, 689);
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(813, 768);
             this.button3.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(178, 52);
+            this.button3.Size = new System.Drawing.Size(155, 52);
             this.button3.TabIndex = 10;
             this.button3.Text = "ClearText";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // button2
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.Location = new System.Drawing.Point(1061, 689);
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(618, 768);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(166, 52);
+            this.button2.Size = new System.Drawing.Size(117, 52);
             this.button2.TabIndex = 9;
-            this.button2.Text = "ບັນທຶກການຈ່າຍ";
+            this.button2.Text = "ຈ່າຍ";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Location = new System.Drawing.Point(855, 105);
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(876, 127);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(129, 51);
+            this.button1.Size = new System.Drawing.Size(129, 63);
             this.button1.TabIndex = 11;
             this.button1.Text = "ຄົ້ນຫາ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
@@ -453,7 +490,7 @@
             this.dgvpayment.AllowUserToDeleteRows = false;
             this.dgvpayment.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvpayment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvpayment.Location = new System.Drawing.Point(30, 198);
+            this.dgvpayment.Location = new System.Drawing.Point(34, 237);
             this.dgvpayment.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.dgvpayment.Name = "dgvpayment";
             this.dgvpayment.ReadOnly = true;
@@ -468,7 +505,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 36F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(208)))), ((int)(((byte)(203)))));
-            this.ClientSize = new System.Drawing.Size(1425, 797);
+            this.ClientSize = new System.Drawing.Size(1425, 860);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Saysettha OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -519,5 +556,7 @@
         private System.Windows.Forms.DataGridView dgvpayment;
         private System.Windows.Forms.DateTimePicker datesearch;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

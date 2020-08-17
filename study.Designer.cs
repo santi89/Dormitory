@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(study));
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -66,6 +67,7 @@
             this.btdsave = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -94,6 +96,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 41);
             this.tabControl1.Name = "tabControl1";
@@ -104,7 +107,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(208)))), ((int)(((byte)(203)))));
+            this.tabPage1.BackColor = System.Drawing.Color.White;
             this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.btdelete);
             this.tabPage1.Controls.Add(this.dgvschool);
@@ -125,22 +128,28 @@
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Location = new System.Drawing.Point(670, 246);
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(743, 265);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 43);
+            this.button1.Size = new System.Drawing.Size(130, 64);
             this.button1.TabIndex = 29;
             this.button1.Text = "ຍົກເລີກ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // btdelete
             // 
             this.btdelete.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btdelete.Location = new System.Drawing.Point(670, 187);
+            this.btdelete.Image = ((System.Drawing.Image)(resources.GetObject("btdelete.Image")));
+            this.btdelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btdelete.Location = new System.Drawing.Point(614, 265);
             this.btdelete.Name = "btdelete";
-            this.btdelete.Size = new System.Drawing.Size(109, 42);
+            this.btdelete.Size = new System.Drawing.Size(103, 64);
             this.btdelete.TabIndex = 28;
             this.btdelete.Text = "ລຶບ";
+            this.btdelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btdelete.UseVisualStyleBackColor = true;
             this.btdelete.Click += new System.EventHandler(this.btdelete_Click_1);
             // 
@@ -150,7 +159,7 @@
             this.dgvschool.AllowUserToDeleteRows = false;
             this.dgvschool.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvschool.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvschool.Location = new System.Drawing.Point(318, 295);
+            this.dgvschool.Location = new System.Drawing.Point(324, 335);
             this.dgvschool.Name = "dgvschool";
             this.dgvschool.ReadOnly = true;
             this.dgvschool.RowHeadersWidth = 51;
@@ -162,11 +171,14 @@
             // btssave
             // 
             this.btssave.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btssave.Location = new System.Drawing.Point(522, 187);
+            this.btssave.Image = ((System.Drawing.Image)(resources.GetObject("btssave.Image")));
+            this.btssave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btssave.Location = new System.Drawing.Point(324, 265);
             this.btssave.Name = "btssave";
-            this.btssave.Size = new System.Drawing.Size(110, 42);
+            this.btssave.Size = new System.Drawing.Size(120, 64);
             this.btssave.TabIndex = 28;
             this.btssave.Text = "ບັນທຶກ";
+            this.btssave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btssave.UseVisualStyleBackColor = true;
             this.btssave.Click += new System.EventHandler(this.btssave_Click_1);
             // 
@@ -174,7 +186,7 @@
             // 
             this.txtschoolID.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtschoolID.Enabled = false;
-            this.txtschoolID.Location = new System.Drawing.Point(522, 68);
+            this.txtschoolID.Location = new System.Drawing.Point(541, 92);
             this.txtschoolID.Name = "txtschoolID";
             this.txtschoolID.Size = new System.Drawing.Size(257, 42);
             this.txtschoolID.TabIndex = 18;
@@ -183,7 +195,7 @@
             // txtnameschool
             // 
             this.txtnameschool.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtnameschool.Location = new System.Drawing.Point(522, 125);
+            this.txtnameschool.Location = new System.Drawing.Point(541, 149);
             this.txtnameschool.Name = "txtnameschool";
             this.txtnameschool.Size = new System.Drawing.Size(257, 42);
             this.txtnameschool.TabIndex = 20;
@@ -193,7 +205,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(352, 71);
+            this.label1.Location = new System.Drawing.Point(371, 95);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(135, 36);
             this.label1.TabIndex = 17;
@@ -204,7 +216,7 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(392, 125);
+            this.label2.Location = new System.Drawing.Point(371, 149);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(95, 36);
             this.label2.TabIndex = 19;
@@ -214,17 +226,20 @@
             // btsedit
             // 
             this.btsedit.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btsedit.Location = new System.Drawing.Point(522, 247);
+            this.btsedit.Image = ((System.Drawing.Image)(resources.GetObject("btsedit.Image")));
+            this.btsedit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btsedit.Location = new System.Drawing.Point(470, 265);
             this.btsedit.Name = "btsedit";
-            this.btsedit.Size = new System.Drawing.Size(110, 42);
+            this.btsedit.Size = new System.Drawing.Size(120, 64);
             this.btsedit.TabIndex = 28;
             this.btsedit.Text = "ແກ້ໄຂ";
+            this.btsedit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btsedit.UseVisualStyleBackColor = true;
             this.btsedit.Click += new System.EventHandler(this.btsedit_Click_1);
             // 
             // tabPage2
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(208)))), ((int)(((byte)(203)))));
+            this.tabPage2.BackColor = System.Drawing.Color.White;
             this.tabPage2.Controls.Add(this.button2);
             this.tabPage2.Controls.Add(this.cbschool);
             this.tabPage2.Controls.Add(this.btfdelete);
@@ -247,11 +262,14 @@
             // button2
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.Location = new System.Drawing.Point(737, 206);
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(739, 211);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(99, 43);
+            this.button2.Size = new System.Drawing.Size(136, 66);
             this.button2.TabIndex = 39;
             this.button2.Text = "ຍົກເລີກ";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click_3);
             // 
@@ -267,11 +285,14 @@
             // btfdelete
             // 
             this.btfdelete.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btfdelete.Location = new System.Drawing.Point(650, 207);
+            this.btfdelete.Image = ((System.Drawing.Image)(resources.GetObject("btfdelete.Image")));
+            this.btfdelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btfdelete.Location = new System.Drawing.Point(619, 211);
             this.btfdelete.Name = "btfdelete";
-            this.btfdelete.Size = new System.Drawing.Size(81, 42);
+            this.btfdelete.Size = new System.Drawing.Size(99, 66);
             this.btfdelete.TabIndex = 36;
             this.btfdelete.Text = "ລຶບ";
+            this.btfdelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btfdelete.UseVisualStyleBackColor = true;
             this.btfdelete.Click += new System.EventHandler(this.btfdelete_Click_3);
             // 
@@ -312,11 +333,14 @@
             // btfedit
             // 
             this.btfedit.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btfedit.Location = new System.Drawing.Point(563, 207);
+            this.btfedit.Image = ((System.Drawing.Image)(resources.GetObject("btfedit.Image")));
+            this.btfedit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btfedit.Location = new System.Drawing.Point(486, 211);
             this.btfedit.Name = "btfedit";
-            this.btfedit.Size = new System.Drawing.Size(81, 42);
+            this.btfedit.Size = new System.Drawing.Size(127, 66);
             this.btfedit.TabIndex = 37;
             this.btfedit.Text = "ແກ້ໄຂ";
+            this.btfedit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btfedit.UseVisualStyleBackColor = true;
             this.btfedit.Click += new System.EventHandler(this.btfedit_Click_3);
             // 
@@ -324,7 +348,7 @@
             // 
             this.label19.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(417, 146);
+            this.label19.Location = new System.Drawing.Point(381, 146);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(82, 36);
             this.label19.TabIndex = 32;
@@ -334,7 +358,7 @@
             // 
             this.label16.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(421, 89);
+            this.label16.Location = new System.Drawing.Point(381, 89);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(78, 36);
             this.label16.TabIndex = 33;
@@ -343,11 +367,14 @@
             // btfsave
             // 
             this.btfsave.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btfsave.Location = new System.Drawing.Point(476, 207);
+            this.btfsave.Image = ((System.Drawing.Image)(resources.GetObject("btfsave.Image")));
+            this.btfsave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btfsave.Location = new System.Drawing.Point(362, 211);
             this.btfsave.Name = "btfsave";
-            this.btfsave.Size = new System.Drawing.Size(81, 42);
+            this.btfsave.Size = new System.Drawing.Size(118, 66);
             this.btfsave.TabIndex = 38;
             this.btfsave.Text = "ບັນທຶກ";
+            this.btfsave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btfsave.UseVisualStyleBackColor = true;
             this.btfsave.Click += new System.EventHandler(this.btfsave_Click_2);
             // 
@@ -361,7 +388,7 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(208)))), ((int)(((byte)(203)))));
+            this.tabPage3.BackColor = System.Drawing.Color.White;
             this.tabPage3.Controls.Add(this.button3);
             this.tabPage3.Controls.Add(this.cbdepart);
             this.tabPage3.Controls.Add(this.btddelete);
@@ -383,11 +410,14 @@
             // button3
             // 
             this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.Location = new System.Drawing.Point(702, 247);
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(769, 248);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(99, 43);
+            this.button3.Size = new System.Drawing.Size(129, 68);
             this.button3.TabIndex = 39;
             this.button3.Text = "ຍົກເລີກ";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click_2);
             // 
@@ -403,11 +433,14 @@
             // btddelete
             // 
             this.btddelete.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btddelete.Location = new System.Drawing.Point(615, 247);
+            this.btddelete.Image = ((System.Drawing.Image)(resources.GetObject("btddelete.Image")));
+            this.btddelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btddelete.Location = new System.Drawing.Point(651, 248);
             this.btddelete.Name = "btddelete";
-            this.btddelete.Size = new System.Drawing.Size(81, 42);
+            this.btddelete.Size = new System.Drawing.Size(95, 68);
             this.btddelete.TabIndex = 36;
             this.btddelete.Text = "ລຶບ";
+            this.btddelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btddelete.UseVisualStyleBackColor = true;
             this.btddelete.Click += new System.EventHandler(this.btddelete_Click_3);
             // 
@@ -417,7 +450,7 @@
             this.dgvdepartment.AllowUserToDeleteRows = false;
             this.dgvdepartment.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvdepartment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvdepartment.Location = new System.Drawing.Point(368, 295);
+            this.dgvdepartment.Location = new System.Drawing.Point(368, 321);
             this.dgvdepartment.Name = "dgvdepartment";
             this.dgvdepartment.ReadOnly = true;
             this.dgvdepartment.RowHeadersWidth = 51;
@@ -448,11 +481,14 @@
             // btdedit
             // 
             this.btdedit.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btdedit.Location = new System.Drawing.Point(531, 247);
+            this.btdedit.Image = ((System.Drawing.Image)(resources.GetObject("btdedit.Image")));
+            this.btdedit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btdedit.Location = new System.Drawing.Point(512, 248);
             this.btdedit.Name = "btdedit";
-            this.btdedit.Size = new System.Drawing.Size(81, 42);
+            this.btdedit.Size = new System.Drawing.Size(119, 67);
             this.btdedit.TabIndex = 37;
             this.btdedit.Text = "ແກ້ໄຂ";
+            this.btdedit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btdedit.UseVisualStyleBackColor = true;
             this.btdedit.Click += new System.EventHandler(this.btdedit_Click_3);
             // 
@@ -460,7 +496,7 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(444, 177);
+            this.label3.Location = new System.Drawing.Point(403, 177);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 36);
             this.label3.TabIndex = 32;
@@ -470,7 +506,7 @@
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(443, 129);
+            this.label11.Location = new System.Drawing.Point(403, 129);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(66, 36);
             this.label11.TabIndex = 33;
@@ -487,17 +523,21 @@
             // btdsave
             // 
             this.btdsave.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btdsave.Location = new System.Drawing.Point(444, 247);
+            this.btdsave.Image = ((System.Drawing.Image)(resources.GetObject("btdsave.Image")));
+            this.btdsave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btdsave.Location = new System.Drawing.Point(368, 248);
             this.btdsave.Name = "btdsave";
-            this.btdsave.Size = new System.Drawing.Size(81, 42);
+            this.btdsave.Size = new System.Drawing.Size(121, 68);
             this.btdsave.TabIndex = 38;
             this.btdsave.Text = "ບັນທຶກ";
+            this.btdsave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btdsave.UseVisualStyleBackColor = true;
             this.btdsave.Click += new System.EventHandler(this.btdsave_Click_2);
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.label6);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -516,6 +556,18 @@
             this.label5.TabIndex = 32;
             this.label5.Text = "X";
             this.label5.Click += new System.EventHandler(this.label5_Click_1);
+            // 
+            // label6
+            // 
+            this.label6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label6.Font = new System.Drawing.Font("Saysettha OT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(0, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(1262, 41);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "ຂໍ້ມູນການສຶກສາ";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label6.Click += new System.EventHandler(this.label1_Click);
             // 
             // study
             // 
@@ -590,5 +642,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtdepname;
         private System.Windows.Forms.Button btdsave;
+        private System.Windows.Forms.Label label6;
     }
 }

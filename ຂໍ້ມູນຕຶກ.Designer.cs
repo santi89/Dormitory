@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ຂໍ້ມູນຕຶກ));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.cbroomtype = new System.Windows.Forms.ComboBox();
@@ -44,6 +45,7 @@
             this.txtbuildingnum = new System.Windows.Forms.TextBox();
             this.btbsave = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvbuild)).BeginInit();
             this.SuspendLayout();
@@ -70,18 +72,20 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 7, 4, 7);
-            this.groupBox2.Size = new System.Drawing.Size(1021, 514);
+            this.groupBox2.Size = new System.Drawing.Size(1021, 517);
             this.groupBox2.TabIndex = 36;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "ຈັດການຂໍ້ມູນຕືກ";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(127, 304);
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(93, 312);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(93, 50);
+            this.button2.Size = new System.Drawing.Size(127, 62);
             this.button2.TabIndex = 33;
             this.button2.Text = "ຍົກເລີກ";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -96,17 +100,20 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(127, 424);
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(129, 439);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 42);
+            this.button1.Size = new System.Drawing.Size(128, 59);
             this.button1.TabIndex = 31;
             this.button1.Text = "ຄົ້ນຫາ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtsearch
             // 
-            this.txtsearch.Location = new System.Drawing.Point(127, 376);
+            this.txtsearch.Location = new System.Drawing.Point(129, 391);
             this.txtsearch.Name = "txtsearch";
             this.txtsearch.Size = new System.Drawing.Size(222, 42);
             this.txtsearch.TabIndex = 30;
@@ -125,13 +132,16 @@
             // 
             // btdelete
             // 
+            this.btdelete.Image = ((System.Drawing.Image)(resources.GetObject("btdelete.Image")));
+            this.btdelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btdelete.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btdelete.Location = new System.Drawing.Point(246, 304);
+            this.btdelete.Location = new System.Drawing.Point(227, 312);
             this.btdelete.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.btdelete.Name = "btdelete";
-            this.btdelete.Size = new System.Drawing.Size(103, 52);
+            this.btdelete.Size = new System.Drawing.Size(122, 62);
             this.btdelete.TabIndex = 28;
             this.btdelete.Text = "ລຶບ";
+            this.btdelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btdelete.UseVisualStyleBackColor = true;
             this.btdelete.Click += new System.EventHandler(this.btdelete_Click);
             // 
@@ -156,13 +166,16 @@
             // 
             // btedit
             // 
+            this.btedit.Image = ((System.Drawing.Image)(resources.GetObject("btedit.Image")));
+            this.btedit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btedit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btedit.Location = new System.Drawing.Point(246, 242);
+            this.btedit.Location = new System.Drawing.Point(228, 242);
             this.btedit.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.btedit.Name = "btedit";
-            this.btedit.Size = new System.Drawing.Size(103, 52);
+            this.btedit.Size = new System.Drawing.Size(121, 61);
             this.btedit.TabIndex = 28;
             this.btedit.Text = "ແກ້ໄຂ";
+            this.btedit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btedit.UseVisualStyleBackColor = true;
             this.btedit.Click += new System.EventHandler(this.btedit_Click);
             // 
@@ -170,7 +183,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(58, 376);
+            this.label2.Location = new System.Drawing.Point(60, 391);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 36);
@@ -209,13 +222,16 @@
             // 
             // btbsave
             // 
+            this.btbsave.Image = ((System.Drawing.Image)(resources.GetObject("btbsave.Image")));
+            this.btbsave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btbsave.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btbsave.Location = new System.Drawing.Point(127, 242);
+            this.btbsave.Location = new System.Drawing.Point(93, 242);
             this.btbsave.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.btbsave.Name = "btbsave";
-            this.btbsave.Size = new System.Drawing.Size(93, 52);
+            this.btbsave.Size = new System.Drawing.Size(127, 61);
             this.btbsave.TabIndex = 28;
             this.btbsave.Text = "ບັນທຶກ";
+            this.btbsave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btbsave.UseVisualStyleBackColor = true;
             this.btbsave.Click += new System.EventHandler(this.btbsave_Click);
             // 
@@ -223,9 +239,10 @@
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.label5.ForeColor = System.Drawing.Color.Red;
             this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label5.Location = new System.Drawing.Point(1019, -3);
+            this.label5.Location = new System.Drawing.Point(1018, -1);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(28, 36);
@@ -233,14 +250,29 @@
             this.label5.Text = "X";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label6.Font = new System.Drawing.Font("Saysettha OT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label6.Location = new System.Drawing.Point(0, 0);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(1047, 57);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "ຂໍ້ມູນຕຶກ";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // ຂໍ້ມູນຕຶກ
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 36F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(208)))), ((int)(((byte)(203)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1047, 575);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.label6);
             this.Font = new System.Drawing.Font("Saysettha OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
@@ -275,5 +307,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }

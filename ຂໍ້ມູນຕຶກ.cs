@@ -205,7 +205,7 @@ sql = "select buildingID,buildingnumber,typename from tbbuilding inner join tbro
             else
             {
 
-            sql="select * from tbbuilding where buildingnumber='"+Convert .ToInt32 (txtsearch.Text) + "'";
+            sql="select * from tbbuilding where buildingnumber='"+txtsearch.Text+ "'";
                 cmd = new SqlCommand(sql, con);
             da = new SqlDataAdapter(cmd);
             da.Fill(ds,"bs");

@@ -14,7 +14,7 @@
   <xs:element name="Dataset" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Dataset" msprop:Generator_UserDSName="Dataset">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="studentID" msprop:Generator_ColumnVarNameInTable="columnstudentID" msprop:Generator_ColumnPropNameInRow="studentID" msprop:Generator_ColumnPropNameInTable="studentIDColumn" msprop:Generator_UserColumnName="studentID">
@@ -92,7 +92,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="DataTable2" msprop:Generator_TableClassName="DataTable2DataTable" msprop:Generator_TableVarName="tableDataTable2" msprop:Generator_TablePropName="DataTable2" msprop:Generator_RowDeletingName="DataTable2RowDeleting" msprop:Generator_RowChangingName="DataTable2RowChanging" msprop:Generator_RowEvHandlerName="DataTable2RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable2RowDeleted" msprop:Generator_UserTableName="DataTable2" msprop:Generator_RowChangedName="DataTable2RowChanged" msprop:Generator_RowEvArgName="DataTable2RowChangeEvent" msprop:Generator_RowClassName="DataTable2Row">
+        <xs:element name="DataTable2" msprop:Generator_TableClassName="DataTable2DataTable" msprop:Generator_TableVarName="tableDataTable2" msprop:Generator_RowChangedName="DataTable2RowChanged" msprop:Generator_TablePropName="DataTable2" msprop:Generator_RowDeletingName="DataTable2RowDeleting" msprop:Generator_RowChangingName="DataTable2RowChanging" msprop:Generator_RowEvHandlerName="DataTable2RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable2RowDeleted" msprop:Generator_RowClassName="DataTable2Row" msprop:Generator_UserTableName="DataTable2" msprop:Generator_RowEvArgName="DataTable2RowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="studentID" msprop:Generator_ColumnVarNameInTable="columnstudentID" msprop:Generator_ColumnPropNameInRow="studentID" msprop:Generator_ColumnPropNameInTable="studentIDColumn" msprop:Generator_UserColumnName="studentID">
@@ -135,6 +135,78 @@
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DataTable3" msprop:Generator_TableClassName="DataTable3DataTable" msprop:Generator_TableVarName="tableDataTable3" msprop:Generator_TablePropName="DataTable3" msprop:Generator_RowDeletingName="DataTable3RowDeleting" msprop:Generator_RowChangingName="DataTable3RowChanging" msprop:Generator_RowEvHandlerName="DataTable3RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable3RowDeleted" msprop:Generator_UserTableName="DataTable3" msprop:Generator_RowChangedName="DataTable3RowChanged" msprop:Generator_RowEvArgName="DataTable3RowChangeEvent" msprop:Generator_RowClassName="DataTable3Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="studentID" msprop:Generator_ColumnVarNameInTable="columnstudentID" msprop:Generator_ColumnPropNameInRow="studentID" msprop:Generator_ColumnPropNameInTable="studentIDColumn" msprop:Generator_UserColumnName="studentID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="startdate" msprop:Generator_ColumnVarNameInTable="columnstartdate" msprop:Generator_ColumnPropNameInRow="startdate" msprop:Generator_ColumnPropNameInTable="startdateColumn" msprop:Generator_UserColumnName="startdate" type="xs:dateTime" />
+              <xs:element name="enddate" msprop:Generator_ColumnVarNameInTable="columnenddate" msprop:Generator_ColumnPropNameInRow="enddate" msprop:Generator_ColumnPropNameInTable="enddateColumn" msprop:Generator_UserColumnName="enddate" type="xs:dateTime" />
+              <xs:element name="room_number" msprop:Generator_ColumnVarNameInTable="columnroom_number" msprop:Generator_ColumnPropNameInRow="room_number" msprop:Generator_ColumnPropNameInTable="room_numberColumn" msprop:Generator_UserColumnName="room_number">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="surname" msprop:Generator_ColumnVarNameInTable="columnsurname" msprop:Generator_ColumnPropNameInRow="surname" msprop:Generator_ColumnPropNameInTable="surnameColumn" msprop:Generator_UserColumnName="surname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="picture" msprop:Generator_ColumnVarNameInTable="columnpicture" msprop:Generator_ColumnPropNameInRow="picture" msprop:Generator_ColumnPropNameInTable="pictureColumn" msprop:Generator_UserColumnName="picture" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="buildingnumber" msprop:Generator_ColumnVarNameInTable="columnbuildingnumber" msprop:Generator_ColumnPropNameInRow="buildingnumber" msprop:Generator_ColumnPropNameInTable="buildingnumberColumn" msprop:Generator_UserColumnName="buildingnumber">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="floornumber" msprop:Generator_ColumnVarNameInTable="columnfloornumber" msprop:Generator_ColumnPropNameInRow="floornumber" msprop:Generator_ColumnPropNameInTable="floornumberColumn" msprop:Generator_UserColumnName="floornumber">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="deptname" msprop:Generator_ColumnVarNameInTable="columndeptname" msprop:Generator_ColumnPropNameInRow="deptname" msprop:Generator_ColumnPropNameInTable="deptnameColumn" msprop:Generator_UserColumnName="deptname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="facname" msprop:Generator_ColumnVarNameInTable="columnfacname" msprop:Generator_ColumnPropNameInRow="facname" msprop:Generator_ColumnPropNameInTable="facnameColumn" msprop:Generator_UserColumnName="facname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="schoolname" msprop:Generator_ColumnVarNameInTable="columnschoolname" msprop:Generator_ColumnPropNameInRow="schoolname" msprop:Generator_ColumnPropNameInTable="schoolnameColumn" msprop:Generator_UserColumnName="schoolname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>

@@ -273,7 +273,7 @@ namespace C_Sharp_2_Project
         {
             try
             {
-                sql = "select roomID,room_number,typename,floornumber from tbroom left join tbroomtype on tbroomtype.roomtypeID=tbroom.roomtypeID left join tbfloor on tbfloor.floorID=tbroom.floorID where roomID='" + txtsearch.Text + "' or room_number='" + txtsearch.Text + "'";
+                sql = "select roomID,room_number,typename,floornumber,buildingnumber from tbroom left join tbroomtype on tbroomtype.roomtypeID=tbroom.roomtypeID left join tbfloor on tbfloor.floorID=tbroom.floorID inner join tbbuilding on tbfloor.buildingID= tbbuilding.buildingID where roomID like '%" + txtsearch.Text + "%' or room_number like '%" + txtsearch.Text + "%'";
                 da = new SqlDataAdapter(sql, con);
                 da.Fill(ds, "room");
                 if (ds.Tables["room"] != null)
@@ -310,7 +310,7 @@ namespace C_Sharp_2_Project
                 }
                 else
                 {
-                    sql = "select roomID,room_number,typename,floornumber from tbroom left join tbroomtype on tbroomtype.roomtypeID=tbroom.roomtypeID left join tbfloor on tbfloor.floorID=tbroom.floorID where roomID='" + txtsearch.Text + "'";
+                    sql = "select roomID,room_number,typename,floornumber,buildingnumber from tbroom left join tbroomtype on tbroomtype.roomtypeID=tbroom.roomtypeID left join tbfloor on tbfloor.floorID=tbroom.floorID inner join tbbuilding on tbfloor.buildingID= tbbuilding.buildingID where roomID='" + txtsearch.Text + "'";
                     da = new SqlDataAdapter(sql, con);
                     da.Fill(ds, "room");
                     if (ds.Tables["room"] != null)

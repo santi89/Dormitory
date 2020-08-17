@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reportstudent));
             this.datetimepick = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -44,7 +45,7 @@
             this.datetimepick.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.datetimepick.CustomFormat = "yyyy-MM-dd";
             this.datetimepick.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.datetimepick.Location = new System.Drawing.Point(289, 82);
+            this.datetimepick.Location = new System.Drawing.Point(279, 64);
             this.datetimepick.Name = "datetimepick";
             this.datetimepick.Size = new System.Drawing.Size(193, 42);
             this.datetimepick.TabIndex = 2;
@@ -54,7 +55,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(67, 87);
+            this.label1.Location = new System.Drawing.Point(57, 69);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(198, 36);
             this.label1.TabIndex = 3;
@@ -63,12 +64,15 @@
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button1.BackColor = System.Drawing.Color.Teal;
-            this.button1.Location = new System.Drawing.Point(981, 81);
+            this.button1.BackColor = System.Drawing.Color.Silver;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(967, 50);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 44);
+            this.button1.Size = new System.Drawing.Size(115, 65);
             this.button1.TabIndex = 4;
             this.button1.Text = "ເບິ່ງ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -77,7 +81,7 @@
             this.dateTimePickerend.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dateTimePickerend.CustomFormat = "yyyy-MM-dd";
             this.dateTimePickerend.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerend.Location = new System.Drawing.Point(702, 81);
+            this.dateTimePickerend.Location = new System.Drawing.Point(692, 63);
             this.dateTimePickerend.Name = "dateTimePickerend";
             this.dateTimePickerend.Size = new System.Drawing.Size(193, 42);
             this.dateTimePickerend.TabIndex = 2;
@@ -87,7 +91,7 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(595, 82);
+            this.label2.Location = new System.Drawing.Point(585, 64);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 36);
             this.label2.TabIndex = 3;
@@ -95,12 +99,11 @@
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(665, 9);
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label3.Location = new System.Drawing.Point(0, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(212, 36);
+            this.label3.Size = new System.Drawing.Size(1391, 36);
             this.label3.TabIndex = 3;
             this.label3.Text = "ເບິ່ງລາຍງານການເຂົ້າພັກ";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -109,6 +112,7 @@
             // 
             this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.label11.ForeColor = System.Drawing.Color.Red;
             this.label11.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label11.Location = new System.Drawing.Point(1363, -3);
@@ -137,7 +141,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 36F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Turquoise;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1391, 703);
             this.Controls.Add(this.crystalReportV);
             this.Controls.Add(this.label11);

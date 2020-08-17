@@ -94,8 +94,7 @@ namespace C_Sharp_2_Project
 
         private void button2_Click(object sender, EventArgs e)
         {
-            txtname.Clear();
-            txtpassword.Clear();
+            Application.Exit();
         }
 
         private void button3_Click(object sender, EventArgs e)

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ຂໍ້ມູນຊັ້ນ));
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.txtsearch = new System.Windows.Forms.TextBox();
             this.search = new System.Windows.Forms.Button();
@@ -44,6 +45,7 @@
             this.txtfloornum = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvfloor)).BeginInit();
             this.SuspendLayout();
@@ -72,7 +74,6 @@
             this.groupBox4.Size = new System.Drawing.Size(984, 493);
             this.groupBox4.TabIndex = 34;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "ຈັດການຂໍ້ມູນຊັ້ນ";
             // 
             // txtsearch
             // 
@@ -85,20 +86,26 @@
             // 
             // search
             // 
-            this.search.Location = new System.Drawing.Point(698, 42);
+            this.search.Image = ((System.Drawing.Image)(resources.GetObject("search.Image")));
+            this.search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.search.Location = new System.Drawing.Point(694, 31);
             this.search.Name = "search";
-            this.search.Size = new System.Drawing.Size(75, 47);
+            this.search.Size = new System.Drawing.Size(115, 58);
             this.search.TabIndex = 32;
             this.search.Text = "ຄົ້ນຫາ";
+            this.search.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.search.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(102, 314);
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(64, 328);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 44);
+            this.button1.Size = new System.Drawing.Size(127, 58);
             this.button1.TabIndex = 31;
             this.button1.Text = "ຍົກເລີກ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -126,13 +133,16 @@
             // 
             // btfsave
             // 
+            this.btfsave.Image = ((System.Drawing.Image)(resources.GetObject("btfsave.Image")));
+            this.btfsave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btfsave.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btfsave.Location = new System.Drawing.Point(101, 252);
+            this.btfsave.Location = new System.Drawing.Point(64, 252);
             this.btfsave.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.btfsave.Name = "btfsave";
-            this.btfsave.Size = new System.Drawing.Size(91, 52);
+            this.btfsave.Size = new System.Drawing.Size(128, 62);
             this.btfsave.TabIndex = 28;
             this.btfsave.Text = "ບັນທຶກ";
+            this.btfsave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btfsave.UseVisualStyleBackColor = true;
             this.btfsave.Click += new System.EventHandler(this.btfsave_Click);
             // 
@@ -158,13 +168,16 @@
             // 
             // btfedit
             // 
+            this.btfedit.Image = ((System.Drawing.Image)(resources.GetObject("btfedit.Image")));
+            this.btfedit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btfedit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btfedit.Location = new System.Drawing.Point(200, 252);
             this.btfedit.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.btfedit.Name = "btfedit";
-            this.btfedit.Size = new System.Drawing.Size(91, 52);
+            this.btfedit.Size = new System.Drawing.Size(119, 62);
             this.btfedit.TabIndex = 28;
             this.btfedit.Text = "ແກ້ໄຂ";
+            this.btfedit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btfedit.UseVisualStyleBackColor = true;
             this.btfedit.Click += new System.EventHandler(this.btfedit_Click);
             // 
@@ -192,13 +205,16 @@
             // 
             // btfdelete
             // 
+            this.btfdelete.Image = ((System.Drawing.Image)(resources.GetObject("btfdelete.Image")));
+            this.btfdelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btfdelete.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btfdelete.Location = new System.Drawing.Point(200, 310);
+            this.btfdelete.Location = new System.Drawing.Point(199, 324);
             this.btfdelete.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.btfdelete.Name = "btfdelete";
-            this.btfdelete.Size = new System.Drawing.Size(91, 52);
+            this.btfdelete.Size = new System.Drawing.Size(119, 62);
             this.btfdelete.TabIndex = 28;
             this.btfdelete.Text = "ລຶບ";
+            this.btfdelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btfdelete.UseVisualStyleBackColor = true;
             this.btfdelete.Click += new System.EventHandler(this.btfdelete_Click);
             // 
@@ -226,6 +242,7 @@
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.label2.ForeColor = System.Drawing.Color.Red;
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label2.Location = new System.Drawing.Point(1018, 0);
@@ -236,14 +253,28 @@
             this.label2.Text = "X";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label3.Location = new System.Drawing.Point(0, 0);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(1044, 58);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "ຈັດການຂໍ້ມູນຊັ້ນ";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // ຂໍ້ມູນຊັ້ນ
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 36F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(208)))), ((int)(((byte)(203)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1044, 574);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.label3);
             this.Font = new System.Drawing.Font("Saysettha OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
@@ -278,5 +309,6 @@
         private System.Windows.Forms.TextBox txtsearch;
         private System.Windows.Forms.Button search;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

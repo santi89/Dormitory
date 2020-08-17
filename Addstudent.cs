@@ -124,7 +124,37 @@ namespace C_Sharp_2_Project
             }reada.Close();
 
         }
+        private void cleartext()
+        {
+            txtstid.Clear();
+            txtstname.Clear();
+            txtstsurname.Clear();
 
+            rbmale.Checked = false;
+            
+                rbfemale.Checked = false;
+
+            
+            txtvillage.Clear();
+            txtdistrict.Clear();
+            cbprovince.SelectedItem = null;
+            txtemail.Clear();
+            txttel.Clear();
+            cbschool.SelectedItem = null;
+            cbfac.SelectedItem = null;
+            cbdep.SelectedItem = null;
+            txtyear.Clear();
+            txtemername.Clear();
+            txtemersurname.Clear();
+            txtemerage.Clear();
+            txtemervillage.Clear();
+            txtemerdistrict.Clear();
+            cbemerprovince.SelectedItem = null;
+            txtemerjob.Clear();
+            txtemertel.Clear();
+            txtemerrelationship.Clear();
+            pictureBox1.Image = null;
+        }
         private void txtregister_Click(object sender, EventArgs e)
         {
             try
@@ -136,8 +166,8 @@ namespace C_Sharp_2_Project
                     {
                         return;
                     }
-                    else
-                    {
+                   
+                    
                         sql = "INSERT INTO tbstudent VALUEs (@studentID,@name,@surname,@gender,@birthofdate,@village,@district,@province,@email,@phone,(select schoolID from tbschool where schoolname=@schoolID),(select facID from tbfaculty where facname=@facID),(select deptID from tbdepartment where deptname=@deptID),@session,@emgcname,@emgcsurname,@emgcage,@emgcvillage,@emgcdistrict,@emgcprovince,@emgcjob,@emgctel,@relationship,@datesign)";
                         cmd = new SqlCommand(sql, con);
                         cmd.Parameters.Clear();
@@ -184,21 +214,18 @@ namespace C_Sharp_2_Project
                          pictureBox1.Image.Save(mem, System.Drawing.Imaging.ImageFormat.Png);
                          byte[] imarr = mem.ToArray();
                          cmd.Parameters.AddWithValue("@picture", imarr);*/
-
-
-
                         cmd.ExecuteNonQuery();
                         showstudent();
+                        cleartext();
                     }
-                }
+                
                 else
                 {
                 if (txtstid.Text == null && txtstname.Text == null && txtstsurname.Text == null && txtvillage.Text == null && txtdistrict.Text == null && cbprovince.SelectedItem == null && txtemail.Text == null && txttel.Text == null &&txtyear.Text  == null && txtemername.Text == null && txtemersurname.Text == null && txtemerage.Text == null && txtemervillage.Text == null && txtemerdistrict.Text == null && txtemerjob.Text == null && txtemertel.Text == null && txtemerrelationship.Text == null)
                 {
                     return;
-                }             else
-                {
-
+                }            
+                
 
                     sql = "INSERT INTO tbstudent VALUEs (@studentID,@name,@surname,@gender,@birthofdate,@village,@district,@province,@email,@phone,(select schoolID from tbschool where schoolname=@schoolID),(select facID from tbfaculty where facname=@facID),(select deptID from tbdepartment where deptname=@deptID),@session,@emgcname,@emgcsurname,@emgcage,@emgcvillage,@emgcdistrict,@emgcprovince,@emgcjob,@emgctel,@relationship,@picture,@datesign)";
                 cmd = new SqlCommand(sql, con);
@@ -243,14 +270,12 @@ namespace C_Sharp_2_Project
                 cmd.Parameters.AddWithValue("@picture",imarr );
                         cmd.Parameters.AddWithValue("@datesign", DateTime.Now);
 
-
-
-
                         cmd.ExecuteNonQuery();
                     showstudent();
+                    cleartext();
 
                 }
-                }
+
             }
             catch (Exception ex)
             {
@@ -417,6 +442,7 @@ namespace C_Sharp_2_Project
                 cmd.Parameters.AddWithValue("@stID", txtstid.Text);
                 cmd.ExecuteNonQuery();
                 showstudent();
+                cleartext();
 
 
             }
@@ -483,6 +509,8 @@ namespace C_Sharp_2_Project
 
                 cmd.ExecuteNonQuery();
                 showstudent();
+                cleartext();
+
             }
             catch (Exception ex )
             {
@@ -631,6 +659,12 @@ namespace C_Sharp_2_Project
             {
                 e.Handled = true;
             }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+                        cleartext();
+            
         }
     }
 }

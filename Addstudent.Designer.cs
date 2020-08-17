@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Addstudent));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtyear = new System.Windows.Forms.TextBox();
             this.cbprovince = new System.Windows.Forms.ComboBox();
             this.cbdep = new System.Windows.Forms.ComboBox();
             this.cbfac = new System.Windows.Forms.ComboBox();
@@ -87,7 +89,8 @@
             this.txtsearch = new System.Windows.Forms.TextBox();
             this.btsearch = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
-            this.txtyear = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -129,12 +132,19 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtstid);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(37, 2);
+            this.groupBox1.Location = new System.Drawing.Point(24, 61);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(698, 509);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ຂໍ້ມູນນັກສຶກສາ";
+            // 
+            // txtyear
+            // 
+            this.txtyear.Location = new System.Drawing.Point(454, 455);
+            this.txtyear.Name = "txtyear";
+            this.txtyear.Size = new System.Drawing.Size(220, 42);
+            this.txtyear.TabIndex = 40;
             // 
             // cbprovince
             // 
@@ -520,11 +530,14 @@
             // txtregister
             // 
             this.txtregister.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtregister.Location = new System.Drawing.Point(820, 457);
+            this.txtregister.Image = ((System.Drawing.Image)(resources.GetObject("txtregister.Image")));
+            this.txtregister.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtregister.Location = new System.Drawing.Point(820, 506);
             this.txtregister.Name = "txtregister";
-            this.txtregister.Size = new System.Drawing.Size(116, 51);
+            this.txtregister.Size = new System.Drawing.Size(116, 64);
             this.txtregister.TabIndex = 2;
             this.txtregister.Text = "ເພີ່ມ";
+            this.txtregister.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.txtregister.UseVisualStyleBackColor = true;
             this.txtregister.Click += new System.EventHandler(this.txtregister_Click);
             // 
@@ -599,7 +612,7 @@
             this.groupBox2.Controls.Add(this.txtemervillage);
             this.groupBox2.Controls.Add(this.txtemerdistrict);
             this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Location = new System.Drawing.Point(741, 25);
+            this.groupBox2.Location = new System.Drawing.Point(741, 74);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(710, 353);
             this.groupBox2.TabIndex = 35;
@@ -634,11 +647,14 @@
             // btdelete
             // 
             this.btdelete.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btdelete.Location = new System.Drawing.Point(946, 457);
+            this.btdelete.Image = ((System.Drawing.Image)(resources.GetObject("btdelete.Image")));
+            this.btdelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btdelete.Location = new System.Drawing.Point(946, 506);
             this.btdelete.Name = "btdelete";
-            this.btdelete.Size = new System.Drawing.Size(116, 51);
+            this.btdelete.Size = new System.Drawing.Size(116, 64);
             this.btdelete.TabIndex = 2;
             this.btdelete.Text = "ລືບ";
+            this.btdelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btdelete.UseVisualStyleBackColor = true;
             this.btdelete.Click += new System.EventHandler(this.btdelete_Click);
             // 
@@ -646,7 +662,7 @@
             // 
             this.dgvregister.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvregister.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvregister.Location = new System.Drawing.Point(37, 517);
+            this.dgvregister.Location = new System.Drawing.Point(37, 581);
             this.dgvregister.Name = "dgvregister";
             this.dgvregister.RowHeadersWidth = 51;
             this.dgvregister.RowTemplate.Height = 24;
@@ -657,11 +673,14 @@
             // btedit
             // 
             this.btedit.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btedit.Location = new System.Drawing.Point(1078, 457);
+            this.btedit.Image = ((System.Drawing.Image)(resources.GetObject("btedit.Image")));
+            this.btedit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btedit.Location = new System.Drawing.Point(1078, 506);
             this.btedit.Name = "btedit";
-            this.btedit.Size = new System.Drawing.Size(102, 51);
+            this.btedit.Size = new System.Drawing.Size(120, 64);
             this.btedit.TabIndex = 2;
             this.btedit.Text = "ແກ້ໄຂ";
+            this.btedit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btedit.UseVisualStyleBackColor = true;
             this.btedit.Click += new System.EventHandler(this.btedit_Click);
             // 
@@ -669,7 +688,7 @@
             // 
             this.label26.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(765, 390);
+            this.label26.Location = new System.Drawing.Point(765, 439);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(66, 36);
             this.label26.TabIndex = 29;
@@ -678,7 +697,7 @@
             // txtsearch
             // 
             this.txtsearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtsearch.Location = new System.Drawing.Point(837, 387);
+            this.txtsearch.Location = new System.Drawing.Point(837, 436);
             this.txtsearch.Multiline = true;
             this.txtsearch.Name = "txtsearch";
             this.txtsearch.Size = new System.Drawing.Size(255, 42);
@@ -688,11 +707,14 @@
             // btsearch
             // 
             this.btsearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btsearch.Location = new System.Drawing.Point(1098, 385);
+            this.btsearch.Image = ((System.Drawing.Image)(resources.GetObject("btsearch.Image")));
+            this.btsearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btsearch.Location = new System.Drawing.Point(1126, 433);
             this.btsearch.Name = "btsearch";
-            this.btsearch.Size = new System.Drawing.Size(121, 47);
+            this.btsearch.Size = new System.Drawing.Size(121, 54);
             this.btsearch.TabIndex = 2;
             this.btsearch.Text = "ຊອກ";
+            this.btsearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btsearch.UseVisualStyleBackColor = true;
             this.btsearch.Click += new System.EventHandler(this.btsearch_Click);
             // 
@@ -700,29 +722,50 @@
             // 
             this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.label15.ForeColor = System.Drawing.Color.Red;
-            this.label15.Location = new System.Drawing.Point(1469, 2);
+            this.label15.Location = new System.Drawing.Point(1469, -1);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(28, 36);
             this.label15.TabIndex = 37;
             this.label15.Text = "X";
             this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
-            // txtyear
+            // label16
             // 
-            this.txtyear.Location = new System.Drawing.Point(454, 455);
-            this.txtyear.Name = "txtyear";
-            this.txtyear.Size = new System.Drawing.Size(220, 42);
-            this.txtyear.TabIndex = 40;
+            this.label16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label16.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label16.Font = new System.Drawing.Font("Saysettha OT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(0, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(1500, 58);
+            this.label16.TabIndex = 38;
+            this.label16.Text = "ລົງທະບຽນນັກສຶກສາໃໝ່";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(1204, 507);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(122, 63);
+            this.button1.TabIndex = 39;
+            this.button1.Text = "Clear";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // Addstudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(208)))), ((int)(((byte)(203)))));
-            this.ClientSize = new System.Drawing.Size(1500, 847);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1500, 871);
             this.ControlBox = false;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.dgvregister);
             this.Controls.Add(this.groupBox2);
@@ -733,11 +776,11 @@
             this.Controls.Add(this.txtsearch);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.label16);
             this.Font = new System.Drawing.Font("Saysettha OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1500, 847);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1500, 847);
             this.Name = "Addstudent";
@@ -819,5 +862,7 @@
         private System.Windows.Forms.ComboBox cbemerprovince;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txtyear;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button button1;
     }
 }

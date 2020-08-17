@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MoveRoom));
             this.dgvnew = new System.Windows.Forms.DataGridView();
             this.dgvold = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
@@ -64,6 +65,7 @@
             this.btmove = new System.Windows.Forms.Button();
             this.btsearch = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvnew)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvold)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -90,7 +92,7 @@
             this.dgvold.AllowUserToDeleteRows = false;
             this.dgvold.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvold.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvold.Location = new System.Drawing.Point(761, 92);
+            this.dgvold.Location = new System.Drawing.Point(761, 107);
             this.dgvold.Name = "dgvold";
             this.dgvold.ReadOnly = true;
             this.dgvold.RowHeadersWidth = 51;
@@ -103,7 +105,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.BackColor = System.Drawing.Color.Turquoise;
-            this.label1.Location = new System.Drawing.Point(761, 53);
+            this.label1.Location = new System.Drawing.Point(761, 68);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(697, 41);
             this.label1.TabIndex = 1;
@@ -122,11 +124,14 @@
             // btsearchold
             // 
             this.btsearchold.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btsearchold.Location = new System.Drawing.Point(602, 26);
+            this.btsearchold.Image = ((System.Drawing.Image)(resources.GetObject("btsearchold.Image")));
+            this.btsearchold.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btsearchold.Location = new System.Drawing.Point(573, 20);
             this.btsearchold.Name = "btsearchold";
-            this.btsearchold.Size = new System.Drawing.Size(125, 48);
+            this.btsearchold.Size = new System.Drawing.Size(154, 62);
             this.btsearchold.TabIndex = 2;
             this.btsearchold.Text = "ຄົ້ນຫາຫ້ອງ";
+            this.btsearchold.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btsearchold.UseVisualStyleBackColor = true;
             this.btsearchold.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -152,7 +157,7 @@
             this.groupBox1.Controls.Add(this.btsearchold);
             this.groupBox1.Controls.Add(this.cbbuild);
             this.groupBox1.Controls.Add(this.cbfloor);
-            this.groupBox1.Location = new System.Drawing.Point(18, 53);
+            this.groupBox1.Location = new System.Drawing.Point(18, 64);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(733, 335);
             this.groupBox1.TabIndex = 3;
@@ -363,7 +368,7 @@
             // 
             this.label36.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(441, 111);
+            this.label36.Location = new System.Drawing.Point(441, 129);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(54, 36);
             this.label36.TabIndex = 4;
@@ -373,7 +378,7 @@
             // 
             this.label35.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(313, 111);
+            this.label35.Location = new System.Drawing.Point(313, 129);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(41, 36);
             this.label35.TabIndex = 4;
@@ -383,7 +388,7 @@
             // 
             this.label34.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(187, 111);
+            this.label34.Location = new System.Drawing.Point(187, 129);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(41, 36);
             this.label34.TabIndex = 4;
@@ -393,7 +398,7 @@
             // 
             this.label33.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(7, 111);
+            this.label33.Location = new System.Drawing.Point(7, 129);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(115, 36);
             this.label33.TabIndex = 4;
@@ -403,7 +408,7 @@
             // 
             this.cbroomnew.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbroomnew.FormattingEnabled = true;
-            this.cbroomnew.Location = new System.Drawing.Point(437, 150);
+            this.cbroomnew.Location = new System.Drawing.Point(437, 168);
             this.cbroomnew.Name = "cbroomnew";
             this.cbroomnew.Size = new System.Drawing.Size(141, 44);
             this.cbroomnew.TabIndex = 3;
@@ -413,7 +418,7 @@
             // 
             this.cbfloornew.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbfloornew.FormattingEnabled = true;
-            this.cbfloornew.Location = new System.Drawing.Point(310, 150);
+            this.cbfloornew.Location = new System.Drawing.Point(310, 168);
             this.cbfloornew.Name = "cbfloornew";
             this.cbfloornew.Size = new System.Drawing.Size(121, 44);
             this.cbfloornew.TabIndex = 3;
@@ -423,7 +428,7 @@
             // 
             this.cbbuildnew.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbbuildnew.FormattingEnabled = true;
-            this.cbbuildnew.Location = new System.Drawing.Point(183, 150);
+            this.cbbuildnew.Location = new System.Drawing.Point(183, 168);
             this.cbbuildnew.Name = "cbbuildnew";
             this.cbbuildnew.Size = new System.Drawing.Size(121, 44);
             this.cbbuildnew.TabIndex = 3;
@@ -433,7 +438,7 @@
             // 
             this.cbtroomnew.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbtroomnew.FormattingEnabled = true;
-            this.cbtroomnew.Location = new System.Drawing.Point(4, 150);
+            this.cbtroomnew.Location = new System.Drawing.Point(4, 168);
             this.cbtroomnew.Name = "cbtroomnew";
             this.cbtroomnew.Size = new System.Drawing.Size(172, 44);
             this.cbtroomnew.TabIndex = 3;
@@ -442,22 +447,28 @@
             // btmove
             // 
             this.btmove.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btmove.Location = new System.Drawing.Point(587, 287);
+            this.btmove.Image = ((System.Drawing.Image)(resources.GetObject("btmove.Image")));
+            this.btmove.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btmove.Location = new System.Drawing.Point(581, 266);
             this.btmove.Name = "btmove";
-            this.btmove.Size = new System.Drawing.Size(146, 48);
+            this.btmove.Size = new System.Drawing.Size(146, 63);
             this.btmove.TabIndex = 2;
             this.btmove.Text = "ຍ້າຍ";
+            this.btmove.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btmove.UseVisualStyleBackColor = true;
             this.btmove.Click += new System.EventHandler(this.btmove_Click);
             // 
             // btsearch
             // 
             this.btsearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btsearch.Location = new System.Drawing.Point(579, 56);
+            this.btsearch.Image = ((System.Drawing.Image)(resources.GetObject("btsearch.Image")));
+            this.btsearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btsearch.Location = new System.Drawing.Point(547, 41);
             this.btsearch.Name = "btsearch";
-            this.btsearch.Size = new System.Drawing.Size(146, 48);
+            this.btsearch.Size = new System.Drawing.Size(178, 63);
             this.btsearch.TabIndex = 2;
             this.btsearch.Text = "ຄົ້ນຫາຫ້ອງໃໝ່";
+            this.btsearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btsearch.UseVisualStyleBackColor = true;
             this.btsearch.Click += new System.EventHandler(this.btsearch_Click);
             // 
@@ -465,19 +476,32 @@
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(1438, -2);
+            this.label4.Location = new System.Drawing.Point(1438, 1);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(28, 36);
             this.label4.TabIndex = 4;
             this.label4.Text = "X";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label6.Font = new System.Drawing.Font("Saysettha OT", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(0, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(1470, 48);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "ຍ້າຍຫ້ອງ";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // MoveRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 36F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1470, 810);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox2);
@@ -487,6 +511,7 @@
             this.Controls.Add(this.dgvold);
             this.Controls.Add(this.dgvnew);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.label6);
             this.Font = new System.Drawing.Font("Saysettha OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
@@ -544,5 +569,6 @@
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Button btmove;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label6;
     }
 }

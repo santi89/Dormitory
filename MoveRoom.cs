@@ -227,11 +227,16 @@ namespace C_Sharp_2_Project
         private void cbtroom_SelectedIndexChanged(object sender, EventArgs e)
         {           
             builcombo();
+            cbbuild.ResetText();
+            cbfloor.ResetText();
+            cbroom.ResetText();
         }
 
         private void cbbuild_SelectedIndexChanged(object sender, EventArgs e)
         {
             flocombo();
+            cbfloor.ResetText();
+            cbroom.ResetText();
         }
 
         private void cbroom_SelectedIndexChanged(object sender, EventArgs e)
@@ -242,16 +247,23 @@ namespace C_Sharp_2_Project
         private void cbtroomnew_SelectedIndexChanged(object sender, EventArgs e)
         {
             builcombonew();
+            cbbuildnew.ResetText();
+            cbfloornew.ResetText();
+            cbroomnew.ResetText();
+
         }
 
         private void cbbuildnew_SelectedIndexChanged(object sender, EventArgs e)
         {
             flocombonew();
+            cbfloornew.ResetText();
+            cbroomnew.ResetText();
         }
 
         private void cbfloornew_SelectedIndexChanged(object sender, EventArgs e)
         {
             roomcombonew();
+            cbroomnew.ResetText();
         }
 
         private void cbroomnew_SelectedIndexChanged(object sender, EventArgs e)
@@ -261,7 +273,8 @@ namespace C_Sharp_2_Project
 
         private void cbfloor_SelectedIndexChanged(object sender, EventArgs e)
         {
-            roomcombo();
+            roomcombo();          
+            cbroom.ResetText();
         }
 
         public void shownew()

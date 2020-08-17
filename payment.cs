@@ -183,8 +183,9 @@ namespace C_Sharp_2_Project
         }
 
         private void payment_Load(object sender, EventArgs e)
-        {
-            rbnewadd.Checked = true;
+        {          
+                datesearch.Enabled = false;
+                checkBox1.Enabled =false;
            
 
           
@@ -224,24 +225,19 @@ namespace C_Sharp_2_Project
 
         private void rbnewadd_CheckedChanged_1(object sender, EventArgs e)
         {
-            if (rbnewadd .Checked ==true)
+           if (rbnewadd.Checked ==true)
             {
                 txtsearch.Enabled = false;
                 datesearch.Enabled = true;
-
-            }else if (rbcontinues.Checked ==true)
-            {
-                txtsearch.Enabled = true;
-                datesearch.Enabled = false;
-
+                checkBox1.Enabled = true;
             }
-
-
         }
-
         private void txtsearch_TextChanged(object sender, EventArgs e)
         {
-
+            if (txtsearch .Text == null)
+            {
+                dgvpayment.DataSource = null;
+            }
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -252,10 +248,10 @@ namespace C_Sharp_2_Project
                 if (txtsearch.Text == "")
                 {
                     return;
-                }
+                }              
                 if (rbcontinues.Checked == true)
                 {
-                    sql = "SELECT rentID,studentID,typename,buildingnumber,floornumber,room_number,startdate,enddate,cost FROM Rentdetail inner join tbroom on tbroom.roomID= Rentdetail.roomID inner join tbfloor on tbfloor.floorID= tbroom.floorID inner join tbbuilding on tbbuilding.buildingID =tbfloor.buildingID inner join tbroomtype on tbroomtype.roomtypeID=Rentdetail.rotypeid where studentID like '%" + txtsearch.Text + "'";
+                    sql = "SELECT rentID,studentID,typename,buildingnumber,floornumber,room_number,startdate,enddate FROM Rentdetail inner join tbroom on tbroom.roomID= Rentdetail.roomID inner join tbfloor on tbfloor.floorID= tbroom.floorID inner join tbbuilding on tbbuilding.buildingID =tbfloor.buildingID inner join tbroomtype on tbroomtype.roomtypeID=Rentdetail.rotypeid where studentID like '%" + txtsearch.Text + "'";
                     cmd = new SqlCommand(sql, con);
                     da = new SqlDataAdapter(cmd);
                     da.Fill(ds, "stud");
@@ -272,14 +268,38 @@ namespace C_Sharp_2_Project
                     dgvpayment.Columns[5].HeaderText = "ຫ້ອງ";
                     dgvpayment.Columns[6].HeaderText = "ວັນເຂົ້າ";
                     dgvpayment.Columns[7].HeaderText = "ວັນໝົດກຳນົດ";
-                    dgvpayment.Columns[8].HeaderText = "ລາຄາ";
+                   
                     dgvpayment.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 }
 
                 else if(rbnewadd.Checked == true)
                 {
+                    if (checkBox1.Checked == true)
+                    {
+                        sql = "select studentID,name,surname,gender,schoolname,facname,deptname from tbstudent inner join tbschool on tbschool.schoolID=tbstudent.schoolID inner join tbfaculty on tbfaculty.facID=tbstudent.facID inner join tbdepartment on tbdepartment.deptID=tbstudent.deptID where name=@dd or studentID = @dd and studentID != all(select studentID from Rentdetail)";
+                        cmd = new SqlCommand(sql, con);
+                        cmd.Parameters.AddWithValue("@dd",txtsearch.Text );
+                        da = new SqlDataAdapter(cmd);
+                        da.Fill(ds, "student");
+                        if (ds.Tables["student"] != null)
+                        {
+                            ds.Tables.Clear();
+                        }
+                        da.Fill(ds, "student");
+                        dgvpayment.DataSource = ds.Tables["student"];
 
-                    sql = "select studentID,name,surname,gender,schoolname,facname,deptname from tbstudent inner join tbschool on tbschool.schoolID=tbstudent.schoolID inner join tbfaculty on tbfaculty.facID=tbstudent.facID inner join tbdepartment on tbdepartment.deptID=tbstudent.deptID where datesignin=@dd and studentID !=(select studentID from Rentdetail)";
+                        dgvpayment.Columns[0].HeaderText = "ລະຫັດນັກສຶກສາ";
+                        dgvpayment.Columns[1].HeaderText = "ຊື່";
+                        dgvpayment.Columns[2].HeaderText = "ນາມສະກຸນ";
+                        dgvpayment.Columns[3].HeaderText = "ເພດ";
+                        dgvpayment.Columns[4].HeaderText = "ສະຖາບັນ";
+                        dgvpayment.Columns[5].HeaderText = "ຄະນະ";
+                        dgvpayment.Columns[6].HeaderText = "ພາກວິຊາ";
+                        dgvpayment.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+                    }else if (checkBox1.Checked  == false)
+                    {
+                    sql = "select studentID,name,surname,gender,schoolname,facname,deptname from tbstudent inner join tbschool on tbschool.schoolID=tbstudent.schoolID inner join tbfaculty on tbfaculty.facID=tbstudent.facID inner join tbdepartment on tbdepartment.deptID=tbstudent.deptID where datesignin=@dd and studentID != all(select studentID from Rentdetail)";
                     cmd = new SqlCommand(sql, con);
                     cmd.Parameters.AddWithValue("@dd", datesearch.Value.ToString("yyyy'/'MM'/'dd"));
 
@@ -300,6 +320,7 @@ namespace C_Sharp_2_Project
                     dgvpayment.Columns[5].HeaderText = "ຄະນະ";
                     dgvpayment.Columns[6].HeaderText = "ພາກວິຊາ";
                     dgvpayment.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    }
                 }
 
             }
@@ -314,7 +335,9 @@ namespace C_Sharp_2_Project
         {
             if (rbcontinues .Checked ==true)
             {
-                datesearch.Enabled = false;
+                datesearch.Enabled = false;                
+                    txtsearch.Enabled = true;
+                checkBox1.Enabled = false;
             }
         }
 
@@ -325,58 +348,63 @@ namespace C_Sharp_2_Project
                 if (rbcontinues.Checked == true)
                 {
 
-                    sql = "update Rentdetail set studentID= @stid,roomtypeID=(select roomtypeID from tbroomtype where typename=@troom),roomID=(select roomID from tbroom where room_number=@room),startdate=@now,enddate=@enddate where rentID=@rentID"; //,buildingID=(select buildingID from tbbuilding buildingnumber=@bui),floorID=(select floorID from tbfloor where floornumber=@flo),,cost=@cs
+                    sql = "update Rentdetail set startdate=@now,enddate=@enddate where rentID=@rentID"; //,buildingID=(select buildingID from tbbuilding buildingnumber=@bui),floorID=(select floorID from tbfloor where floornumber=@flo),,cost=@cs
                     cmd = new SqlCommand(sql, con);
                     cmd.Parameters.Clear();
-                    cmd.Parameters.AddWithValue("@stid", txtstid.Text);
+                   /* cmd.Parameters.AddWithValue("@stid", txtstid.Text);
                     cmd.Parameters.AddWithValue("@troom", cbtroom.SelectedItem);
-                    /*cmd.Parameters.AddWithValue("@bui", cbbuilding.SelectedItem);
-                    cmd.Parameters.AddWithValue("@flo", cbfloor.SelectedItem);*/
-                    cmd.Parameters.AddWithValue("@room", cbroom.SelectedItem);
+                    cmd.Parameters.AddWithValue("@bui", cbbuilding.SelectedItem);
+                    cmd.Parameters.AddWithValue("@flo", cbfloor.SelectedItem);
+                    cmd.Parameters.AddWithValue("@room", cbroom.SelectedItem);*/
                     cmd.Parameters.AddWithValue("@now", startdate.Value);
-                    cmd.Parameters.AddWithValue("@enddate", enddate.Value);
-                   // cmd.Parameters.AddWithValue("@cs", Convert.ToInt32(txtcost.Text ));
+                    cmd.Parameters.AddWithValue("@enddate", enddate.Value);               
                     cmd.Parameters.AddWithValue("@rentID", txtid.Text);
-                    if (cmd.ExecuteNonQuery() == 1)
-                    {
-                        MessageBox.Show("ສຳເລັດ");
-                        cd.ids = txtstid.Text;
-                        sql1 = "update tbroom set Student_amount=Student_amount +1 where room_number='" + cbroom.SelectedItem + "'";
-                    cmd1 = new SqlCommand(sql1, con);
-                    cmd1.ExecuteNonQuery();                  
-                    cd.Show();
-                    }
-                    else
-                    {          
-                            MessageBox.Show("ບັນທຶກຜິດຜາດກະລຸນາກວດສອບຂໍ້ມູນຄືນ");                    
-                    }
                     
-                }
-                else if (rbnewadd.Checked == true)
-                {
-                    sql = "insert into Rentdetail values (@stid,(select roomtypeID from tbroomtype where typename=@troom),(select roomID from tbroom where room_number=@room),@now,@enddate)";
-                    cmd = new SqlCommand(sql, con);
-                    cmd.Parameters.Clear();                  
-                    cmd.Parameters.AddWithValue("@stid", txtstid.Text);
-                    cmd.Parameters.AddWithValue("@troom", cbtroom.SelectedItem);
-                   /* cmd.Parameters.AddWithValue("@bui", cbbuilding.SelectedItem);
-                    cmd.Parameters.AddWithValue("@flo", cbfloor.SelectedItem);*/
+
+                     if (cmd.ExecuteNonQuery() >= 1)
+                     {
+                         MessageBox.Show("ສຳເລັດ");
+                         cd.ids = txtstid.Text;                                     
+                     cd.Show();
+                        dgvpayment.Rows .Clear();
+                        dgvpayment.Refresh();
+                     }
+                     else
+                     {          
+
+                             MessageBox.Show("ບັນທຶກຜິດຜາດກະລຸນາກວດສອບຂໍ້ມູນຄືນ");                    
+                     }
+
+                 }
+                 else if (rbnewadd.Checked == true)
+                 {
+                     sql = "insert into Rentdetail values (@stid,(select roomtypeID from tbroomtype where typename=@troom),(select roomID from tbroom where room_number=@room),@now,@enddate)";
+                     cmd = new SqlCommand(sql, con);
+                     cmd.Parameters.Clear();                  
+                     cmd.Parameters.AddWithValue("@stid", txtstid.Text);
+                     cmd.Parameters.AddWithValue("@troom", cbtroom.SelectedItem);
+                    /* cmd.Parameters.AddWithValue("@bui", cbbuilding.SelectedItem);
+                     cmd.Parameters.AddWithValue("@flo", cbfloor.SelectedItem);*/
                     cmd.Parameters.AddWithValue("@room", cbroom.SelectedItem);
                     cmd.Parameters.AddWithValue("@now", startdate.Value);
                     cmd.Parameters.AddWithValue("@enddate", enddate.Value);
                    // cmd.Parameters.AddWithValue("@cost", txtcost.Text);
                     if (cmd.ExecuteNonQuery() == 1) { 
 
-                    sql1 = "update tbroom set Student_amount=Student_amount +1 where room_number='" + cbroom.SelectedItem + "'";
+                    sql1 = "update tbroom set Student_amount=Student_amount+1 where room_number='" + cbroom.SelectedItem + "'";
                     cmd1 = new SqlCommand(sql1, con);
                     cmd1.ExecuteNonQuery();                   
                     cd.ids = txtstid.Text;                                  
-                    cd.Show();
+                    cd.Show();                        
+                        dgvpayment.Refresh();
                     }
                     else
-                    {                      
-                            MessageBox.Show("ບັນທຶກຜິດຜາດ");                    
-
+                    {
+                        /*string sqldelete = "delete from Rentdetail where studentID=@aa";
+                        cmd = new SqlCommand(sqldelete, con);
+                        cmd.Parameters.AddWithValue("@aa", txtstid.Text);
+                        cmd.ExecuteNonQuery();*/
+                        MessageBox.Show("ບັນທຶກຜິດຜາດກະລຸນາກວດສອບຂໍ້ມູນຄືນ");
                     }
                 }
                 
@@ -403,8 +431,10 @@ namespace C_Sharp_2_Project
 
         private void dgvpayment_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
+
             if (rbcontinues .Checked ==true)
             {
+                txtid.Text = dgvpayment.CurrentRow.Cells[0].Value.ToString();
                 txtstid.Text = dgvpayment.CurrentRow.Cells[1].Value.ToString();
                 sql = "select name from tbstudent where studentID ='" + txtstid.Text + "'";
                 cmd = new SqlCommand(sql, con);
@@ -417,7 +447,7 @@ namespace C_Sharp_2_Project
                 cbbuilding.SelectedItem = dgvpayment.CurrentRow.Cells[3].Value.ToString();
                 cbfloor.SelectedItem = dgvpayment.CurrentRow.Cells[4].Value.ToString();
                 cbroom.SelectedItem = dgvpayment.CurrentRow.Cells[5].Value.ToString();
-                startdate.Value = DateTime.Now;
+                startdate.Value = DateTime.Now.AddDays(1);
                 cbtroom.Enabled = false;
                 cbroom.Enabled = false;
                 cbbuilding.Enabled = false;
@@ -496,13 +526,10 @@ namespace C_Sharp_2_Project
 
         private void datesearch_ValueChanged(object sender, EventArgs e)
         {
-           /* datesearch.Format = DateTimePickerFormat.Custom;
-            datesearch.CustomFormat = "yyyy-MM-dd";
-            datesearch.Value = DateTime.Now;*/
-            sql = "select studentID,name,surname,gender,schoolname,facname,deptname from tbstudent inner join tbschool on tbschool.schoolID=tbstudent.schoolID inner join tbfaculty on tbfaculty.facID=tbstudent.facID inner join tbdepartment on tbdepartment.deptID=tbstudent.deptID where datesignin=@dd and studentID !=(select studentID from Rentdetail)";
+          
+            sql = "select studentID,name,surname,gender,schoolname,facname,deptname from tbstudent inner join tbschool on tbschool.schoolID = tbstudent.schoolID inner join tbfaculty on tbfaculty.facID = tbstudent.facID inner join tbdepartment on tbdepartment.deptID = tbstudent.deptID where datesignin=@dd and studentID != all(select studentID from Rentdetail)";
             cmd = new SqlCommand(sql, con);
-            cmd.Parameters.AddWithValue("@dd", datesearch.Value.ToString("yyyy'/'MM'/'dd"));      
-            
+            cmd.Parameters.AddWithValue("@dd", datesearch.Value.ToString("yyyy'/'MM'/'dd"));                
             da = new SqlDataAdapter(cmd);
             da.Fill(ds, "student");
             if (ds.Tables["student"] != null)
@@ -519,8 +546,6 @@ namespace C_Sharp_2_Project
             dgvpayment.Columns[4].HeaderText = "ສະຖາບັນ";
             dgvpayment.Columns[5].HeaderText = "ຄະນະ";
             dgvpayment.Columns[6].HeaderText = "ພາກວິຊາ";
-
-
             dgvpayment.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             
         }
@@ -528,6 +553,18 @@ namespace C_Sharp_2_Project
         private void button4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1 .Checked ==true)
+            {
+                txtsearch.Enabled = true;
+            }else if (checkBox1 .Checked == false)
+            {
+                txtsearch.Enabled = false;
+
+            }
         }
     }
 }

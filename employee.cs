@@ -37,8 +37,8 @@ namespace C_Sharp_2_Project
             dgvemp.DataSource = ds.Tables["emp"];
             dgvemp.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvemp.Columns[0].HeaderText = "ລະຫັດພະນັກງານ";
-            dgvemp.Columns[1].HeaderText = "ລະຫັດເຂົ້າລະບົບ";
-            dgvemp.Columns[2].HeaderText = "ຊື່";
+            dgvemp.Columns[1].HeaderText = "ຊື່";
+            dgvemp.Columns[2].HeaderText = "ລະຫັດເຂົ້າລະບົບ";
             dgvemp.Columns[3].HeaderText = "ນາມສະກຸນ";
             dgvemp.Columns[4].HeaderText = "ເພດ";
             dgvemp.Columns[5].HeaderText = "ວັນເດືອນປີເກີດ";
@@ -205,8 +205,8 @@ namespace C_Sharp_2_Project
         {
             DataGridViewRow indexrow = dgvemp.CurrentRow;
             txtempID.Text = indexrow.Cells[0].Value.ToString();
-             txtpassword.Text  = indexrow.Cells[1].Value.ToString();
-             txtname.Text = indexrow.Cells[2].Value.ToString();
+             txtpassword.Text  = indexrow.Cells[2].Value.ToString();
+             txtname.Text = indexrow.Cells[1].Value.ToString();
             txtsurname.Text = indexrow.Cells[3].Value.ToString();
             if (rbfemale.Text == indexrow.Cells[4].Value.ToString())
             {
@@ -268,6 +268,11 @@ namespace C_Sharp_2_Project
         private void label11_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtpassword_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

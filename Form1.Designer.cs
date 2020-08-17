@@ -37,6 +37,8 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.register = new System.Windows.Forms.ToolStripMenuItem();
             this.ຊຳລະຄາຫToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ຍາຍຫອງToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ຊຳລະຄາຫToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ຈດການຂມນToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ຈດການຂມນຕກToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ຈດການຂມນຊນToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,10 +49,7 @@
             this.ລາຍງານToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ລາຍງານນກສກສາເຂາພກToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ລາຍງານນກສກສາໝດກຳນດພກເຊາToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.crToolStripTextBox1 = new CrystalDecisions.Windows.Forms.CRToolStripTextBox();
             this.ອອກຈາລະບບToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ຍາຍຫອງToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ຊຳລະຄາຫToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel_show.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -79,7 +78,6 @@
             this.pictureBox1.Location = new System.Drawing.Point(268, 168);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(580, 428);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -124,11 +122,11 @@
             this.ຊຳລະຄາຫToolStripMenuItem,
             this.ຈດການຂມນToolStripMenuItem,
             this.ລາຍງານToolStripMenuItem,
-            this.crToolStripTextBox1,
             this.ອອກຈາລະບບToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.menuStrip1.ShowItemToolTips = true;
             this.menuStrip1.Size = new System.Drawing.Size(1121, 46);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
@@ -154,6 +152,20 @@
             this.ຊຳລະຄາຫToolStripMenuItem.Size = new System.Drawing.Size(244, 42);
             this.ຊຳລະຄາຫToolStripMenuItem.Text = "ຊຳລະຄ່າຫໍ ແລະ ຍ້າຍຫ້ອງ";
             this.ຊຳລະຄາຫToolStripMenuItem.Click += new System.EventHandler(this.ຊຳລະຄາຫToolStripMenuItem_Click);
+            // 
+            // ຍາຍຫອງToolStripMenuItem
+            // 
+            this.ຍາຍຫອງToolStripMenuItem.Name = "ຍາຍຫອງToolStripMenuItem";
+            this.ຍາຍຫອງToolStripMenuItem.Size = new System.Drawing.Size(179, 38);
+            this.ຍາຍຫອງToolStripMenuItem.Text = "ຍ້າຍຫ້ອງ";
+            this.ຍາຍຫອງToolStripMenuItem.Click += new System.EventHandler(this.ຍາຍຫອງToolStripMenuItem_Click);
+            // 
+            // ຊຳລະຄາຫToolStripMenuItem1
+            // 
+            this.ຊຳລະຄາຫToolStripMenuItem1.Name = "ຊຳລະຄາຫToolStripMenuItem1";
+            this.ຊຳລະຄາຫToolStripMenuItem1.Size = new System.Drawing.Size(179, 38);
+            this.ຊຳລະຄາຫToolStripMenuItem1.Text = "ຊຳລະຄ່າຫໍ";
+            this.ຊຳລະຄາຫToolStripMenuItem1.Click += new System.EventHandler(this.ຊຳລະຄາຫToolStripMenuItem1_Click);
             // 
             // ຈດການຂມນToolStripMenuItem
             // 
@@ -237,38 +249,12 @@
             this.ລາຍງານນກສກສາໝດກຳນດພກເຊາToolStripMenuItem.Text = "ລາຍງານນັກສຶກສາໝົດກຳນົດພັກເຊົາ";
             this.ລາຍງານນກສກສາໝດກຳນດພກເຊາToolStripMenuItem.Click += new System.EventHandler(this.ລາຍງານນກສກສາໝດກຳນດພກເຊາToolStripMenuItem_Click);
             // 
-            // crToolStripTextBox1
-            // 
-            this.crToolStripTextBox1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.crToolStripTextBox1.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.crToolStripTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.crToolStripTextBox1.Font = new System.Drawing.Font("Saysettha OT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.crToolStripTextBox1.Name = "crToolStripTextBox1";
-            this.crToolStripTextBox1.Size = new System.Drawing.Size(27, 42);
-            this.crToolStripTextBox1.Text = "x";
-            this.crToolStripTextBox1.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.crToolStripTextBox1.Click += new System.EventHandler(this.crToolStripTextBox1_Click_1);
-            // 
             // ອອກຈາລະບບToolStripMenuItem
             // 
             this.ອອກຈາລະບບToolStripMenuItem.Name = "ອອກຈາລະບບToolStripMenuItem";
             this.ອອກຈາລະບບToolStripMenuItem.Size = new System.Drawing.Size(132, 42);
             this.ອອກຈາລະບບToolStripMenuItem.Text = "ອອກຈາລະບົບ";
             this.ອອກຈາລະບບToolStripMenuItem.Click += new System.EventHandler(this.ອອກຈາລະບບToolStripMenuItem_Click);
-            // 
-            // ຍາຍຫອງToolStripMenuItem
-            // 
-            this.ຍາຍຫອງToolStripMenuItem.Name = "ຍາຍຫອງToolStripMenuItem";
-            this.ຍາຍຫອງToolStripMenuItem.Size = new System.Drawing.Size(224, 38);
-            this.ຍາຍຫອງToolStripMenuItem.Text = "ຍ້າຍຫ້ອງ";
-            this.ຍາຍຫອງToolStripMenuItem.Click += new System.EventHandler(this.ຍາຍຫອງToolStripMenuItem_Click);
-            // 
-            // ຊຳລະຄາຫToolStripMenuItem1
-            // 
-            this.ຊຳລະຄາຫToolStripMenuItem1.Name = "ຊຳລະຄາຫToolStripMenuItem1";
-            this.ຊຳລະຄາຫToolStripMenuItem1.Size = new System.Drawing.Size(224, 38);
-            this.ຊຳລະຄາຫToolStripMenuItem1.Text = "ຊຳລະຄ່າຫໍ";
-            this.ຊຳລະຄາຫToolStripMenuItem1.Click += new System.EventHandler(this.ຊຳລະຄາຫToolStripMenuItem1_Click);
             // 
             // Form1
             // 
@@ -321,7 +307,6 @@
         private System.Windows.Forms.ToolStripMenuItem ຈດການຂມນປະເພດຫອງToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ຈດການຂມນສະຖາບນToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ລາຍງານToolStripMenuItem;
-        private CrystalDecisions.Windows.Forms.CRToolStripTextBox crToolStripTextBox1;
         private System.Windows.Forms.ToolStripMenuItem ລາຍງານນກສກສາເຂາພກToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ລາຍງານນກສກສາໝດກຳນດພກເຊາToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ອອກຈາລະບບToolStripMenuItem;
